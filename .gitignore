@@ -1,0 +1,14 @@
+# Byte-compiled
+__pycache__/
+*.pyc
+
+#Ipython Notebook
+.ipynb_checkpoints
+
+/db.sqlite3
+/brin/settings/mysql.py
+/brin/settings/server.py
+/brin/db.sqlite3
+
+/play.ipynb
+/staticfiles/*
