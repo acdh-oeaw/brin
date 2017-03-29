@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'vocabs',
     'places',
     'bib',
+    'inscriptions',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -60,7 +61,7 @@ REST_FRAMEWORK = {
 }
 
 SPAGHETTI_SAUCE = {
-    'apps': ['vocabs', 'places', 'bib'],
+    'apps': ['vocabs', 'places', 'bib', 'inscriptions'],
     'show_fields': False,
     'exclude': {'auth': ['user']}
 }
