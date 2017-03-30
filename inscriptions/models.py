@@ -4,7 +4,7 @@ from bib.models import Book
 from places.models import Place
 
 
-class References(models.Model):
+class Reference(models.Model):
     book = models.ForeignKey(Book, blank=True, null=True)
     page = models.CharField(blank=True, max_length=50)
     note = models.CharField(blank=True, max_length=255)
@@ -45,7 +45,8 @@ class Inschrift(models.Model):
     anderer_kopial_text = models.TextField(blank=True)
     notizen = models.TextField(blank=True)
     bemerkungen = models.TextField(blank=True)
-    quellen = models.ManyToManyField(References, blank=True)
+    quellen = models.ManyToManyField(Reference, blank=True)
+    quellen_unstruktieriert = models.TextField(blank=True)
     created = models.DateTimeField(null=True)
     status = models.NullBooleanField()
     schlagworte = models.ManyToManyField(
