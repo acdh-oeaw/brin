@@ -10,6 +10,9 @@ class AlternativeName(models.Model):
 
 class Place(models.Model):
     PLACE_TYPES = (
+        ("part of building", "part of building"),
+        ("building", "building"),
+        ("district", "district"),
         ("city", "city"),
         ("country", "country")
     )
@@ -35,7 +38,7 @@ class Place(models.Model):
         max_digits=20, decimal_places=12, blank=True, null=True
     )
     part_of = models.ForeignKey(
-        "Place", null=True, blank=True, help_text="A place (country) this place is part of."
+        "Place", null=True, blank=True, help_text="A location this place is part of."
     )
     place_type = models.CharField(choices=PLACE_TYPES, null=True, blank=True, max_length=50)
 
