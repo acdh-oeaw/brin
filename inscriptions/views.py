@@ -25,10 +25,18 @@ class InschriftDetailView(DetailView):
         print(context['previous_entry'])
         return context
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(InschriftDetailView, self).dispatch(*args, **kwargs)
+
 
 class InschriftListView(ListView):
     model = Inschrift
     template_name = 'inscriptions/inschrift_list.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(InschriftListView, self).dispatch(*args, **kwargs)
 
 
 class InschriftCreate(CreateView):
