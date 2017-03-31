@@ -5,9 +5,27 @@
 <div class="container">
     <div class="panel panel-default procustom-panel-create">
         <div class="panel-heading procustom-panel-heading">
-            <h1 style="text-align: center;">
-              {{ object.transkription_normalized|truncatechars:20 }}
-            </h1>
+            <div class="row">
+                <div class="col-md-2">
+                {% if previous_entry %}
+                    <h2>
+                        <a href="{% url 'inschriften:inschrift_detail' pk=previous_entry %}"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true" title="previous area"></span></a>
+                    </h2>
+                {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <h1 style="text-align: center;">
+                      {{ object.transkription_normalized|truncatechars:20 }}
+                    </h1>
+                </div>
+                <div class="col-md-2">
+                {% if next_entry %}
+                    <h2>
+                        <a href="{% url 'inschriften:inschrift_detail' pk=next_entry %}" style="float:right"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true" title="next area"></span></a>
+                    </h2>
+                {% endif %}
+                </div>
+            </div>
         </div>
         <div class="panel-body">
 

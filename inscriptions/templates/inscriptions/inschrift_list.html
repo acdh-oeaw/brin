@@ -14,11 +14,18 @@
       <br>
     </div>
     <div class="panel-body procustom-panel-body">
-       {% for object in object_list %}
-       <li>
-           {{ object.transkription_normalized|truncatechars:20 }} <a href="{% url 'inschriften:inschrift_detail' pk=object.id %}">{{ object }}</a>
-      </li>
-       {% endfor %}
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Inschriften ID</th>
+                <th>Inschriften Text</th>
+            </tr>
+            {% for object in object_list %}
+                <tr>
+                    <td><a href="{% url 'inschriften:inschrift_detail' pk=object.id %}">{{ object }}</a></td>
+                    <td>{{ object.transkription_normalized|truncatechars:20 }}</td>
+                </tr>
+            {% endfor %}
+        </table>
 
     </div>
 </div>

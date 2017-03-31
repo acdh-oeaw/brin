@@ -12,6 +12,19 @@ class InschriftDetailView(DetailView):
     model = Inschrift
     template_name = 'inscriptions/inschrift_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(InschriftDetailView, self).get_context_data(**kwargs)
+        try:
+            context["next_entry"] = Inschrift.objects.filter(id__gt=int(self.kwargs['pk']))[0].pk
+        except:
+            context["next_entry"] = None
+        try:
+            context["previous_entry"] = Inschrift.objects.filter(id__lt=int(self.kwargs['pk']))[0].pk
+        except:
+            context["previous_entry"] = None
+        print(context['previous_entry'])
+        return context
+
 
 class InschriftListView(ListView):
     model = Inschrift
