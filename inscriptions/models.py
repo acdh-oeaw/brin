@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 from vocabs.models import SkosConcept
 from bib.models import Book
 from places.models import Place
@@ -73,3 +74,6 @@ class Inschrift(models.Model):
 
     def __str__(self):
         return "{}".format(self.legacy_id)
+
+    def get_absolute_url(self):
+        return reverse('inschriften:inschrift_detail', kwargs={'pk': self.id})
