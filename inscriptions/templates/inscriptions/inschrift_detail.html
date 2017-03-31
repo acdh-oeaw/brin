@@ -1,0 +1,94 @@
+{% extends "webpage/base.html" %}
+{% block Titel %} {{ object.legacy_id }} {% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="panel panel-default procustom-panel-create">
+        <div class="panel-heading procustom-panel-heading">
+            <h1 style="text-align: center;">
+              {{ object.transkription_normalized|truncatechars:20 }}
+            </h1>
+        </div>
+        <div class="panel-body">
+
+            <legend>Text</legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Transkription (diplomatisch)</th>
+                    <th>Transkription (normalisiert)</th>
+                </tr>
+                <tr>
+                    <td>{{ object.transkription }}</td>
+                    <td>{{ object.transkription_normalized }}</td>
+                </tr>
+            </table>
+
+            <legend>Metadaten</legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Resch Kopial Signatur</th>
+                    <td>{{ object.resch_kopial_signatur }}</td>
+                </tr>
+                <tr>
+                    <th>Resch Kopial Text</th>
+                    <td>{{ object.resch_kopial_text }}</td>
+                </tr>
+                <tr>
+                    <th>Andere Kopial Signatur</th>
+                    <td>{{ object.andere_kopial_signatur }}</td>
+                </tr>
+                <tr>
+                    <th>Referenzen/Quellen</th>
+                    <td>{{ object.quellen_unstruktieriert }}</td>
+                </tr>
+            </table>
+
+            <legend>Schrift</legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Schrifthöhe (min/max)</th>
+                    <td>{{ object.schrift_hoch_min }}/{{ object.schrift_hoch_max }}</td>
+                </tr>
+                <tr>
+                    <th>Schriftbreite (min/max)</th>
+                    <td>{{ object.schrift_breit_min }}/{{ object.schrift_breit_max }}</td>
+                </tr>
+                <tr>
+                    <th>Majuskel (min/max)</th>
+                    <td>{{ object.majuskel_min }}/{{ object.majuskel_max }}</td>
+                </tr>
+                <tr>
+                    <th>Minuskel (min/max)</th>
+                    <td>{{ object.minuskel_min }}/{{ object.minuskel_max }}</td>
+                </tr>
+                <tr>
+                    <th>Mittellänge (min/max)</th>
+                    <td>{{ object.mittellaenge_min }}/{{ object.mittellaenge_max }}</td>
+                </tr>
+                <tr>
+                    <th>Oberlänge (min/max)</th>
+                    <td>{{ object.oberlaenge_min }}/{{ object.oberlaenge_max }}</td>
+                </tr>
+            </table>
+
+            <legend>Farbe</legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Farbträger</th>
+                    <td>{{ object.farbtraeger }}</td>
+                </tr>
+                <tr>
+                    <th>Farbtschrift</th>
+                    <td>{{ object.farbschrift }}</td>
+                </tr>
+                <tr>
+                    <th>Erhaltungszustand</th>
+                    <td>{{ object.erhaltungszustand }}</td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

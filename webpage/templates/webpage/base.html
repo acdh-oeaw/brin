@@ -38,7 +38,7 @@
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
             <script src="{% static 'webpage/libraries/cool-share/plugin.js' %}"/></script>
         <!-- Piwik -->
-            <script type="text/javascript">
+            <!-- <script type="text/javascript">
               var _paq = _paq || [];
               // tracker methods like "setCustomDimension" should be called before "trackPageView"
               _paq.push(['trackPageView']);
@@ -50,7 +50,7 @@
                 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
                 g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
               })();
-            </script>
+            </script> -->
         <!-- End Piwik Code -->
 
       {% block scriptHeader %}
@@ -111,10 +111,14 @@
                   {% endif %}
 
                   <ul class="dropdown-menu procustom-dropdown-menu">
+                      <li>
+                          <a href="{% url 'inschriften:inschrift_list' %}">Inschriften</a>
+                      </li>
+
+                    {% if user.is_authenticated %}
                     <li>
                         <a href="{% url 'places:place_list' %}">Locations</a>
                     </li>
-                    {% if user.is_authenticated %}
                     <li role="separator" class="divider"></li>
                     <li>
                         <a href="{% url 'bib:synczotero' %}">Import new Items from Zotero</a>
@@ -122,14 +126,14 @@
                     {% endif %}
                   </ul>
                 </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Analyze the Data
-                  <span class="caret"/>
-                  </a>
-                  <ul class="dropdown-menu procustom-dropdown-menu">
+                <!-- <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Analyze the Data
+                          <span class="caret"/>
+                      </a>
+                      <ul class="dropdown-menu procustom-dropdown-menu">
 
-                  </ul>
-                </li>
+                      </ul>
+                </li> -->
                 {% if user.is_authenticated %}
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vocabs Curation
@@ -233,7 +237,7 @@
 
     {% block scripts %}
     <script type="text/javascript" src="{% static 'webpage/libraries/bootstrap337/js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'webpage/libraries/bootstrap337/js/bootstrap-tab.js' %}"></script>
+    <!-- <script type="text/javascript" src="{% static 'webpage/libraries/bootstrap337/js/bootstrap-tab.js' %}"></script> -->
 
     <script type="text/javascript">
         var nav = $('#top-procustom-navbar'); // Change to nav div

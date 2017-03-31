@@ -18,7 +18,7 @@ body{
 }
 header{
     flex:0 0 auto;
-    background-color:#331165; /*#F8F8F8 #22267b*/
+    background-color:#035151; /*#F8F8F8 #22267b*/
 
     color:#ffffff;
 }
@@ -27,7 +27,7 @@ header{
 }
 footer{
     flex:0 0 auto;
-    background-color:#331165; /*#331165*/
+    background-color:#035151; /*#035151*/
     color:#ffffff;
     font-size:13px;
     padding:20px;
@@ -39,7 +39,7 @@ footer{
 
 }
 legend {
-  background-color: #e6e5f5;
+  background-color: #80CBC4;
   padding: 10px;
 }
 
