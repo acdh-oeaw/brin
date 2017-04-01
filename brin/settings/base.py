@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'places',
     'bib',
     'inscriptions',
+    'images',
 ]
 
 MIDDLEWARE_CLASSES = [
