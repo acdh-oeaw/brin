@@ -117,6 +117,9 @@
 
                     {% if user.is_authenticated %}
                     <li>
+                        <a href="{% url 'images:image_list' %}">Images</a>
+                    </li>
+                    <li>
                         <a href="{% url 'places:place_list' %}">Locations</a>
                     </li>
                     <li role="separator" class="divider"></li>
