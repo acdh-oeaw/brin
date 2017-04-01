@@ -1,6 +1,8 @@
 {% extends "webpage/base.html" %}
+{% load staticfiles %}
 {% block Titel %} {{ object.legacy_id }} {% endblock %}
 {% block content %}
+<script src="{% static 'images/openseadragon/openseadragon.min.js' %}"></script>
 
 <div class="container">
     <div class="panel panel-default procustom-panel-create">
@@ -27,108 +29,136 @@
                 </div>
             </div>
         </div>
-        <div class="panel-body">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <legend>Text</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Transkription (diplomatisch)</th>
+                                <th>Transkription (normalisiert)</th>
+                            </tr>
+                            <tr>
+                                <td>{{ object.transkription }}</td>
+                                <td>{{ object.transkription_normalized }}</td>
+                            </tr>
+                        </table>
 
-            <legend>Text</legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th>Transkription (diplomatisch)</th>
-                    <th>Transkription (normalisiert)</th>
-                </tr>
-                <tr>
-                    <td>{{ object.transkription }}</td>
-                    <td>{{ object.transkription_normalized }}</td>
-                </tr>
-            </table>
-
-            <legend>Standort</legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th width="66%">aktueller Standort</th>
-                    <th>alter Standort</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>{{ object.genauer_standort.part_of.part_of.part_of }}</li>
-                                <ul>
-                                    <li>{{ object.genauer_standort.part_of}}</li>
+                        <legend>Standort</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th width="66%">aktueller Standort</th>
+                                <th>alter Standort</th>
+                            </tr>
+                            <tr>
+                                <td>
                                     <ul>
-                                        <li>{{ object.genauer_standort}}</li>
+                                        <li>{{ object.genauer_standort.part_of.part_of.part_of }}</li>
+                                            <ul>
+                                                <li>{{ object.genauer_standort.part_of}}</li>
+                                                <ul>
+                                                    <li>{{ object.genauer_standort}}</li>
+                                                </ul>
+                                            </ul>
+                                        </ul>
                                     </ul>
-                                </ul>
-                            </ul>
-                        </ul>
-                    </td>
-                    <td>{{ object.alter_standort }}</td>
-                </tr>
-            </table>
+                                </td>
+                                <td>{{ object.alter_standort }}</td>
+                            </tr>
+                        </table>
 
-            <legend>Metadaten</legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th>Resch Kopial Signatur</th>
-                    <td>{{ object.resch_kopial_signatur }}</td>
-                </tr>
-                <tr>
-                    <th>Resch Kopial Text</th>
-                    <td>{{ object.resch_kopial_text }}</td>
-                </tr>
-                <tr>
-                    <th>Andere Kopial Signatur</th>
-                    <td>{{ object.andere_kopial_signatur }}</td>
-                </tr>
-                <tr>
-                    <th>Referenzen/Quellen</th>
-                    <td>{{ object.quellen_unstruktieriert }}</td>
-                </tr>
-            </table>
+                        <legend>Metadaten</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Resch Kopial Signatur</th>
+                                <td>{{ object.resch_kopial_signatur }}</td>
+                            </tr>
+                            <tr>
+                                <th>Resch Kopial Text</th>
+                                <td>{{ object.resch_kopial_text }}</td>
+                            </tr>
+                            <tr>
+                                <th>Andere Kopial Signatur</th>
+                                <td>{{ object.andere_kopial_signatur }}</td>
+                            </tr>
+                            <tr>
+                                <th>Referenzen/Quellen</th>
+                                <td>{{ object.quellen_unstruktieriert }}</td>
+                            </tr>
+                        </table>
 
-            <legend>Schrift</legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th>Schrifthöhe (min/max)</th>
-                    <td>{{ object.schrift_hoch_min }}/{{ object.schrift_hoch_max }}</td>
-                </tr>
-                <tr>
-                    <th>Schriftbreite (min/max)</th>
-                    <td>{{ object.schrift_breit_min }}/{{ object.schrift_breit_max }}</td>
-                </tr>
-                <tr>
-                    <th>Majuskel (min/max)</th>
-                    <td>{{ object.majuskel_min }}/{{ object.majuskel_max }}</td>
-                </tr>
-                <tr>
-                    <th>Minuskel (min/max)</th>
-                    <td>{{ object.minuskel_min }}/{{ object.minuskel_max }}</td>
-                </tr>
-                <tr>
-                    <th>Mittellänge (min/max)</th>
-                    <td>{{ object.mittellaenge_min }}/{{ object.mittellaenge_max }}</td>
-                </tr>
-                <tr>
-                    <th>Oberlänge (min/max)</th>
-                    <td>{{ object.oberlaenge_min }}/{{ object.oberlaenge_max }}</td>
-                </tr>
-            </table>
+                        <legend>Schrift</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Schrifthöhe (min/max)</th>
+                                <td>{{ object.schrift_hoch_min }}/{{ object.schrift_hoch_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Schriftbreite (min/max)</th>
+                                <td>{{ object.schrift_breit_min }}/{{ object.schrift_breit_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Majuskel (min/max)</th>
+                                <td>{{ object.majuskel_min }}/{{ object.majuskel_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Minuskel (min/max)</th>
+                                <td>{{ object.minuskel_min }}/{{ object.minuskel_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Mittellänge (min/max)</th>
+                                <td>{{ object.mittellaenge_min }}/{{ object.mittellaenge_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Oberlänge (min/max)</th>
+                                <td>{{ object.oberlaenge_min }}/{{ object.oberlaenge_max }}</td>
+                            </tr>
+                        </table>
 
-            <legend>Farbe</legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th>Farbträger</th>
-                    <td>{{ object.farbtraeger }}</td>
-                </tr>
-                <tr>
-                    <th>Farbtschrift</th>
-                    <td>{{ object.farbschrift }}</td>
-                </tr>
-                <tr>
-                    <th>Erhaltungszustand</th>
-                    <td>{{ object.erhaltungszustand }}</td>
-                </tr>
-            </table>
-
-
+                        <legend>Farbe</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Farbträger</th>
+                                <td>{{ object.farbtraeger }}</td>
+                            </tr>
+                            <tr>
+                                <th>Farbtschrift</th>
+                                <td>{{ object.farbschrift }}</td>
+                            </tr>
+                            <tr>
+                                <th>Erhaltungszustand</th>
+                                <td>{{ object.erhaltungszustand }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                    {% for x in object.images.all %}
+                    <div class="panel panel-default" style="text-align:center">
+                        <div class="panel-heading"><strong>{{ x.filename }}</strong><br/>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary" id="zoom-in-{{ forloop.counter }}">Zoom In</button>
+                                <button type="button" class="btn btn-primary" id="home-{{ forloop.counter }}">Default</button>
+                                <button type="button" class="btn btn-primary" id="zoom-out-{{ forloop.counter }}">Zoom Out</button>
+                                <button type="button" class="btn btn-primary" id="full-page-{{ forloop.counter }}">Full Sceen</button>
+                            </div>
+                        </div>
+                        <div class="panel-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 250px">
+                            <a href="{{ x }}">dragon-{{ forloop.counter }}</a>
+                        </div>
+                        <script type="text/javascript">
+                            var viewer = OpenSeadragon({
+                                id: "dragon-{{ forloop.counter }}",
+                                tileSources: "{{ x }}",
+                                zoomInButton:   "zoom-in-{{ forloop.counter }}",
+                                zoomOutButton:  "zoom-out-{{ forloop.counter }}",
+                                homeButton:     "home-{{ forloop.counter }}",
+                                fullPageButton: "full-page-{{ forloop.counter }}",
+                            });
+                        </script>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </div>

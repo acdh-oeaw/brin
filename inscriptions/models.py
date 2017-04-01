@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 from vocabs.models import SkosConcept
 from bib.models import Book
 from places.models import Place
+from images.models import Image
 
 
 class Reference(models.Model):
@@ -71,6 +72,7 @@ class Inschrift(models.Model):
         Place, blank=True, null=True, related_name="genauer_standort"
     )
     alter_standort = models.CharField(blank=True, max_length=255, null=True)
+    images = models.ManyToManyField(Image, blank=True)
 
     def __str__(self):
         return "{}".format(self.legacy_id)
