@@ -70,7 +70,7 @@ class Inschrift(models.Model):
     genauer_standort = models.ForeignKey(
         Place, blank=True, null=True, related_name="genauer_standort"
     )
-    alter_standort = models.ForeignKey(Place, blank=True, null=True, related_name="alter_standort")
+    alter_standort = models.CharField(blank=True, max_length=255, null=True)
 
     def __str__(self):
         return "{}".format(self.legacy_id)

@@ -18,11 +18,13 @@ class InschriftDetailView(DetailView):
             context["next_entry"] = Inschrift.objects.filter(id__gt=int(self.kwargs['pk']))[0].pk
         except:
             context["next_entry"] = None
+        prev = [x.id for x in Inschrift.objects.filter(id__lt=int(self.kwargs['pk']))][-1]
         try:
-            context["previous_entry"] = Inschrift.objects.filter(id__lt=int(self.kwargs['pk']))[0].pk
+            Inschrift.objects.get(id=int(prev)-1)
+            context["previous_entry"] = prev
         except:
             context["previous_entry"] = None
-        print(context['previous_entry'])
+
         return context
 
     @method_decorator(login_required)

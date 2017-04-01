@@ -41,6 +41,29 @@
                 </tr>
             </table>
 
+            <legend>Standort</legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th width="66%">aktueller Standort</th>
+                    <th>alter Standort</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>{{ object.genauer_standort.part_of.part_of.part_of }}</li>
+                                <ul>
+                                    <li>{{ object.genauer_standort.part_of}}</li>
+                                    <ul>
+                                        <li>{{ object.genauer_standort}}</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </td>
+                    <td>{{ object.alter_standort }}</td>
+                </tr>
+            </table>
+
             <legend>Metadaten</legend>
             <table class="table table-bordered table-hover">
                 <tr>
