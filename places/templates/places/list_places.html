@@ -75,7 +75,7 @@
 
     	{% for object in object_list %}
     	{% if object.lat %}
-    	L.marker([{{ object.lat }}, {{ object.lng }}])
+    	L.marker([{{ object.lng }}, {{ object.lat }}])
     	.addTo(map)
     	.bindPopup("<h1>{{ object.name }}</h1> <table class='table table-striped'> <tr> <td>Name: </td> <td>{{ object.name }}</td> </tr> </table>");
     	{% endif %}

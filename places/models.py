@@ -30,12 +30,12 @@ class Place(models.Model):
         max_length=50, blank=True,
         help_text="GND-ID"
     )
+    lng = models.DecimalField(
+        max_digits=20, decimal_places=12, blank=True, null=True
+    )
     lat = models.DecimalField(
         max_digits=20, decimal_places=12,
         blank=True, null=True
-    )
-    lng = models.DecimalField(
-        max_digits=20, decimal_places=12, blank=True, null=True
     )
     part_of = models.ForeignKey(
         "Place", null=True, blank=True, help_text="A location this place is part of."
