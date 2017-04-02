@@ -11,16 +11,17 @@ class Reference(models.Model):
     page = models.CharField(blank=True, max_length=50)
     note = models.CharField(blank=True, max_length=255)
 
-    # def __str__(self):
-    #     return self.book
+    def __str__(self):
+        return self.book
 
 
 class Person(models.Model):
     name = models.CharField(blank=True, max_length=255)
     titel_grad_beruf = models.CharField(blank=True, max_length=255)
+    gnd_id = models.CharField(blank=True, max_length=255)
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
 
 
 class Inschrift(models.Model):
