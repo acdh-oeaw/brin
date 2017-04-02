@@ -47,10 +47,10 @@
                 <form class="form-group">
                     <select class="form-control" id="geonamesSELECT">
                             {% if object.geonames_id or object.lat %}
-                                <option id="geonamesOption" value="{{ object.name }}_{{ object.lat }}_{{ object.lng }}_{{ object.geonames_id }}">DB-Entry | {{ object.name }} | {{ object.lat }} | {{ object.lng }} | {{ object.geonames_id }}</option>
+                                <option id="geonamesOption" value="{{ object.name }}_{{ object.lng }}_{{ object.lat }}_{{ object.geonames_id }}">DB-Entry | {{ object.name }} | {{ object.lng }} | {{ object.lat }} | {{ object.geonames_id }}</option>
                             {% endif %}
                             {% for dict in responseJSON %}
-                            <option id="geonamesOption" value="{{ dict.countryName }}_{{ dict.name }}_{{ dict.lat }}_{{ dict.lng }}_{{ dict.geonameId }}"> {{ dict.countryName }} | {{ dict.name }} | {{ dict.lat }} | {{ dict.lng }} | {{ dict.geonameId }}</option>
+                            <option id="geonamesOption" value="{{ dict.countryName }}_{{ dict.name }}_{{ dict.lng }}_{{ dict.lat }}_{{ dict.geonameId }}"> {{ dict.countryName }} | {{ dict.name }} | {{ dict.lng }} | {{ dict.lat }} | {{ dict.geonameId }}</option>
                             {% endfor %}
                         </select>
                     </form>
@@ -101,8 +101,8 @@
         var gps1 = placeName.split(/\|/)[2];
         var gps2 = placeName.split(/\|/)[3];
         var geonameId = placeName.split(/\|/)[4];
-        $('#id_lat').val(parseFloat(gps2));
         $('#id_lng').val(parseFloat(gps1));
+        $('#id_lat').val(parseFloat(gps2));
         $('#id_geonames_id').val(parseInt(geonameId));
         var gndURL = "http://www.geonames.org/"+geonameId.trim();
         var lookupButton = $("#currentID");
@@ -121,8 +121,8 @@
         var gps2 = placeName.split(/\|/)[3];
         var map = L.map('map').setView([gps1, gps2], 15);
         var geonameId = placeName.split(/\|/)[4];
-        $('#id_lat').val(parseFloat(gps2));
         $('#id_lng').val(parseFloat(gps1));
+        $('#id_lat').val(parseFloat(gps2));
         $('#id_geonames_id').val(parseInt(geonameId));
        var gndURL = "http://www.geonames.org/"+geonameId.trim();
         var lookupButton = $("#currentID");
