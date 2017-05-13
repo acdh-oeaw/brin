@@ -20,7 +20,7 @@ class InschriftForm(forms.ModelForm):
             'schriftklassifikation': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs/skos-constraint-ac/?scheme=schriftklassifikation'),
             'dating': autocomplete.ModelSelect2Multiple(
-                url='../../skos-constraint-ac/?scheme=Dating'),
+                url='../../vocabs/skos-constraint-ac/?scheme=Dating'),
             'reference': autocomplete.ModelSelect2Multiple(
                 url='burials:book-autocomplete'),
         }
