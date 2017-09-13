@@ -113,7 +113,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    {{ object.transkription }}
+                                    {{ object.transkription|safe }}
                                     {% if object.schriftbeschreibung %}
                                         <br/>
                                         <hr/>
