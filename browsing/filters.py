@@ -21,6 +21,18 @@ django_filters.filters.LOOKUP_TYPES = [
 
 
 class InschriftListFilter(django_filters.FilterSet):
+    transkription = django_filters.CharFilter(
+        lookup_expr='icontains',
+        label="Transkription"
+        )
+    transkription_normalized = django_filters.CharFilter(
+        lookup_expr='icontains',
+        label="Transkription normalized"
+        )
+    resch_kopial_signatur = django_filters.CharFilter(
+        lookup_expr='icontains',
+        label="Resch kopial signatur"
+        )
 
     class Meta:
         model = Inschrift
