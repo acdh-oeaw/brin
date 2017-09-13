@@ -8,6 +8,7 @@ __pycache__/
 /db.sqlite3
 /brin/settings/mysql.py
 /brin/settings/server.py
+/brin/settings/local.py
 /brin/db.sqlite3
 
 /play.ipynb
