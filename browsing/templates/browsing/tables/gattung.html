@@ -1,0 +1,3 @@
+{% for x in record.gattung.all %}
+{{x}} {% if not forloop.last %} | {% endif %}
+{% endfor %}

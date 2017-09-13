@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)$', views.SkosConceptDetailView.as_view(), name='skosconcept_detail'),
     url(r'^create/$', views.SkosConceptCreate.as_view(), name='skosconcept_create'),
     url(r'^update/(?P<pk>[0-9]+)$', views.SkosConceptUpdate.as_view(), name='skosconcept_update'),
+    url(r'^delete/(?P<pk>[0-9]+)$', views.SkosConceptDelete.as_view(), name='skosconcept_delete'),
     url(r'^scheme/$', views.SkosConceptSchemeListView.as_view(), name='skosconceptscheme_list'),
     url(
         r'^scheme/(?P<pk>[0-9]+)$', views.SkosConceptSchemeDetailView.as_view(),
@@ -33,8 +34,4 @@ urlpatterns = [
     url(
         r'^label/update/(?P<pk>[0-9]+)$', views.SkosLabelUpdate.as_view(),
         name='skoslabel_update'),
-    url(
-        r'^skos-constraint-ac/$', dal_views.SKOSConstraintAC.as_view(model=SkosConcept),
-        name='skos-constraint-ac',
-        ),
 ]

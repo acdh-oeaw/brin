@@ -12,3 +12,4 @@ __pycache__/
 
 /play.ipynb
 /staticfiles/*
+/vocabs/data/spreadsheets/vocabs_sample.xlsx
