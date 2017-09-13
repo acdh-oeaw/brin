@@ -36,12 +36,34 @@ class Image(models.Model):
             pass
         super(Image, self).save(*args, **kwargs)
 
+    def get_next(self):
+        next = Image.objects.filter(id__gt=self.id)
+        if next:
+            return next.first().id
+        return False
+
+    def get_prev(self):
+        prev = Image.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return prev.first().id
+        return False
+
     @property
     def full_path(self):
         if self.directory == "":
             return "{}/{}/info.json".format(self.path, self.filename)
         else:
             return "{}{}/{}/info.json".format(self.path, self.directory, self.filename)
+
+    @property
+    def iiif_endpoint(self):
+        if self.directory == "":
+            return "{}/{}".format(self.path, self.filename)
+        else:
+            return "{}{}/{}".format(self.path, self.directory, self.filename)
+
+    def __str__(self):
+        return self.full_path
 
     def __str__(self):
         return self.full_path

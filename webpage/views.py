@@ -1,20 +1,22 @@
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
+from django.template import RequestContext, loader
 from django.views.generic import TemplateView
 from django.contrib.auth import authenticate, login, logout
 from .forms import form_user_login
 
 
-class AboutView(TemplateView):
-    template_name = "webpage/about.html"
+class GenericWebpageView(TemplateView):
+    template_name = 'webpage/index.html'
 
-
-class StartView(TemplateView):
-    template_name = "webpage/index.html"
-
-
-class ImprintView(TemplateView):
-    template_name = "webpage/imprint.html"
+    def get_template_names(self):
+        template_name = "webpage/{}.html".format(self.kwargs.get("template", 'index'))
+        try:
+            loader.select_template([template_name])
+            template_name = "webpage/{}.html".format(self.kwargs.get("template", 'index'))
+        except:
+            template_name = "webpage/index.html"
+        return [template_name]
 
 
 #################################################################
@@ -27,14 +29,10 @@ def user_login(request):
         if form.is_valid():
             cd = form.cleaned_data
             user = authenticate(username=cd['username'], password=cd['password'])
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    return HttpResponseRedirect(request.GET.get('next', '/'))
-                else:
-                    return HttpResponse('not active.')
-            else:
-                return HttpResponse('user does not exist')
+            if user and user.is_active:
+                login(request, user)
+                return HttpResponseRedirect(request.GET.get('next', '/'))
+            return HttpResponse('user does not exist')
     else:
         form = form_user_login()
         return render(request, 'webpage/user_login.html', {'form': form})

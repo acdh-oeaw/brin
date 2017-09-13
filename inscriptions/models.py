@@ -80,3 +80,15 @@ class Inschrift(models.Model):
 
     def get_absolute_url(self):
         return reverse('inschriften:inschrift_detail', kwargs={'pk': self.id})
+
+    def get_next(self):
+        next = Inschrift.objects.filter(id__gt=self.id)
+        if next:
+            return next.first().id
+        return False
+
+    def get_prev(self):
+        prev = Inschrift.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return prev.first().id
+        return False

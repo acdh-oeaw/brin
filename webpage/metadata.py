@@ -2,10 +2,12 @@
 # (by default) in the base.html and index.html
 
 PROJECT_METADATA = {
-    'title': 'Brixner Inschriften',
+    'title': 'BRIN',
     'author': 'Peter Andorfer',
-    'subtitle': 'Eine Datenbank zu mittelalterlichen Inschriften in und um Brixen',
-    'description': 'some text to come',
+    'subtitle': 'Brixner Inschriften',
+    'description': 'A web application to publish research data about public inscritption in Brixen',
     'github': 'https://github.com/acdh-oeaw/brin',
-    'purpose_de': 'Das Ziel des Projekts "Brixner Inschriften" ist die Publikation von Daten über Inschriften in Brixen.',
-    'purpose_en': 'The purpose of the project "Brixner Inschriften" is the publication of data about inscriptions in Brixen.'}
+    'purpose_de': 'Ziel dieser Anwendung ist die Publikation von Daten.',
+    'purpose_en': 'The purpose of this project is to publish data.',
+    'version': '1.0.0'
+}
