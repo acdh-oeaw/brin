@@ -12,15 +12,15 @@ class InschriftForm(forms.ModelForm):
         fields = "__all__"
         widgets = {
             'gattung': autocomplete.ModelSelect2Multiple(
-                url='../../vocabs/skos-constraint-ac/?scheme=gattung'),
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=gattung'),
             'traeger': autocomplete.ModelSelect2Multiple(
-                url='../../vocabs/skos-constraint-ac/?scheme=traeger'),
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=traeger'),
             'schlagworte': autocomplete.ModelSelect2Multiple(
-                url='../../vocabs/skos-constraint-ac/?scheme=schlagworte'),
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=schlagworte'),
             'schriftklassifikation': autocomplete.ModelSelect2Multiple(
-                url='../../vocabs/skos-constraint-ac/?scheme=schriftklassifikation'),
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=schriftklassifikation'),
             'dating': autocomplete.ModelSelect2Multiple(
-                url='../../vocabs/skos-constraint-ac/?scheme=Dating'),
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=Dating'),
             'reference': autocomplete.ModelSelect2Multiple(
                 url='burials:book-autocomplete'),
         }
