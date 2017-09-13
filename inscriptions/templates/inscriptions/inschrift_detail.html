@@ -112,7 +112,17 @@
                                 <th>Transkription (normalisiert)</th>
                             </tr>
                             <tr>
-                                <td>{{ object.transkription }}</td>
+                                <td>
+                                    {{ object.transkription }}
+                                    {% if object.schriftbeschreibung %}
+                                        <br/>
+                                        <hr/>
+                                        <small>
+                                            {{ object.schriftbeschreibung}}
+                                        </small>
+                                    </hr/>
+                                    {% endif %}
+                                </td>
                                 <td>{{ object.transkription_normalized }}</td>
                             </tr>
                         </table>
