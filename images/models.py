@@ -7,7 +7,7 @@ try:
 except:
     base_url = "https://iiif.acdh.oeaw.ac.at/"
 
-IIIF_PATH = "{}{}".format(base_url, os.path.basename(settings.BASE_DIR))
+IIIF_PATH = "{}".format(base_url)
 FILE_EXTENSION_CHOICES = (
     ('.tif', 'tif'),
     ('.jpg', '.jpg'),
