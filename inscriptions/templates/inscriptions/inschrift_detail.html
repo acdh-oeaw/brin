@@ -45,6 +45,66 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-6">
+                        <legend>Basic Metadata</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Gattung</th>
+                                <td>
+                                    {% for x in object.gattung.all %}
+                                        <li>
+                                            {{ x.pref_label }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Träger</th>
+                                <td>
+                                    {% for x in object.traeger.all %}
+                                        <li>
+                                            {{ x.pref_label }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Resch Kopial Signatur</th>
+                                <td>{{ object.resch_kopial_signatur }}</td>
+                            </tr>
+                            <tr>
+                                <th>Resch Kopial Text</th>
+                                <td>{{ object.resch_kopial_text }}</td>
+                            </tr>
+                            <tr>
+                                <th>Andere Kopial Signatur</th>
+                                <td>{{ object.andere_kopial_signatur }}</td>
+                            </tr>
+                            <tr>
+                                <th>Referenzen/Quellen</th>
+                                <td>{{ object.quellen_unstruktieriert }}</td>
+                            </tr>
+                            <tr>
+                                <th>Künstler</th>
+                                <td>
+                                    {% for x in object.kuenstler.all %}
+                                        <li>
+                                            {{ x.name }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>kennname</th>
+                                <td>
+                                    {% for x in object.kennname.all %}
+                                        <li>
+                                            {{ x.name }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                        </table>
+
                         <legend>Text</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
@@ -84,26 +144,6 @@
                         </table>
 
                         <div id="mymap"></div>
-
-                        <legend>Metadaten</legend>
-                        <table class="table table-bordered table-hover">
-                            <tr>
-                                <th>Resch Kopial Signatur</th>
-                                <td>{{ object.resch_kopial_signatur }}</td>
-                            </tr>
-                            <tr>
-                                <th>Resch Kopial Text</th>
-                                <td>{{ object.resch_kopial_text }}</td>
-                            </tr>
-                            <tr>
-                                <th>Andere Kopial Signatur</th>
-                                <td>{{ object.andere_kopial_signatur }}</td>
-                            </tr>
-                            <tr>
-                                <th>Referenzen/Quellen</th>
-                                <td>{{ object.quellen_unstruktieriert }}</td>
-                            </tr>
-                        </table>
 
                         <legend>Schrift</legend>
                         <table class="table table-bordered table-hover">
