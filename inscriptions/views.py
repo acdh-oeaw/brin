@@ -6,11 +6,25 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from .models import Inschrift
 from .forms import InschriftForm
+from images.models import Image
 
 
 class InschriftDetailView(DetailView):
     model = Inschrift
     template_name = 'inscriptions/inschrift_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(InschriftDetailView, self).get_context_data(**kwargs)
+        to_remove = self.request.GET.getlist('to_remove')
+        if to_remove and self.request.user.is_authenticated():
+            context['to_remove'] = to_remove
+            images = Image.objects.filter(id__in=to_remove)
+            inscript = self.get_object()
+            for x in images:
+                inscript.images.remove(x)
+        else:
+            context['to_remove'] = None
+        return context
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):

@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-            <div class="panel-body">
+        <div class="panel-body">
                 <div class="row">
                     <div class="col-md-6">
                         <legend>Basic Metadata</legend>
@@ -200,36 +200,48 @@
                         </table>
                     </div>
                     <div class="col-md-6">
-                    {% for x in object.images.all %}
-                    <div class="panel panel-default" style="text-align:center">
-                        <div class="panel-heading"><strong>{{ x.filename }}</strong><br/>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary" id="zoom-in-{{ forloop.counter }}">Zoom In</button>
-                                <button type="button" class="btn btn-primary" id="home-{{ forloop.counter }}">Default</button>
-                                <button type="button" class="btn btn-primary" id="zoom-out-{{ forloop.counter }}">Zoom Out</button>
-                                <button type="button" class="btn btn-primary" id="full-page-{{ forloop.counter }}">Full Sceen</button>
-                            </div>
-                        </div>
-                        <div class="panel-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 250px">
-                            <a href="{{ x }}">dragon-{{ forloop.counter }}</a>
-                        </div>
-                        <script type="text/javascript">
-                            var viewer = OpenSeadragon({
-                                id: "dragon-{{ forloop.counter }}",
-                                tileSources: "{{ x }}",
-                                zoomInButton:   "zoom-in-{{ forloop.counter }}",
-                                zoomOutButton:  "zoom-out-{{ forloop.counter }}",
-                                homeButton:     "home-{{ forloop.counter }}",
-                                fullPageButton: "full-page-{{ forloop.counter }}",
-                            });
-                        </script>
+                        <form method="get">
+                            {% for x in object.images.all %}
+                                <div class="panel panel-default" style="text-align:center">
+                                    <div class="panel-heading"><strong>{{ x.filename }}</strong>
+                                        {% if user.is_authenticated %}
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" value="{{ x.id }}" name="to_remove">remove?</label>
+                                            </div>
+                                        {% endif %}
+
+                                        <br/>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary" id="zoom-in-{{ forloop.counter }}">Zoom In</button>
+                                            <button type="button" class="btn btn-primary" id="home-{{ forloop.counter }}">Default</button>
+                                            <button type="button" class="btn btn-primary" id="zoom-out-{{ forloop.counter }}">Zoom Out</button>
+                                            <button type="button" class="btn btn-primary" id="full-page-{{ forloop.counter }}">Full Sceen</button>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 250px">
+                                        <a href="{{ x }}">dragon-{{ forloop.counter }}</a>
+                                    </div>
+                                    <script type="text/javascript">
+                                        var viewer = OpenSeadragon({
+                                            id: "dragon-{{ forloop.counter }}",
+                                            tileSources: "{{ x }}",
+                                            zoomInButton:   "zoom-in-{{ forloop.counter }}",
+                                            zoomOutButton:  "zoom-out-{{ forloop.counter }}",
+                                            homeButton:     "home-{{ forloop.counter }}",
+                                            fullPageButton: "full-page-{{ forloop.counter }}",
+                                        });
+                                    </script>
+                                </div>
+                            {% endfor %}
+                            {% if user.is_authenticated %}
+                                <button type="submit" class="btn btn-default">remove selected images from this entry</button>
+                            {% endif %}
+                        </form>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-</div>
 <script type="text/javascript">
     {% if object.genauer_standort.part_of.lng %}
         var lng = parseFloat({{ object.genauer_standort.part_of.lng }});
