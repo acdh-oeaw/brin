@@ -205,21 +205,21 @@
                                 <div class="panel panel-default" style="text-align:center">
                                     <div class="panel-heading"><strong>{{ x.filename }}</strong>
                                         {% if user.is_authenticated %}
-                                            <div class="checkbox">
+                                            {# <div class="checkbox">#}
                                                 <label><input type="checkbox" value="{{ x.id }}" name="to_remove">remove?</label>
-                                            </div>
+                                            {# </div>#}
                                         {% endif %}
 
-                                        <br/>
+                                        {# <br/>#}
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-primary" id="zoom-in-{{ forloop.counter }}">Zoom In</button>
+                                            {# <button type="button" class="btn btn-primary" id="zoom-in-{{ forloop.counter }}">Zoom In</button>#}
                                             <button type="button" class="btn btn-primary" id="home-{{ forloop.counter }}">Default</button>
-                                            <button type="button" class="btn btn-primary" id="zoom-out-{{ forloop.counter }}">Zoom Out</button>
-                                            <button type="button" class="btn btn-primary" id="full-page-{{ forloop.counter }}">Full Sceen</button>
+                                            {# <button type="button" class="btn btn-primary" id="zoom-out-{{ forloop.counter }}">Zoom Out</button>#}
+                                            <button type="button" class="btn btn-primary" id="full-page-{{ forloop.counter }}">Full Screen</button>
                                         </div>
                                     </div>
-                                    <div class="panel-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 250px">
-                                        <a href="{{ x }}">dragon-{{ forloop.counter }}</a>
+                                    <div class="panel-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 150px">
+                                        {# <a href="{{ x }}">dragon-{{ forloop.counter }}</a>#}
                                     </div>
                                     <script type="text/javascript">
                                         var viewer = OpenSeadragon({
