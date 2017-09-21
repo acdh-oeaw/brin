@@ -26,17 +26,17 @@ $("#goto option").each(function() {
 </script>
 <div class="container">
 <div class="panel panel-default">
-    <div class="panel-heading procustom-panel-heading">
+    <div class="panel-heading">
 
-        <h3><span class="fa fa-search" style="padding-left:10px; padding-right: 10px;"></span>Browse {% class_definition %} {% block list_title %}{% endblock %}</h3>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myFilter">
-          <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+        <h2><span class="fa fa-search" style="padding-left:10px; padding-right: 10px;"></span>Search {% class_definition %} {% block list_title %}{% endblock %}</h2>
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myFilter">
+         Search options
         </button>
         <a class ="btn btn-default"  href=".">Reset search</a>
     {%block customView %}{% endblock %}
     {% block create_button %}{% endblock %}
     </div>
-    <div class="panel-body procustom-panel-body">
+    <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
                 {% with table.paginator.count as total %}
@@ -63,11 +63,17 @@ $("#goto option").each(function() {
           <tbody>
               {% for row in table.page.object_list|default:table.rows %} {# support pagination #}
               {% block table.tbody.row %}
+
+
               <tr {{ row.attrs.as_html }}>
                   {% for column, cell in row.items %}
                       <td {{ column.attrs.td.as_html }}>{% if column.localize == None %}{{ cell }}{% else %}{% if column.localize %}{{ cell|localize }}{% else %}{{ cell|unlocalize }}{% endif %}{% endif %}</td>
                   {% endfor %}
               </tr>
+
+
+
+
               {% endblock table.tbody.row %}
               {% empty %}
               {% if table.empty_text %}
