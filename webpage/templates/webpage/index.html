@@ -1,69 +1,40 @@
 {% extends "webpage/base.html" %}
 {% load staticfiles %}
 {% load webpage_extras %}
+
+{% block hp-image %}
+<div>
+<div class="index-image" style="background-image: url({% static 'webpage/img/4.jpg' %})" title="by Andreas Oberhofer, Miriam Trojer">
+</div>
+ <div class="top-main-section" id="hp-intro-text" >
+        <h1>BRIN</h1>
+        <hr class="h-hr">
+        <h1> Die Brixner Inschriften</h1>
+        <div style="height:50px; width:100%;"></div>
+    </div>
+    </div>
+
+{% endblock %}
+
 {% block content %}
-    <div class="container text-center">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-                <li data-target="#myCarousel" data-slide-to="5"></li>
-                <li data-target="#myCarousel" data-slide-to="6"></li>
-                <li data-target="#myCarousel" data-slide-to="7"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="{% static 'webpage/img/1.jpg' %}" alt="First" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/2.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/3.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/4.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/5.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/6.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/7.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-                <div class="item">
-                    <img src="{% static 'webpage/img/8.jpg' %}" alt="a nice feature picture" width="1200" height="600" title="by Andreas Oberhofer, Miriam Trojer" />
-                    <div class="carousel-caption"></div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"></a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"></a>
-        </div>
-        <h1 style="text-align:center">Die Brixner Inschriften</h1>
-        <h3>{% projects_metadata 'subtitle' %}</h3>
-        <div class="row">
-            <div class="col-md-6">
+
+<h1 style="text-align:center">Die Brixner Inschriften</h1>
+        <h3 style="text-align:center">{% projects_metadata 'subtitle' %}</h3>
+        <div class="main-flexbox">
+
+            <div class="card">
+            <h3>DE</h3>
                 <p>
                     Das Projekt „Die Brixner Inschriften. Bestandsaufnahme der epigraphischen Zeugnisse des Mittelalters und der Frühen Neuzeit“ (2011-2013) zielte darauf ab, alle Inschriften auf dem Gebiet der Stadtgemeinde Brixen (Südtirol) aus dem Zeitraum zwischen dem 13. Jahrhundert und dem Jahr 1665 zu fotografieren, zu transkribieren und zu beschreiben. In einem zweiten Schritt machen wir nun die Ergebnisse der Arbeit in einer Online-Datenbank für alle Interessierten zugänglich.
                 </p>
             </div>
-            <div class="col-md-6">
+            <div class="card">
+            <h3>EN</h3>
                 <p>
                     The project „The inscriptions of Brixen / Bressanone. Survey of the epigraphic testimonies of the Middle Ages and the Early Modern Period” (2011-2013) aimed at photographing, transcribing and describing all inscriptions on the territory of the municipality of Brixen/Bressanone (South Tyrol) from the period between the 13th century and the year 1665. As a second step, we make the results of this work accessible in an online database.
                 </p>
             </div>
+
         </div>
-    </div>
+        
 {% endblock %}
