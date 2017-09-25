@@ -26,9 +26,9 @@ $("#goto option").each(function() {
 </script>
 <div class="container">
 <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading text-center">
 
-        <h2><span class="fa fa-search" style="padding-left:10px; padding-right: 10px;"></span>Search {% class_definition %} {% block list_title %}{% endblock %}</h2>
+        <h1><!-- <span class="fa fa-search" style="padding-left:10px; padding-right: 10px;"></span> -->Explore {% class_definition %} {% block list_title %}{% endblock %}</h1>
        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myFilter">
          Search options
         </button>
@@ -208,12 +208,14 @@ $("#goto option").each(function() {
             <form action="." class="uniForm" method="get">
                 {% if togglable_colums %}
                 </br>
-                    <legend>Select additional columns</legend>
+                    <h3>Select additional columns</h3>
+                    <hr>
                     {% column_selector  %}
                 {% endif %}
                 
                 </br>
-            <legend>Refine your search</legend>
+            <h3>Refine your search</h3>
+            <hr>
             {% crispy filter.form filter.form.helper %}
             </form>
 

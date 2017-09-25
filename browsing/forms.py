@@ -34,13 +34,13 @@ class InschriftFilterFormHelper(FormHelper):
                     'resch_kopial_signatur',
                     css_id="basic_search_fields"
                 ),
-                AccordionGroup(
-                    'Advanced search options',
-                    css_id="advanced_search_options"),
-                AccordionGroup(
-                    'Other search options',
-                    css_id="other_search_options"
-                ),
+                # AccordionGroup(
+                #     'Advanced search options',
+                #     css_id="advanced_search_options"),
+                # AccordionGroup(
+                #     'Other search options',
+                #     css_id="other_search_options"
+                # ),
                 css_id="accordion",
                 )
             )

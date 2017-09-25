@@ -18,6 +18,10 @@ class PlaceListView(generic.ListView):
     def get_queryset(self):
         return Place.objects.all()
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PlaceListView, self).dispatch(*args, **kwargs)
+
 
 @login_required
 def create_place(request):

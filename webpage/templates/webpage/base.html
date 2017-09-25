@@ -111,10 +111,10 @@
                             <li>
                                 <a href="{% url 'images:image_list' %}">Bilder</a>
                             </li>
-                            <li>
+                            {% if user.is_authenticated %}
+                             <li>
                                 <a href="{% url 'places:place_list' %}">Locations</a>
                             </li>
-                            {% if user.is_authenticated %}
                                 <li role="separator" class="divider"></li>
                                 <li><a href="{% url 'bib:synczotero' %}">Import new Items from Zotero</a></li>
                             {% endif %}
@@ -170,7 +170,6 @@
 <section class="main-content">
     {% block hp-image %}
     {% endblock %}
-
     <div id="content" class="container">{% block content %}{% endblock %}</div>
 </section>
 <div style="text-align:center">
