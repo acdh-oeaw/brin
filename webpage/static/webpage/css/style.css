@@ -213,6 +213,19 @@ legend {
     margin-top: -300px;
     }
 }
+/*portrait & landscape for smartphones*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+  #hp-intro-text {
+    padding-left: 20px;
+    margin-top: -200px;
+    }
+    #hp-intro-text > h1 { 
+      font-size: 2em; 
+   }
+
+ }
 
 #hp-intro-text > h1 {
     color: #1a2930;
