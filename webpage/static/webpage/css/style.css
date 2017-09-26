@@ -190,6 +190,10 @@ legend {
     box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);
     opacity: 0.75;
 }
+.empty-div {
+  height:50px;
+  width:100%;
+}
 #hp-intro-text {
     z-index: 1;
     margin-top: -300px;
@@ -215,6 +219,7 @@ legend {
 }
 /*portrait & landscape for smartphones*/
 @media only screen
+and (min-device-width: 375px)
 and (max-device-width: 667px) {
   #hp-intro-text {
     padding-left: 20px;
@@ -222,6 +227,10 @@ and (max-device-width: 667px) {
     }
     #hp-intro-text > h1 { 
       font-size: 2em; 
+   }
+   #hp-intro-text > .empty-div {
+    height:0px;
+  width:0px;
    }
 
  }
