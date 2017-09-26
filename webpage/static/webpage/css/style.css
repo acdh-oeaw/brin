@@ -230,7 +230,7 @@ and (max-device-width: 667px) {
    }
    #hp-intro-text > .empty-div {
     height:0px;
-  width:0px;
+    width: 0px;
    }
 
  }
