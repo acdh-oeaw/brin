@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from .models import Image
+from .forms import ImageForm
 
 
 class ImageDetailView(DetailView):
@@ -23,3 +24,10 @@ class ImageListView(ListView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(ImageListView, self).dispatch(*args, **kwargs)
+
+
+class ImageCreate(CreateView):
+
+    model = Image
+    template_name = 'images/image_create.html'
+    form_class = ImageForm

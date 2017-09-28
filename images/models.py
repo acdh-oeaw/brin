@@ -1,6 +1,8 @@
 import os
 from django.db import models
 from django.conf import settings
+from django.core.urlresolvers import reverse
+
 
 try:
     base_url = settings.IIIF_BASE
@@ -11,7 +13,15 @@ IIIF_PATH = "{}".format(base_url)
 FILE_EXTENSION_CHOICES = (
     ('.tif', 'tif'),
     ('.jpg', '.jpg'),
+    ('.jp2', '.jp2'),
 )
+
+
+def set_directory_path(instance, filename):
+    if instance.directory:
+        return '{0}/{1}'.format(instance.directory, filename)
+    else:
+        return filename
 
 
 class ServerPath(models.Model):
@@ -24,9 +34,10 @@ class ServerPath(models.Model):
 class Image(models.Model):
     path = models.ForeignKey(ServerPath, blank=True, null=True)
     directory = models.CharField(blank=True, max_length=250)
-    filename = models.CharField(blank=True, max_length=250)
+    custom_filename = models.CharField(blank=True, max_length=250)
     file_extension = models.CharField(
-        blank=True, max_length=20, choices=FILE_EXTENSION_CHOICES, default='.jpg')
+        blank=True, max_length=20, choices=FILE_EXTENSION_CHOICES, default='.jp2')
+    upload = models.FileField(upload_to=set_directory_path, blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if self.path is None:
@@ -34,6 +45,9 @@ class Image(models.Model):
             self.path = temp_path
         else:
             pass
+        if self.upload:
+            self.custom_filename = self.upload.name
+
         super(Image, self).save(*args, **kwargs)
 
     def get_next(self):
@@ -51,19 +65,24 @@ class Image(models.Model):
     @property
     def full_path(self):
         if self.directory == "":
-            return "{}/{}/info.json".format(self.path, self.filename)
+            return "{}/{}/info.json".format(self.path, self.custom_filename)
         else:
-            return "{}{}/{}/info.json".format(self.path, self.directory, self.filename)
+            return "{}{}/{}/info.json".format(self.path, self.directory, self.custom_filename)
 
     @property
     def iiif_endpoint(self):
         if self.directory == "":
-            return "{}/{}".format(self.path, self.filename)
+            url = "{}/{}".format(self.path, self.custom_filename)
         else:
-            return "{}{}/{}".format(self.path, self.directory, self.filename)
+            url = "{}{}/{}".format(self.path, self.directory, self.custom_filename)
+        if url.endswith('.jp2'):
+            url = url[:-4]
+        else:
+            pass
+        return url
 
     def __str__(self):
         return self.full_path
 
-    def __str__(self):
-        return self.full_path
+    def get_absolute_url(self):
+        return reverse('images:image_detail', kwargs={'pk': self.id})
