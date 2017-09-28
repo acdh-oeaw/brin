@@ -8,7 +8,8 @@
         <h1>Images </h1>
         <div>
             {% if user.is_authenticated %}
-                <a class="btn btn-primary" href="#" role="button">create new Image</a>
+                <a class="btn btn-primary" href="{% url 'images:image_create' %}" role="button">create new Image</a>
+                <a class="btn btn-primary" href="{% url 'images:image_zipupload' %}" role="button">upload multiple Images (zip)</a>
             {% endif %}
       </div>
       <br>
