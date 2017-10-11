@@ -28,10 +28,14 @@ class UploadZip(FormView):
         context['unzip_path'] = extract_path
         zf = zipfile.ZipFile(zipped, 'r')
         extracted = zf.extractall(extract_path)
-        # for x in zf.infolist():
-        #     if (x.filename).endswith('.jp2'):
-        #         print(x.filename)
-        #         x.extract(x.filename, [context['unzip_path']])
+        for x in zf.infolist():
+            if (x.filename).endswith('.jp2'):
+                print(x.filename)
+                new_img = Image.objects.create(
+                    directory=cd['filepath'],
+                    custom_filename=x.filename)
+                # new_img.save()
+                # x.extract(x.filename, [context['unzip_path']])
         context['filepath'] = filepath
         context['extract_path'] = extract_path
         context['zipped'] = zf.infolist()

@@ -1,6 +1,5 @@
-
 from .base import *
-
+IIIF_BASE = "https://brin-iiif.acdh.oeaw.ac.at/"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#(&h$k5$9hxjnj9d@n2gn$q3fi2%0blcwbp(iu083(#6lilfo4'
