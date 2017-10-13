@@ -45,10 +45,10 @@
         <div class="panel-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <legend>Basic Metadata</legend>
+                        <legend>Klassifizierung</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>Gattung</th>
+                                <th>Inschriftengattung</th>
                                 <td>
                                     {% for x in object.gattung.all %}
                                         <li>
@@ -58,7 +58,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Träger</th>
+                                <th>Inschriftenträger</th>
                                 <td>
                                     {% for x in object.traeger.all %}
                                         <li>
@@ -67,67 +67,16 @@
                                     {% endfor %}
                                 </td>
                             </tr>
-                            <tr>
-                                <th>Resch Kopial Signatur</th>
-                                <td>{{ object.resch_kopial_signatur }}</td>
+                             <tr>
+                                <th>Farbe des Inschriftenträgers</th>
+                                <td>{{ object.farbtraeger }}</td>
                             </tr>
                             <tr>
-                                <th>Resch Kopial Text</th>
-                                <td>{{ object.resch_kopial_text }}</td>
-                            </tr>
-                            <tr>
-                                <th>Andere Kopial Signatur</th>
-                                <td>{{ object.andere_kopial_signatur }}</td>
-                            </tr>
-                            <tr>
-                                <th>Referenzen/Quellen</th>
-                                <td>{{ object.quellen_unstruktieriert }}</td>
-                            </tr>
-                            <tr>
-                                <th>Künstler</th>
-                                <td>
-                                    {% for x in object.kuenstler.all %}
-                                        <li>
-                                            {{ x.name }}
-                                        </li>
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>kennname</th>
-                                <td>
-                                    {% for x in object.kennname.all %}
-                                        <li>
-                                            {{ x.name }}
-                                        </li>
-                                    {% endfor %}
-                                </td>
+                                <th>Farbe der Schrift</th>
+                                <td>{{ object.farbschrift }}</td>
                             </tr>
                         </table>
-
-                        <legend>Text</legend>
-                        <table class="table table-bordered table-hover">
-                            <tr>
-                                <th>Transkription (diplomatisch)</th>
-                                <th>Transkription (normalisiert)</th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {{ object.transkription|safe }}
-                                    {% if object.schriftbeschreibung %}
-                                        <br/>
-                                        <hr/>
-                                        <small>
-                                            {{ object.schriftbeschreibung}}
-                                        </small>
-                                    </hr/>
-                                    {% endif %}
-                                </td>
-                                <td>{{ object.transkription_normalized }}</td>
-                            </tr>
-                        </table>
-
-                        <legend>Standort</legend>
+                         <legend>Standort</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
                                 <th width="66%">aktueller Standort</th>
@@ -155,50 +104,224 @@
 
                         <div id="mymap"></div>
                         <br>
+                        <legend>Datierung</legend>
+                        <table class="table table-bordered table-hover">
+                        <tr>
+                                <th>Datierung</th>
+                                <td>{{ object.datierung_inschrift_written}}</td>
+                                
+                            </tr>
+                             <tr>
+                                <th>Datierung</th>
+                                <td>{{ object.datierung_inschrift}}</td>
+                            </tr>
+                            
+                        </table>
 
-                        <legend>Schrift</legend>
+                        <legend>Edition</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>Schrifthöhe (min/max)</th>
-                                <td>{{ object.schrift_hoch_min }}/{{ object.schrift_hoch_max }}</td>
+                                <th>Transkription</th>
+                                <th>Transkription normalisiert</th>
                             </tr>
                             <tr>
-                                <th>Schriftbreite (min/max)</th>
-                                <td>{{ object.schrift_breit_min }}/{{ object.schrift_breit_max }}</td>
-                            </tr>
-                            <tr>
-                                <th>Majuskel (min/max)</th>
-                                <td>{{ object.majuskel_min }}/{{ object.majuskel_max }}</td>
-                            </tr>
-                            <tr>
-                                <th>Minuskel (min/max)</th>
-                                <td>{{ object.minuskel_min }}/{{ object.minuskel_max }}</td>
-                            </tr>
-                            <tr>
-                                <th>Mittellänge (min/max)</th>
-                                <td>{{ object.mittellaenge_min }}/{{ object.mittellaenge_max }}</td>
-                            </tr>
-                            <tr>
-                                <th>Oberlänge (min/max)</th>
-                                <td>{{ object.oberlaenge_min }}/{{ object.oberlaenge_max }}</td>
+                                <td>
+                                    {{ object.transkription|safe }}
+                                    {% if object.schriftbeschreibung %}
+                                        <br/>
+                                        <hr/>
+                                        <small>
+                                            {{ object.schriftbeschreibung}}
+                                        </small>
+                                    </hr/>
+                                    {% endif %}
+                                </td>
+                                <td>{{ object.transkription_normalized }}</td>
                             </tr>
                         </table>
 
-                        <legend>Farbe</legend>
+                        <legend>Überlieferung</legend>
                         <table class="table table-bordered table-hover">
+                  
                             <tr>
-                                <th>Farbträger</th>
-                                <td>{{ object.farbtraeger }}</td>
+                                <th>Signatur bei Resch</th>
+                                <td>{{ object.resch_kopial_signatur }}</td>
                             </tr>
                             <tr>
-                                <th>Farbtschrift</th>
-                                <td>{{ object.farbschrift }}</td>
+                                <th>Transkription bei Resch</th>
+                                <td>{{ object.resch_kopial_text }}</td>
+                            </tr>
+                            <tr>
+                                <th>weitere Signaturen</th>
+                                <td>{{ object.andere_kopial_signatur }}</td>
+                            </tr>
+                            <tr>
+                                <th>weitere Transkriptionen</th>
+                                <td>{{ object.anderer_kopial_text }}</td>
+                            </tr>
+                            <tr>
+                                <th>museale_inv_nummer</th>
+                                <td>{{ object.museale_inv_nummer }}</td>
                             </tr>
                             <tr>
                                 <th>Erhaltungszustand</th>
                                 <td>{{ object.erhaltungszustand }}</td>
                             </tr>
+
                         </table>
+
+                        <legend>Schriftfeld</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Höhe Schriftfeld (min/max)</th>
+                                <td>{{ object.schrift_hoch_min }}/{{ object.schrift_hoch_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Breite Schriftfeld (min/max)</th>
+                                <td>{{ object.schrift_breit_min }}/{{ object.schrift_breit_max }}</td>
+                            </tr>
+                            </table>
+
+                         <legend>Schriftgröße</legend>
+                        <table class="table table-bordered table-hover">
+
+                            <tr>
+                                <th>Höhe Majuskel (min/max)</th>
+                                <td>{{ object.majuskel_min }}/{{ object.majuskel_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Höhe Minuskel (min/max)</th>
+                                <td>{{ object.minuskel_min }}/{{ object.minuskel_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Höhe Mittellänge (min/max)</th>
+                                <td>{{ object.mittellaenge_min }}/{{ object.mittellaenge_max }}</td>
+                            </tr>
+                            <tr>
+                                <th>Höhe Oberlänge (min/max)</th>
+                                <td>{{ object.oberlaenge_min }}/{{ object.oberlaenge_max }}</td>
+                            </tr>
+                        </table>
+
+
+                        <legend>Schriftbild</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Schriftbeschreibung</th>
+                                <td>{{ object.schriftbeschreibung }}</td>
+                            </tr>
+                            <tr>
+                                <th>Schriftklassifikation</th>
+                                <td>
+                                    {% for x in object.schriftklassifikation.all %}
+                                        <li>
+                                            {{ x.pref_label }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            </table>
+
+
+                        <legend>Allgemeine Beschreibung</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>ausführender Künstler</th>
+                                <td>
+                                    {% for x in object.kuenstler.all %}
+                                        <li>
+                                            {{ x.name }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>allgemeine Beschreibung</th>
+                                <td>{{ object.allgemeine_beschreibung }}</td>
+                            </tr>
+                             <tr>
+                                <th>Restaurierungsphasen</th>
+                                <td>{{ object.restaurierungsphasen }}</td>
+                            </tr>
+                             <tr>
+                                <th>Bemerkungen</th>
+                                <td>{{ object.bemerkungen }}</td>
+                            </tr>
+                            {% if user.is_authenticated %}
+                             <tr>
+                                <th>Notizen</th>
+                                <td>{{ object.notizen }}</td>
+                            </tr>
+                            {% endif %}
+                            </table>
+
+
+                     <legend>Quellen und Literatur</legend>
+                        <table class="table table-bordered table-hover">
+                           <tr>
+                                <th>Quellen und Literatur</th>
+                                <td>
+                                    {% for x in object.quellen.all %}
+                                        <li>
+                                            {{ x.book }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                          <tr>
+                                <th>Quellen und Literatur (unstrukturiert)</th>
+                                <td>{{ object.quellen_unstruktieriert }}</td>
+                            </tr>
+                            </table>
+
+
+                        <legend>Schlagworte</legend>
+                        <table class="table table-bordered table-hover">
+                           <tr>
+                                <th>Schlagworte</th>
+                                <td>
+                                    {% for x in object.schlagworte.all %}
+                                        <li>
+                                            {{ x.pref_label }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                           <tr>
+                                <th>Kenname(n)</th>
+                                <td>
+                                    {% for x in object.kennname.all %}
+                                        <li>
+                                            {{ x.name }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            </table>
+
+                        <legend>Metadaten</legend>
+                        <table class="table table-bordered table-hover">
+                           
+                            <tr>
+                                <th>Anlagedatum</th>
+                                <td>{{ object.created }}</td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>{{ object.status }}</td>
+                            </tr>
+                             <tr>
+                                <th>Legacy-ID</th>
+                                <td>{{ object.legacy_id }}</td>
+                            </tr>
+                            <tr>
+                                <th>Aufnahmedatum</th>
+                                <td>{{ object.aufnahmedatum }}</td>
+                            </tr>
+                        </table>
+
+
+
                     </div>
                     <div class="col-md-6">
                         <form method="get">
