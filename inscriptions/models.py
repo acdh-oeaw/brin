@@ -95,11 +95,11 @@ class Inschrift(models.Model):
         )
     transkription = models.TextField(blank=True,
         verbose_name="Transkription",
-        help_text="Eigentliche Transkription oder Edition des Textes der Inschrift nach feststehenden Editionsrichtlinien (Auflösung von Abkürzungen, Verwendung von Trennzeichen und Klammern etc.)."
+        help_text="Transkription oder Edition des Textes der Inschrift nach feststehenden Editionsrichtlinien (Auflösung von Abkürzungen, Verwendung von Trennzeichen und Klammern etc.)."
         )
     transkription_normalized = models.TextField(blank=True,
         verbose_name="Transkription normalisiert",
-        help_text="Eigentliche Transkription oder Edition des Textes der Inschrift nach feststehenden Editionsrichtlinien (Auflösung von Abkürzungen, Verwendung von Trennzeichen und Klammern etc.)."
+        help_text="Normalisierte  Transkription oder Edition des Textes der Inschrift nach feststehenden Editionsrichtlinien (Auflösung von Abkürzungen, Verwendung von Trennzeichen und Klammern etc.)."
         )
     kennname = models.ManyToManyField(Person, blank=True, related_name="kennname",
         verbose_name="Kenname(n)",
