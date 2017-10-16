@@ -65,20 +65,18 @@ class Image(models.Model):
     @property
     def full_path(self):
         if self.directory == "":
-            return "{}/{}/info.json".format(self.path, self.custom_filename)
+            path = "{}/{}/info.json".format(self.path, self.custom_filename)
         else:
-            return "{}{}/{}/info.json".format(self.path, self.directory, self.custom_filename)
+            path = "{}{}/{}/info.json".format(self.path, self.directory, self.custom_filename)
+        path = path.replace('.jp2', '')
 
     @property
     def iiif_endpoint(self):
         if self.directory == "":
-            url = "{}/{}".format(self.path, self.custom_filename)
+            path = "{}/{}".format(self.path, self.custom_filename)
         else:
-            url = "{}{}/{}".format(self.path, self.directory, self.custom_filename)
-        if url.endswith('.jp2'):
-            url = url[:-4]
-        else:
-            pass
+            path = "{}{}/{}".format(self.path, self.directory, self.custom_filename)
+        path = path.replace('.jp2', '')
         return url
 
     def __str__(self):
