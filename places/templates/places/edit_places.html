@@ -121,8 +121,8 @@
         var gps2 = placeName.split(/\|/)[3];
         var map = L.map('map').setView([gps1, gps2], 15);
         var geonameId = placeName.split(/\|/)[4];
-        $('#id_lng').val(parseFloat(gps1));
-        $('#id_lat').val(parseFloat(gps2));
+        $('#id_lng').val(parseFloat(gps2));
+        $('#id_lat').val(parseFloat(gps1));
         $('#id_geonames_id').val(parseInt(geonameId));
        var gndURL = "http://www.geonames.org/"+geonameId.trim();
         var lookupButton = $("#currentID");
