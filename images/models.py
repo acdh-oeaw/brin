@@ -69,6 +69,7 @@ class Image(models.Model):
         else:
             path = "{}{}/{}/info.json".format(self.path, self.directory, self.custom_filename)
         path = path.replace('.jp2', '')
+        return path
 
     @property
     def iiif_endpoint(self):
@@ -77,7 +78,7 @@ class Image(models.Model):
         else:
             path = "{}{}/{}".format(self.path, self.directory, self.custom_filename)
         path = path.replace('.jp2', '')
-        return url
+        return path
 
     def __str__(self):
         return self.full_path
