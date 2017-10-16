@@ -14,7 +14,8 @@ class Place(models.Model):
         ("building", "building"),
         ("district", "district"),
         ("city", "city"),
-        ("country", "country")
+        ("country", "country"),
+        ("street", "street")
     )
 
     """Holds information about places."""
