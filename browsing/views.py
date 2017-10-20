@@ -1,4 +1,6 @@
 from django_tables2 import SingleTableView, RequestConfig
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from inscriptions.models import *
 from .filters import *
 from .forms import *
@@ -63,3 +65,27 @@ class InschriftListView(GenericListView):
         exclude_vals = [x for x in all_cols if x not in selected_cols]
         table.exclude = exclude_vals
         return table
+
+
+class MapView(GenericListView):
+    model = Inschrift
+    table_class = InschriftTable
+    filter_class = InschriftListFilter
+    formhelper_class = InschriftFilterFormHelper
+    template_name = 'browsing/map_view.html'
+    #init_columns = ['legacy_id', 'gattung', 'traeger', 'resch_kopial_signatur']
+
+    def get_context_data(self, **kwargs):
+        context = super(MapView, self).get_context_data()
+        context[self.context_filter_name] = self.filter
+        inschrifts = []
+        for x in self.get_queryset():
+            inschrifts.append(x)
+        context["inschrifts"] = set(inschrifts)
+        # togglable_colums = [x for x in self.get_all_cols() if x not in self.init_columns]
+        # context['togglable_colums'] = togglable_colums
+        return context
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(MapView, self).dispatch(*args, **kwargs)

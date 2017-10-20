@@ -80,6 +80,10 @@ class Image(models.Model):
         path = path.replace('.jp2', '')
         return path
 
+    @property
+    def fetch_binary(self):
+        return "{}/full/full/0/default.jpg".format(self.iiif_endpoint)
+
     def __str__(self):
         return self.full_path
 
