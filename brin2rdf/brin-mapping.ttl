@@ -1,0 +1,131 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix :      <https://brin.acdh.oeaw.ac.at/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:MAPID-0a4441fbeabe4edda52ff9545687ce7b_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `id`, `inschrift_id`, `skosconcept_id` from `brin`.`inscriptions_inschrift_traeger`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "https://brin.acdh.oeaw.ac.at/inschriften/{inschrift_id}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P65_shows_visual_item>
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     <http://erlangen-crm.org/current/E25_Man-Made_Feature> ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/traeger/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-4e5552919f9f4a8ea16ab87605d49015>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT `skosconcept_id`, `inscriptions_inschrift_traeger`.`id`, `vocabs_skosconcept`.`pref_label`\nFROM `inscriptions_inschrift_traeger`\nINNER JOIN `vocabs_skosconcept` ON `inscriptions_inschrift_traeger`.`skosconcept_id`=`vocabs_skosconcept`.`id`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "https://brin.acdh.oeaw.ac.at/traeger/name/{id}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P1_is_identified_by>
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/traeger/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-49f278c5c8f54b8e9e641fe81cc4c719_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT `skosconcept_id`, `inscriptions_inschrift_traeger`.`id`, `vocabs_skosconcept`.`pref_label`\nFROM `inscriptions_inschrift_traeger`\nINNER JOIN `vocabs_skosconcept` ON `inscriptions_inschrift_traeger`.`skosconcept_id`=`vocabs_skosconcept`.`id`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "{pref_label}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P3_has_note>
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     <http://erlangen-crm.org/current/E41_Appellation> ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/traeger/name/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-01bcc666646a4ca98be3e60a9481dab1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT `genauer_standort_id`, `legacy_id`, `inscriptions_inschrift_traeger`.`id`, `inscriptions_inschrift_traeger`.`inschrift_id` FROM `inscriptions_inschrift` INNER JOIN `inscriptions_inschrift_traeger` on `inscriptions_inschrift`.`id`=`inscriptions_inschrift_traeger`.`inschrift_id`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "https://brin.acdh.oeaw.ac.at/place/{genauer_standort_id}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P53_has_former_or_current_location>
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/traeger/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-e168811d768246aa906c760223dab17d_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `id`, `schrift_hoch_min`, `schrift_hoch_max`, `schrift_breit_min`, `schrift_breit_max`, `majuskel_min`, `majuskel_max`, `mittellaenge_max`, `mittellaenge_min`, `farbtraeger`, `farbschrift`, `erhaltungszustand`, `transkription`, `transkription_normalized`, `resch_kopial_signatur`, `resch_kopial_text`, `andere_kopial_signatur`, `anderer_kopial_text`, `notizen`, `bemerkungen`, `created`, `status`, `restaurierungsphasen`, `allgemeine_beschreibung`, `schriftbeschreibung`, `alter_standort`, `aufnahmedatum`, `datierung_inschrift`, `datierung_inschrift_written`, `genauer_standort_id`, `legacy_id`, `museale_inv_nummer`, `quellen_unstruktieriert`, `oberlaenge_max`, `oberlaenge_min`, `minuskel_max`, `minuskel_min` from `brin`.`inscriptions_inschrift`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "{transkription_normalized}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P3_has_note>
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     <http://erlangen-crm.org/current/E34_Inscription> ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/inschriften/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-5a20cf92b5c446f0acd4890af6938cb4_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `id`, `name`, `geonames_id`, `lat`, `lng`, `place_type`, `part_of_id` from `brin`.`places_place`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "https://brin.acdh.oeaw.ac.at/place/name/{id}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P87_is_identified_by>
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     <http://erlangen-crm.org/current/E53_Place> ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/place/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-7869a79b1bd44f6f8a5cddfc9fbf5b7a_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `id`, `name`, `geonames_id`, `lat`, `lng`, `place_type`, `part_of_id` from `brin`.`places_place`"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "{name}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  <http://erlangen-crm.org/current/P3_has_note>
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     <http://erlangen-crm.org/current/E44_Place_Appellation> ;
+                                 rr:template  "https://brin.acdh.oeaw.ac.at/place/name/{id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
