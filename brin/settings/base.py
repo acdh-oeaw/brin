@@ -130,4 +130,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SPARQL_ENDPOINT = "http://ontop4obda.eos.arz.oeaw.ac.at/openrdf-workbench/repositories/brin/query?action=exec&queryLn=SPARQL&query="
+SPARQL_ENDPOINT = "http://ontop4obda.eos.arz.oeaw.ac.at/openrdf-workbench/repositories/brin/query?action=exec&queryLn=SPARQL&limit=10000&query="
