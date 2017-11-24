@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bib',
     'inscriptions',
     'images',
+    'sparql'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -88,18 +89,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'brin.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -140,3 +129,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+SPARQL_ENDPOINT = "http://ontop4obda.eos.arz.oeaw.ac.at/openrdf-workbench/repositories/brin/query?action=exec&queryLn=SPARQL&query="

@@ -88,7 +88,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            
+
                             <li><a href="{% url 'webpage:staticpage' template='about' %}">About</a></li>
                             <li><a href="{% url 'datamodel:plate' %}">Application's data model</a></li>
                             <li><a href="{% url 'webpage:staticpage' template='imprint' %}">Impressum / Imprint</a></li>
@@ -124,7 +124,9 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Analyze the Data <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu"></ul>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'sparql:query' %}">SPARQL</a></li>
+                        </ul>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="dropdown">
