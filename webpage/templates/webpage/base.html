@@ -113,6 +113,9 @@
                             </li>
                             {% if user.is_authenticated %}
                              <li>
+                                <a href="{% url 'browsing:map' %}">Map</a>
+                            </li>
+                             <li>
                                 <a href="{% url 'places:place_list' %}">Locations</a>
                             </li>
                                 <li role="separator" class="divider"></li>
@@ -172,11 +175,13 @@
 <section class="main-content">
     {% block hp-image %}
     {% endblock %}
+    {% block explore-map %}
+    {% endblock %}
     <div id="content" class="container">{% block content %}{% endblock %}</div>
 </section>
-<div style="text-align:center">
-    <span class="socialShare"><!-- The share buttons will be inserted here --></span>
-</div>
+{% block social-share %}
+
+{% endblock %}
 <footer>
     <div class="container">
         <div class="row text-center">
@@ -203,7 +208,7 @@
     $(function (){
         var options = {
             twitter: {
-            text: '',
+            text: 'Explore Die Brixner Inschriften project',
             via: ''
         },
         facebook : true,

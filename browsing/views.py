@@ -72,7 +72,7 @@ class MapView(GenericListView):
     table_class = InschriftTable
     filter_class = InschriftListFilter
     formhelper_class = InschriftFilterFormHelper
-    template_name = 'browsing/map_view_test.html'
+    template_name = 'browsing/map_view.html'
     #init_columns = ['legacy_id', 'gattung', 'traeger', 'resch_kopial_signatur']
 
     def get_context_data(self, **kwargs):
