@@ -1,0 +1,154 @@
+{% extends "webpage/base.html" %}
+{% load staticfiles %}
+{% load django_tables2 %}
+{% load i18n %}
+{% block Titel %} See all {{ object.classname }} {% endblock %}
+{% block scriptHeader %}
+  <!--leafletjs -->
+     <!-- <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/></link>
+    <script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script> -->
+    <!--leafletjs -->
+<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+ <!--    <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/>
+    <script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script> -->
+    <!-- <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.css' %}"/></link>
+    <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.Default.css' %}"/></link>
+    <script src="{% static 'webpage/libraries/leaflet.markercluster/src/leaflet.markercluster-src.js' %}"></script> -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+    
+<style>
+#map { 
+          height: 900px; 
+}
+.pop-up-image {
+    height: auto !important;
+    width: 180px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+.info, .leaflet-container h1 {
+    background-color: #ffffff;
+    padding: 15px;
+    font-size: 20pt;  
+}
+.h-hr {
+    height: 4px;
+    border: 0;
+    background: #f7ce3e;
+}
+#colors {
+    position: absolute;
+    top: 235px;
+    right: 10px;
+    background: #fff;
+    width: 150px;
+    padding: 10px;
+}
+    </style>
+
+{% endblock %}
+{% block explore-map %}
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<div id='map'></div>
+<form id='colors'>
+  <div><input type='checkbox' name='filters' onclick='showInschriften();' value='images' checked> with images</div>
+  <div><input type='checkbox' name='filters' onclick='showInschriften();' value='noImages' checked> no images</div>
+</form>
+
+<script>
+ var geojsonFeature =  {
+  "type": "FeatureCollection",
+  "features":
+ [
+        {% for object in inschrifts %}
+        {% if object.genauer_standort.lat %}
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ {{ object.genauer_standort.lng }}, {{ object.genauer_standort.lat }} ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "{% if object.images.all %}{% with  object.images.all|first as x %}<a href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><img src='{{x.fetch_binary}}' title='ID {{ object }}' class='pop-up-image'/></a><br>{% endwith %} {% endif %}<a class='read-more' href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><h4><b>Inschrift ID {{ object }}</b></h4></a><br>{% if object.gattung.all %}<b>Gattung: </b>{% for x in object.gattung.all %}{{ x.pref_label }}<br>{% endfor %}{% endif %}{% if object.traeger.all %}<b>Traeger: </b>{% for x in object.traeger.all %}{{ x.pref_label }}<br>{% endfor %}{% endif %}{% if object.datierung_inschrift_written %}<b>Datierung: </b>{{ object.datierung_inschrift_written }}{% endif %}",
+            "images": "{% if object.images.all %}images{% else %}noImages{% endif %}"
+        },
+        "id": "{{ object.id }}"
+        }
+        {% if forloop.last %}
+
+        {% else %}
+        ,
+        {% endif %}
+        {% endif %}
+        {% empty %}
+        {% endfor %}]
+    };
+
+
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2VubmllcmVyIiwiYSI6ImNpbHk1YWV0bDAwZnB2dW01d2l1Y3phdmkifQ.OljQLEhqeAygai2y6VoSwQ';
+
+var map = L.mapbox.map('map')
+    .setView([46.7145, 11.6562], 16)
+    .addLayer(L.mapbox.tileLayer('mapbox.light'));
+
+var overlays = L.layerGroup().addTo(map);
+
+var layers;
+
+// Since featureLayer is an asynchronous method, we use the `.on('ready'`
+// call to only use its marker data once we know it is actually loaded.
+
+L.mapbox.featureLayer()   
+    .loadURL('{% static "webpage/img/test.geojson" %}')
+    .on('ready', function(e) {
+        layers = e.target;
+        showInschriften();
+    });
+
+var filters = document.getElementById('colors').filters;
+
+
+//add info panel on the map
+        var info = L.control();
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+        // method that we will use to update the control based on feature properties passed
+        info.update = function (props) {
+            this._div.innerHTML = '<h1>Die Brixner Inschriften Map</h1><hr class="h-hr">';
+        };
+        info.addTo(map);
+
+function showInschriften() {
+    var list = [];
+    for (var i = 0; i < filters.length; i++) {
+        if (filters[i].checked) list.push(filters[i].value);
+    }
+    // then remove any previously-displayed marker groups
+    overlays.clearLayers();
+    // create a new marker group
+    var clusterGroup = new L.MarkerClusterGroup().addTo(overlays);
+    // and add any markers that fit the filtered criteria to that group.
+    layers.eachLayer(function(layer) {
+        if (list.indexOf(layer.feature.properties.images) !== -1) {
+            clusterGroup.addLayer(layer);
+        }
+        if (layer.feature.properties && layer.feature.properties.popupContent) {
+                popupContent = layer.feature.properties.popupContent;
+            }
+
+            layer.bindPopup(layer.feature.properties.popupContent, {
+        closeButton: true
+    });
+    });
+}
+ 
+    </script>
+{% endblock %}

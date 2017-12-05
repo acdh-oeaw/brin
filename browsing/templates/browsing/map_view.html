@@ -4,55 +4,36 @@
 {% load i18n %}
 {% block Titel %} See all {{ object.classname }} {% endblock %}
 {% block scriptHeader %}
-  <!--leafletjs -->
-     <!-- <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/></link>
-    <script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script> -->
-    <!--leafletjs -->
-    <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/>
-    <script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.css' %}"/></link>
-    <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.Default.css' %}"/></link>
-    <script src="{% static 'webpage/libraries/leaflet.markercluster/src/leaflet.markercluster-src.js' %}"></script>
-    <style>
-   #map { 
-          height: 900px; 
-    }
-    .pop-up-image {
-        height: auto !important;
-        width: 180px !important;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-        background-color: #1a2930;
-        color: #ffffff;
-    }
 
-    .leaflet-popup-content-wrapper .leaflet-popup-content {
-        background-color: #1a2930;
-    }
-
-    .leaflet-popup-tip-container {
-
-    }
-    /*a:link, a:active, a:focus, a:hover, a:visited {
-        color: #ffffff;
-    }*/
-    .info {
-        background-color: #ffffff;
-        padding: 20px;
-    }
-    .h-hr {
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/>
+<script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.css' %}"/></link>
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.Default.css' %}"/></link>
+<script src="{% static 'webpage/libraries/leaflet.markercluster/src/leaflet.markercluster-src.js' %}"></script>
+<style>
+#map { 
+    height: 900px; 
+}
+.pop-up-image {
+    height: auto !important;
+    width: 180px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info {
+    background-color: #ffffff;
+    padding: 20px;
+}
+.h-hr {
     height: 4px;
     border: 0;
     background: #f7ce3e;
-
-    }
-    </style>
+}
+</style>
 
 {% endblock %}
 {% block explore-map %}
-   
+  
 <div id="map"></div>
  <script>
     var mapLayerGroups = [];
@@ -103,25 +84,40 @@
         info.addTo(mymap);
 
         var markers = L.markerClusterGroup({});
-        var build_data =  [
+        //data
+        var geojsonFeature =  {
+        "type": "FeatureCollection",
+          "features":
+        [
         {% for object in inschrifts %}
         {% if object.genauer_standort.lat %}
-        {"geometry": 
-        {"type": "Point", "coordinates": [ {{ object.genauer_standort.lng }}, {{ object.genauer_standort.lat }} ]},
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ {{ object.genauer_standort.lng }}, {{ object.genauer_standort.lat }} ]
+        },
         "type": "Feature",
-        "properties": {"popupContent":
-        "{% if object.images.all %}{% with  object.images.all|first as x %}<a href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><img src='{{x.fetch_binary}}' title='ID {{ object }}' class='pop-up-image'/></a><br>{% endwith %} {% endif %}<a class='read-more' href='{%url 'inschriften:inschrift_detail' pk=object.id %}'>Inschrift ID {{ object }}</a><br>{% for x in object.gattung.all %}{{ x.pref_label }}<br>{% endfor %}{% for x in object.traeger.all %}{{ x.pref_label }}<br>{% endfor %}{% if object.datierung_inschrift_written %}Datierung {{ object.datierung_inschrift_written }}{% endif %}"},
-        "id": "{{ object.id }}"}
+        "properties": {
+            "popupContent":
+            "{% if object.images.all %}{% with  object.images.all|first as x %}<a href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><img src='{{x.fetch_binary}}' title='ID {{ object }}' class='pop-up-image'/></a><br>{% endwith %} {% endif %}<a class='read-more' href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><h4><b>Inschrift ID {{ object }}</b></h4></a>{% if object.gattung.all %}<b>Gattung: </b>{% for x in object.gattung.all %}{{ x.pref_label }}<br>{% endfor %}{% endif %}{% if object.traeger.all %}<b>Traeger: </b>{% for x in object.traeger.all %}{{ x.pref_label }}<br>{% endfor %}{% endif %}{% if object.datierung_inschrift_written %}<b>Datierung: </b>{{ object.datierung_inschrift_written }}{% endif %}",
+            "images": "{% if object.images.all %}images{% else %}noImages{% endif %}"
+        },
+        "id": "{{ object.id }}"
+        }
         {% if forloop.last %}
+
         {% else %}
         ,
         {% endif %}
         {% endif %}
         {% empty %}
         {% endfor %}]
-        var geoJsonLayer = L.geoJson( build_data, {onEachFeature: onEachFeature});
+        };
+       
+        var geoJsonLayer = L.geoJson(geojsonFeature, {onEachFeature: onEachFeature});
         markers.addLayer(geoJsonLayer);
         mymap.addLayer(markers);
         mymap.fitBounds(markers.getBounds(), {'maxZoom': 18});
+
     </script>
 {% endblock %}
