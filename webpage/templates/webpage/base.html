@@ -111,10 +111,10 @@
                             <li>
                                 <a href="{% url 'images:image_list' %}">Bilder</a>
                             </li>
+                            {% if user.is_authenticated %}
                             <li>
                                 <a href="{% url 'browsing:map' %}">Map</a>
                             </li>
-                            {% if user.is_authenticated %}
                              <li>
                                 <a href="{% url 'places:place_list' %}">Locations</a>
                             </li>

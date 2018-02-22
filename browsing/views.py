@@ -85,3 +85,7 @@ class MapView(GenericListView):
         # togglable_colums = [x for x in self.get_all_cols() if x not in self.init_columns]
         # context['togglable_colums'] = togglable_colums
         return context
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(MapView, self).dispatch(*args, **kwargs)
