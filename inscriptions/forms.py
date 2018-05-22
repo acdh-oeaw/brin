@@ -23,6 +23,8 @@ class InschriftForm(forms.ModelForm):
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=Dating'),
             'reference': autocomplete.ModelSelect2Multiple(
                 url='burials:book-autocomplete'),
+            'images': autocomplete.ModelSelect2Multiple(
+                url='images-ac:image-autocomplete'),
         }
 
     def __init__(self, *args, **kwargs):
