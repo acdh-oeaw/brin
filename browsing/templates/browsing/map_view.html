@@ -4,85 +4,135 @@
 {% load i18n %}
 {% block Titel %} See all {{ object.classname }} {% endblock %}
 {% block scriptHeader %}
-  <!--leafletjs -->
-     <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/></link>
-    <script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
-    <style>
-   #mymap { 
-   	height: 800px; 
-   }
-    .image-icon img {
-    height: 52px !important;
-    width: 52px !important;
-    border-radius: 50% !important;
-    border: solid;
-    border-color: #f7ce3e;
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* IE 9 */
-    -o-transition: all 1s ease; /* Opera */
-    transition: all 1s ease;
-   
-	}
 
-	.image-icon img:hover, .image-icon img:active {
-	 -webkit-transform:scale(3.75); /* Safari and Chrome */
-    -moz-transform:scale(3.75); /* Firefox */
-    -ms-transform:scale(3.75); /* IE 9 */
-    -o-transform:scale(3.75); /* Opera */
-     transform:scale(3.75);
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/>
+<script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.css' %}"/></link>
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.Default.css' %}"/></link>
+<script src="{% static 'webpage/libraries/leaflet.markercluster/src/leaflet.markercluster-src.js' %}"></script>
+<style>
+#map { 
+    height: 900px; 
+}
+.pop-up-image {
+    height: auto !important;
+    width: 180px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info {
+    background-color: #ffffff;
+    padding: 20px;
+}
+.h-hr {
+    height: 4px;
+    border: 0;
+    background: #f7ce3e;
+}
+@media (max-width: 768px) {
+    .info {
+        width: 60%;
+        padding: 5px;
+    }
+    .info > h3 {
+       font-size: 2rem;
+        margin-bottom: 0px; 
+    }
+    .h-hr {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
 
- 	}
-
-    </style>
+}
+</style>
 
 {% endblock %}
-{% block content %}
+{% block explore-map %}
+  
+<div id="map"></div>
+ <script>
+    var mapLayerGroups = [];
+    function onEachFeature(feature, layer) {
+            var lg = mapLayerGroups[feature.relation_type];
+            if (lg === undefined) {
+                lg = new L.layerGroup();
+                mapLayerGroups[feature.relation_type] = lg;
+            }
+
+            //add the feature to the layer
+            lg.addLayer(layer);
+            //mymap.fitBounds(lg.getBounds(), {'maxZoom': 12});
+
+            if (feature.properties && feature.properties.popupContent) {
+                popupContent = feature.properties.popupContent;
+            }
+
+            layer.bindPopup(feature.properties.popupContent, {
+        closeButton: true
+    });
+
+        };
+
+        var mymap = L.map('map', {
+            fullscreenControl: true,
+        }).setView([0, 0], 2);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.light',
+            accessToken: 'pk.eyJ1Ijoic2VubmllcmVyIiwiYSI6ImNpbHk1YWV0bDAwZnB2dW01d2l1Y3phdmkifQ.OljQLEhqeAygai2y6VoSwQ'
+        }).addTo(mymap);
 
 
-	<h1 class="text-center">Brixen map</h1>
-	
-	<div class="empty-div"></div>
+        //add info panel on the map
+        var info = L.control();
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+        // method that we will use to update the control based on feature properties passed
+        info.update = function (props) {
+            this._div.innerHTML = '<h3>Die Brixner Inschriften Map</h3><hr class="h-hr">';
+        };
+        info.addTo(mymap);
 
-<div id="mymap"></div>
+        var markers = L.markerClusterGroup({});
+        //data
+        var geojsonFeature =  {
+        "type": "FeatureCollection",
+          "features":
+        [
+        {% for object in inschrifts %}
+        {% if object.genauer_standort.lat %}
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ {{ object.genauer_standort.lng }}, {{ object.genauer_standort.lat }} ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "{% if object.images.all %}{% with  object.images.all|first as x %}<a href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><img src='{{x.fetch_binary}}' title='ID {{ object }}' class='pop-up-image'/></a><br>{% endwith %} {% endif %}<a class='read-more' href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><h4><b>Inschrift ID {{ object }}</b></h4></a>{% if object.gattung.all %}<b>Gattung: </b>{% for x in object.gattung.all %}{{ x.pref_label }}<br>{% endfor %}{% endif %}{% if object.traeger.all %}<b>Traeger: </b>{% for x in object.traeger.all %}{{ x.pref_label }}<br>{% endfor %}{% endif %}{% if object.datierung_inschrift_written %}<b>Datierung: </b>{{ object.datierung_inschrift_written }}{% endif %}",
+            "images": "{% if object.images.all %}images{% else %}noImages{% endif %}"
+        },
+        "id": "{{ object.id }}"
+        }
+        {% if forloop.last %}
 
-<script type="text/javascript">
-var mymap = L.map('mymap').setView([46.71445, 11.65699], 17);
+        {% else %}
+        ,
+        {% endif %}
+        {% endif %}
+        {% empty %}
+        {% endfor %}]
+        };
+       
+        var geoJsonLayer = L.geoJson(geojsonFeature, {onEachFeature: onEachFeature});
+        markers.addLayer(geoJsonLayer);
+        mymap.addLayer(markers);
+        mymap.fitBounds(markers.getBounds(), {'maxZoom': 18});
 
-
-
-{% for object in inschrifts %}
-    {% if object.genauer_standort.lat and object.images.all %}
-    {% with  object.images.all|first as x %}
-
-var varimage = "<a href='{%url 'inschriften:inschrift_detail' pk=object.id %}'><img src='{{x.fetch_binary}}' title='Go to detail view of ID {{ object }}'/></a>";
-
-{% endwith %}
-var marker = new L.Marker([{{ object.genauer_standort.lat }}, {{ object.genauer_standort.lng }}], {
-    icon: L.divIcon({
-        html: varimage,
-        // Specify a class name we can refer to in CSS.
-        className: 'image-icon',
-        // Set a markers width and height.
-        iconSize: [52, 52]
-    })
-});
-marker.addTo(mymap);
-// .bindPopup("{{object}}");
-    {% endif %}
- {% endfor %}
-
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 21,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1Ijoic2VubmllcmVyIiwiYSI6ImNpbHk1YWV0bDAwZnB2dW01d2l1Y3phdmkifQ.OljQLEhqeAygai2y6VoSwQ'
-}).addTo(mymap);
-		
-
-</script>
-
-
-
+    </script>
 {% endblock %}

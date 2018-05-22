@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %} {% projects_metadata 'title' %}{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     {% block metaDescription %}
         <meta name="description" content="{{ metadata.description }}">
         <meta name="author" content="{{ metadata.author }}">
@@ -112,6 +112,9 @@
                                 <a href="{% url 'images:image_list' %}">Bilder</a>
                             </li>
                             {% if user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'browsing:map' %}">Map</a>
+                            </li>
                              <li>
                                 <a href="{% url 'places:place_list' %}">Locations</a>
                             </li>
@@ -172,6 +175,8 @@
 <section class="main-content">
     {% block hp-image %}
     {% endblock %}
+    {% block explore-map %}
+    {% endblock %}
     <div id="content" class="container">{% block content %}{% endblock %}</div>
 </section>
 <div style="text-align:center">
@@ -203,7 +208,7 @@
     $(function (){
         var options = {
             twitter: {
-            text: '',
+            text: 'Explore Die Brixner Inschriften project',
             via: ''
         },
         facebook : true,

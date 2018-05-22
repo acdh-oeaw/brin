@@ -9,16 +9,17 @@
 <script src='//cdn.jsdelivr.net/yasr/2.4/yasr.bundled.min.js'></script>
 <script src='//cdn.jsdelivr.net/yasqe/2.11.10/yasqe.bundled.min.js'></script>
 <div class="container">
+<div class="panel panel-default procustom-panel-create">
 
 <!--new-->
-  <div>
+  <div class="panel-heading procustom-panel-heading">
     <h2 style="text-align:center">SPARQL Endpoint</h2>
   </div>
-
+<div class="panel-body">
 {% if examples %}
  <div id="examples">
     <h3>Example-Queries</h3>
-    <hr/>
+
 {% for x in examples %}
 <button  type="button" class="btn btn-default" data-toggle="collapse" data-target="#see-example-{{ x.id }}" id="see-example-btn-{{ x.id }}">{{ x.title }}</button>
 
@@ -30,9 +31,7 @@
  {% endfor %}
  </div>
  {% endif %}
-
  <br>
-
  <div id="query-editor">
     {% crispy form %}
 </div>
@@ -43,12 +42,12 @@
     <div id="yasr"></div>
 </div>
 <br>
+</div>
+</div>
 <div class="panel panel-info">
       <div class="panel-heading"><span class="glyphicon glyphicon-info-sign"></span>  Credits</div>
       <div class="panel-body">SPARQL endpoint interface is built with <a href="http://about.yasgui.org/">YASGUI</a> package.</div>
 </div>
-
-
 </div>
 
 <script>

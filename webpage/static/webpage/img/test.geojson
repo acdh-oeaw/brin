@@ -1,0 +1,2023 @@
+{
+   "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features":
+ [
+             {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/1'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0546/full/full/0/default.jpg' title='ID 1' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/1'><h4><b>Inschrift ID 1</b></h4></a><br><b>Gattung: </b>Gedenkinschrift<br><b>Traeger: </b>Epitaph<br><b>Datierung: </b>1373 (?)",
+            "images": "images"
+        },
+        "id": "1"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/2'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0580/full/full/0/default.jpg' title='ID 2' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/2'><h4><b>Inschrift ID 2</b></h4></a><br><b>Gattung: </b>Gedächtnisinschrift: Baunachricht<br> Autonome Inschrift: Datierung<br><b>Traeger: </b>Portalschwelle<br><b>Datierung: </b>1471",
+            "images": "images"
+        },
+        "id": "2"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.659147000000, 46.716623000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/3'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0715/full/full/0/default.jpg' title='ID 3' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/3'><h4><b>Inschrift ID 3</b></h4></a><br><b>Gattung: </b>Gedächtnisinschrift<br> Renovierungsinschrift<br><b>Traeger: </b>Ufermauer<br><b>Datierung: </b>1634",
+            "images": "images"
+        },
+        "id": "3"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.656119000000, 46.716412000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/4'><h4><b>Inschrift ID 4</b></h4></a><br><b>Gattung: </b> Datierung<br>Baunachricht<br> Wappeninschrift<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1632",
+            "images": "noImages"
+        },
+        "id": "4"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.659243000000, 46.714325000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/5'><h4><b>Inschrift ID 5</b></h4></a><br><b>Gattung: </b> <br>Datierung<br> Bauinschrift (?)<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1661",
+            "images": "noImages"
+        },
+        "id": "5"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658823000000, 46.712451000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/6'><h4><b>Inschrift ID 6</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Mauer<br><b>Datierung: </b>1657",
+            "images": "noImages"
+        },
+        "id": "6"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/7'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0527/full/full/0/default.jpg' title='ID 14' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/7'><h4><b>Inschrift ID 14</b></h4></a><br><b>Gattung: </b>Gedächtnisinschrift<br><b>Traeger: </b>Weihwasserbecken<br><b>Datierung: </b>1446",
+            "images": "images"
+        },
+        "id": "7"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/8'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0537/full/full/0/default.jpg' title='ID 15' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/8'><h4><b>Inschrift ID 15</b></h4></a><br><b>Gattung: </b>Gedenkinschrift<br> Weiheinschrift (?)<br><b>Traeger: </b>Weihwasserbecken<br><b>Datierung: </b>1457 (?)",
+            "images": "images"
+        },
+        "id": "8"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/9'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0582/full/full/0/default.jpg' title='ID 17' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/9'><h4><b>Inschrift ID 17</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>1633 Januar 6",
+            "images": "images"
+        },
+        "id": "9"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/10'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0626/full/full/0/default.jpg' title='ID 18' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/10'><h4><b>Inschrift ID 18</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>06.10.1639",
+            "images": "images"
+        },
+        "id": "10"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/11'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0469/full/full/0/default.jpg' title='ID 19' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/11'><h4><b>Inschrift ID 19</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>17. 10. 1443",
+            "images": "images"
+        },
+        "id": "11"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/12'><h4><b>Inschrift ID 20</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b> <br><b>Datierung: </b>28. 02. 1450",
+            "images": "noImages"
+        },
+        "id": "12"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/13'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0501/full/full/0/default.jpg' title='ID 24' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/13'><h4><b>Inschrift ID 24</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>10. 01. 1613",
+            "images": "images"
+        },
+        "id": "13"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657637000000, 46.716178000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/14'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0162/full/full/0/default.jpg' title='ID 25' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/14'><h4><b>Inschrift ID 25</b></h4></a><br><b>Gattung: </b> <br>Datierung<br><b>Traeger: </b>Totenleuchte<br><b>Datierung: </b>1483",
+            "images": "images"
+        },
+        "id": "14"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657637000000, 46.716178000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/15'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0346/full/full/0/default.jpg' title='ID 27' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/15'><h4><b>Inschrift ID 27</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br><b>Datierung: </b>13. 03. 1561; 29. 04. 1563",
+            "images": "images"
+        },
+        "id": "15"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/16'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0199/full/full/0/default.jpg' title='ID 31' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/16'><h4><b>Inschrift ID 31</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>08. 06. 1462",
+            "images": "images"
+        },
+        "id": "16"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/17'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0216/full/full/0/default.jpg' title='ID 32' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/17'><h4><b>Inschrift ID 32</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>24. 06. 1442",
+            "images": "images"
+        },
+        "id": "17"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/18'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0258/full/full/0/default.jpg' title='ID 33' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/18'><h4><b>Inschrift ID 33</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>um 1400",
+            "images": "images"
+        },
+        "id": "18"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/19'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0268/full/full/0/default.jpg' title='ID 34' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/19'><h4><b>Inschrift ID 34</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>15. 03. 1390",
+            "images": "images"
+        },
+        "id": "19"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/20'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0690/full/full/0/default.jpg' title='ID 35' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/20'><h4><b>Inschrift ID 35</b></h4></a><br><b>Gattung: </b>Gedächtnisinschrift<br><b>Traeger: </b>Epitaph<br><b>Datierung: </b>1582",
+            "images": "images"
+        },
+        "id": "20"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/21'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0694/full/full/0/default.jpg' title='ID 36' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/21'><h4><b>Inschrift ID 36</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>31.12.1561",
+            "images": "images"
+        },
+        "id": "21"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/22'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0277/full/full/0/default.jpg' title='ID 38' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/22'><h4><b>Inschrift ID 38</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>28. 04. 1373",
+            "images": "images"
+        },
+        "id": "22"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/23'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0715/full/full/0/default.jpg' title='ID 39' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/23'><h4><b>Inschrift ID 39</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>13.03.1562",
+            "images": "images"
+        },
+        "id": "23"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/24'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0293/full/full/0/default.jpg' title='ID 40' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/24'><h4><b>Inschrift ID 40</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>21. 02. 1352",
+            "images": "images"
+        },
+        "id": "24"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/25'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0724/full/full/0/default.jpg' title='ID 41' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/25'><h4><b>Inschrift ID 41</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>02.02.1542",
+            "images": "images"
+        },
+        "id": "25"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/26'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0741/full/full/0/default.jpg' title='ID 42' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/26'><h4><b>Inschrift ID 42</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>06.09.1535",
+            "images": "images"
+        },
+        "id": "26"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/27'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0318/full/full/0/default.jpg' title='ID 43' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/27'><h4><b>Inschrift ID 43</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br> Grabplatte<br>Fragment<br> Epitaph<br><b>Datierung: </b>27. 10. 1363",
+            "images": "images"
+        },
+        "id": "27"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/28'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0763/full/full/0/default.jpg' title='ID 46' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/28'><h4><b>Inschrift ID 46</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>19.12.1514",
+            "images": "images"
+        },
+        "id": "28"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/29'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0333/full/full/0/default.jpg' title='ID 49' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/29'><h4><b>Inschrift ID 49</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br><b>Datierung: </b>Mitte 14. Jh.",
+            "images": "images"
+        },
+        "id": "29"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/30'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0771/full/full/0/default.jpg' title='ID 50' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/30'><h4><b>Inschrift ID 50</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>20.12.1512",
+            "images": "images"
+        },
+        "id": "30"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/31'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0504/full/full/0/default.jpg' title='ID 51' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/31'><h4><b>Inschrift ID 51</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br><b>Datierung: </b>1571",
+            "images": "images"
+        },
+        "id": "31"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657637000000, 46.716178000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/32'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0416/full/full/0/default.jpg' title='ID 52' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/32'><h4><b>Inschrift ID 52</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>1/2 15. Jh. (?)",
+            "images": "images"
+        },
+        "id": "32"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/33'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0784/full/full/0/default.jpg' title='ID 53' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/33'><h4><b>Inschrift ID 53</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>06.06.1509",
+            "images": "images"
+        },
+        "id": "33"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658341000000, 46.711914000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/34'><h4><b>Inschrift ID 139</b></h4></a><br><b>Gattung: </b> <br>Gedächtnisinschrift<br><b>Traeger: </b> <br> Bodenplatte<br>Gruftplatte<br><b>Datierung: </b>1602",
+            "images": "noImages"
+        },
+        "id": "34"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/35'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0793/full/full/0/default.jpg' title='ID 54' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/35'><h4><b>Inschrift ID 54</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>20.04.1508",
+            "images": "images"
+        },
+        "id": "35"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657637000000, 46.716178000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/36'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0387/full/full/0/default.jpg' title='ID 55' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/36'><h4><b>Inschrift ID 55</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>um 1600",
+            "images": "images"
+        },
+        "id": "36"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/37'><h4><b>Inschrift ID 56</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>13. 03. 1391",
+            "images": "noImages"
+        },
+        "id": "37"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/38'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0833/full/full/0/default.jpg' title='ID 57' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/38'><h4><b>Inschrift ID 57</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>10.06.1501",
+            "images": "images"
+        },
+        "id": "38"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/39'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0860/full/full/0/default.jpg' title='ID 58' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/39'><h4><b>Inschrift ID 58</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>22.12.1448",
+            "images": "images"
+        },
+        "id": "39"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/40'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0879/full/full/0/default.jpg' title='ID 59' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/40'><h4><b>Inschrift ID 59</b></h4></a><br><b>Gattung: </b>Baunachricht<br><b>Traeger: </b>eingemauerte Steintafel<br><b>Datierung: </b>1612",
+            "images": "images"
+        },
+        "id": "40"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/41'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0552/full/full/0/default.jpg' title='ID 60' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/41'><h4><b>Inschrift ID 60</b></h4></a><br><b>Gattung: </b>Gedenkinschrift<br><b>Traeger: </b>Epitaph<br><b>Datierung: </b>1654",
+            "images": "images"
+        },
+        "id": "41"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/42'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0228/full/full/0/default.jpg' title='ID 61' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/42'><h4><b>Inschrift ID 61</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>26.11.1424",
+            "images": "images"
+        },
+        "id": "42"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/43'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0898/full/full/0/default.jpg' title='ID 62' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/43'><h4><b>Inschrift ID 62</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>01. 12. 1495",
+            "images": "images"
+        },
+        "id": "43"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/44'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0910/full/full/0/default.jpg' title='ID 63' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/44'><h4><b>Inschrift ID 63</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>21. 10. 1490",
+            "images": "images"
+        },
+        "id": "44"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/45'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0260/full/full/0/default.jpg' title='ID 65' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/45'><h4><b>Inschrift ID 65</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>1442",
+            "images": "images"
+        },
+        "id": "45"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/46'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0938/full/full/0/default.jpg' title='ID 66' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/46'><h4><b>Inschrift ID 66</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>23. 04. 1486",
+            "images": "images"
+        },
+        "id": "46"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/47'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0960/full/full/0/default.jpg' title='ID 67' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/47'><h4><b>Inschrift ID 67</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>07. 10. 1485",
+            "images": "images"
+        },
+        "id": "47"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/48'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0969/full/full/0/default.jpg' title='ID 68' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/48'><h4><b>Inschrift ID 68</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>05. 10. 1484",
+            "images": "images"
+        },
+        "id": "48"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/49'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0977/full/full/0/default.jpg' title='ID 69' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/49'><h4><b>Inschrift ID 69</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>10. 09. 1483",
+            "images": "images"
+        },
+        "id": "49"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/50'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0994/full/full/0/default.jpg' title='ID 70' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/50'><h4><b>Inschrift ID 70</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>02. 06. 1483",
+            "images": "images"
+        },
+        "id": "50"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/51'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0996/full/full/0/default.jpg' title='ID 71' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/51'><h4><b>Inschrift ID 71</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>03. 08. 1461",
+            "images": "images"
+        },
+        "id": "51"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/52'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0304/full/full/0/default.jpg' title='ID 72' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/52'><h4><b>Inschrift ID 72</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>25.09.1471",
+            "images": "images"
+        },
+        "id": "52"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/53'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0377/full/full/0/default.jpg' title='ID 73' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/53'><h4><b>Inschrift ID 73</b></h4></a><br><b>Gattung: </b>Gedenkinschrift<br><b>Traeger: </b>Epitaph<br><b>Datierung: </b>22.01.1551",
+            "images": "images"
+        },
+        "id": "53"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/54'><h4><b>Inschrift ID 74</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>14.03.1511",
+            "images": "noImages"
+        },
+        "id": "54"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/55'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0416/full/full/0/default.jpg' title='ID 75' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/55'><h4><b>Inschrift ID 75</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>21.06.1529",
+            "images": "images"
+        },
+        "id": "55"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/56'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0424/full/full/0/default.jpg' title='ID 76' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/56'><h4><b>Inschrift ID 76</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br>",
+            "images": "images"
+        },
+        "id": "56"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/57'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0427/full/full/0/default.jpg' title='ID 77' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/57'><h4><b>Inschrift ID 77</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br>",
+            "images": "images"
+        },
+        "id": "57"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/58'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0430/full/full/0/default.jpg' title='ID 79' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/58'><h4><b>Inschrift ID 79</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte oder Epitaph (?)<br><b>Datierung: </b>17. Jahrhundert (?)",
+            "images": "images"
+        },
+        "id": "58"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/59'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0032/full/full/0/default.jpg' title='ID 80' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/59'><h4><b>Inschrift ID 80</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>18. 10. 1439",
+            "images": "images"
+        },
+        "id": "59"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/60'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0435/full/full/0/default.jpg' title='ID 81' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/60'><h4><b>Inschrift ID 81</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br><b>Datierung: </b>1434",
+            "images": "images"
+        },
+        "id": "60"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/61'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0045/full/full/0/default.jpg' title='ID 82' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/61'><h4><b>Inschrift ID 82</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>03. 06. 1426",
+            "images": "images"
+        },
+        "id": "61"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/62'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0079/full/full/0/default.jpg' title='ID 83' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/62'><h4><b>Inschrift ID 83</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>01. 04. 1401",
+            "images": "images"
+        },
+        "id": "62"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/63'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0092/full/full/0/default.jpg' title='ID 84' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/63'><h4><b>Inschrift ID 84</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>18. 02. 1400",
+            "images": "images"
+        },
+        "id": "63"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/64'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0102/full/full/0/default.jpg' title='ID 85' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/64'><h4><b>Inschrift ID 85</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>05. 08. 1395",
+            "images": "images"
+        },
+        "id": "64"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/65'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0112/full/full/0/default.jpg' title='ID 87' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/65'><h4><b>Inschrift ID 87</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>08. 12. 1394",
+            "images": "images"
+        },
+        "id": "65"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/66'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0124/full/full/0/default.jpg' title='ID 88' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/66'><h4><b>Inschrift ID 88</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>22. 04. 1391",
+            "images": "images"
+        },
+        "id": "66"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657485000000, 46.715682000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/67'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0458/full/full/0/default.jpg' title='ID 89' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/67'><h4><b>Inschrift ID 89</b></h4></a><br><b>Gattung: </b>Grabinschrift<br><b>Traeger: </b>Grabplatte<br>",
+            "images": "images"
+        },
+        "id": "67"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/68'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0246/full/full/0/default.jpg' title='ID 90' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/68'><h4><b>Inschrift ID 90</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>1410",
+            "images": "images"
+        },
+        "id": "68"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/69'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0149/full/full/0/default.jpg' title='ID 91' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/69'><h4><b>Inschrift ID 91</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>05. 12. 1367",
+            "images": "images"
+        },
+        "id": "69"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/70'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0162/full/full/0/default.jpg' title='ID 92' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/70'><h4><b>Inschrift ID 92</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b>Epitaph<br> <br> Grabplatte<br><b>Datierung: </b>04. 03. 1378",
+            "images": "images"
+        },
+        "id": "70"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.659348000000, 46.712923000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/71'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_04/DSC_0006/full/full/0/default.jpg' title='ID 94' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/71'><h4><b>Inschrift ID 94</b></h4></a><br><b>Gattung: </b>historische Nachricht<br><b>Traeger: </b>Fresko- oder Sekkomalerei<br>",
+            "images": "images"
+        },
+        "id": "71"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.659348000000, 46.712923000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/72'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_04/DSC_0004/full/full/0/default.jpg' title='ID 95' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/72'><h4><b>Inschrift ID 95</b></h4></a><br><b>Gattung: </b>Bildbeischrift !!!<br><b>Traeger: </b>Fassade<br>",
+            "images": "images"
+        },
+        "id": "72"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/73'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_04/DSC_0015/full/full/0/default.jpg' title='ID 96' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/73'><h4><b>Inschrift ID 96</b></h4></a><br><b>Gattung: </b>Bildbeischrift<br><b>Traeger: </b>Wand<br><b>Datierung: </b>15. Jh.",
+            "images": "images"
+        },
+        "id": "73"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/74'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0167/full/full/0/default.jpg' title='ID 97' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/74'><h4><b>Inschrift ID 97</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br>",
+            "images": "images"
+        },
+        "id": "74"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/75'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_04/DSC_0207/full/full/0/default.jpg' title='ID 98' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/75'><h4><b>Inschrift ID 98</b></h4></a><br><b>Gattung: </b>Bildbeischrift<br><b>Traeger: </b>Fresko<br><b>Datierung: </b>1410/20 (Andergassen)",
+            "images": "images"
+        },
+        "id": "75"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/76'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0509/full/full/0/default.jpg' title='ID 100' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/76'><h4><b>Inschrift ID 100</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>1627",
+            "images": "images"
+        },
+        "id": "76"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/77'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0523/full/full/0/default.jpg' title='ID 101' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/77'><h4><b>Inschrift ID 101</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>29. 03. 1521",
+            "images": "images"
+        },
+        "id": "77"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/78'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0564/full/full/0/default.jpg' title='ID 102' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/78'><h4><b>Inschrift ID 102</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br><b>Datierung: </b>06. 08. 1374",
+            "images": "images"
+        },
+        "id": "78"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/79'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0580/full/full/0/default.jpg' title='ID 103' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/79'><h4><b>Inschrift ID 103</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>24. 09. 1628",
+            "images": "images"
+        },
+        "id": "79"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/80'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0586/full/full/0/default.jpg' title='ID 104' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/80'><h4><b>Inschrift ID 104</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>12. 05. 1647",
+            "images": "images"
+        },
+        "id": "80"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657203000000, 46.716281000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/81'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0610/full/full/0/default.jpg' title='ID 105' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/81'><h4><b>Inschrift ID 105</b></h4></a><br><b>Gattung: </b> <br>Wappenstein<br> Baunachricht<br><b>Traeger: </b>Mauer<br><b>Datierung: </b>1494",
+            "images": "images"
+        },
+        "id": "81"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/82'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0620/full/full/0/default.jpg' title='ID 106' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/82'><h4><b>Inschrift ID 106</b></h4></a><br><b>Gattung: </b> <br>Wappenstein<br> Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br>",
+            "images": "images"
+        },
+        "id": "82"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/83'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_07_08/DSC_0626/full/full/0/default.jpg' title='ID 107' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/83'><h4><b>Inschrift ID 107</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Bodenplatte<br>",
+            "images": "images"
+        },
+        "id": "83"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/84'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0370/full/full/0/default.jpg' title='ID 109' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/84'><h4><b>Inschrift ID 109</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b> <br>Wand<br> Mauer<br><b>Datierung: </b>1612",
+            "images": "images"
+        },
+        "id": "84"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/85'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0374/full/full/0/default.jpg' title='ID 110' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/85'><h4><b>Inschrift ID 110</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b> <br>Wand<br> Mauer<br><b>Datierung: </b>1653",
+            "images": "images"
+        },
+        "id": "85"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658239000000, 46.715608000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/86'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0421/full/full/0/default.jpg' title='ID 111' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/86'><h4><b>Inschrift ID 111</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br> Bodenplatte<br>Fragment<br> Grabplatten<br><b>Datierung: </b>11. 02. 1511",
+            "images": "images"
+        },
+        "id": "86"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/87'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0595/full/full/0/default.jpg' title='ID 112' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/87'><h4><b>Inschrift ID 112</b></h4></a><br><b>Gattung: </b> <br>Ritzinschrift<br><b>Traeger: </b> <br>Wand<br> Mauer<br>",
+            "images": "images"
+        },
+        "id": "87"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/88'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0636/full/full/0/default.jpg' title='ID 113' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/88'><h4><b>Inschrift ID 113</b></h4></a><br><b>Gattung: </b>Graffito<br> Rötelinschrift<br><b>Traeger: </b> <br>Wand<br> Mauer<br><b>Datierung: </b>1561 (?)",
+            "images": "images"
+        },
+        "id": "88"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658868000000, 46.714339000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/89'><h4><b>Inschrift ID 114</b></h4></a><br><b>Gattung: </b> <br>Stifterinschrift<br><b>Traeger: </b> <br>Relief<br><b>Datierung: </b>1432",
+            "images": "noImages"
+        },
+        "id": "89"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.659348000000, 46.712923000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/90'><h4><b>Inschrift ID 115</b></h4></a><br><b>Gattung: </b> <br>historische Nachricht<br> Wunschinschrift<br> Segensinschrift<br><b>Traeger: </b> <br>Wand<br> Mauer<br><b>Datierung: </b>02. 01. 1551; 1645;",
+            "images": "noImages"
+        },
+        "id": "90"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655914000000, 46.716627000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/91'><h4><b>Inschrift ID 116</b></h4></a><br><b>Gattung: </b> <br>Datierung<br><b>Traeger: </b>Säulenkapitell<br>",
+            "images": "noImages"
+        },
+        "id": "91"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658868000000, 46.714339000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/92'><h4><b>Inschrift ID 118</b></h4></a><br><b>Gattung: </b> <br>Wappenstein<br> Baunachricht<br><b>Traeger: </b> <br>Wand<br><b>Datierung: </b>1532 (?)",
+            "images": "noImages"
+        },
+        "id": "92"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655172917000, 46.716333400000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/93'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_08_22/DSC_0610/full/full/0/default.jpg' title='ID 119' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/93'><h4><b>Inschrift ID 119</b></h4></a><br><b>Gattung: </b> <br>Bauinschrift<br> Künstlerinschrift<br><b>Traeger: </b> <br>Kupferplakette<br><b>Datierung: </b>1591",
+            "images": "images"
+        },
+        "id": "93"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657788000000, 46.715838000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a href='/inschriften/94'><img src='https://brin-iiif.acdh.oeaw.ac.at/Brixen_2011_06_17/DSC_0599/full/full/0/default.jpg' title='ID 122' class='pop-up-image'/></a><br> <a class='read-more' href='/inschriften/94'><h4><b>Inschrift ID 122</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br> Bodenplatte<br><b>Datierung: </b>19. 10. 1654",
+            "images": "images"
+        },
+        "id": "94"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.659348000000, 46.712923000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/95'><h4><b>Inschrift ID 123</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br> Weihnachricht<br><b>Traeger: </b>Mauer<br><b>Datierung: </b>1631",
+            "images": "noImages"
+        },
+        "id": "95"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658464000000, 46.716625000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/96'><h4><b>Inschrift ID 124</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1655",
+            "images": "noImages"
+        },
+        "id": "96"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658875000000, 46.714563000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/97'><h4><b>Inschrift ID 125</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b> <br>Granitsäule<br><b>Datierung: </b>1652",
+            "images": "noImages"
+        },
+        "id": "97"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.656119000000, 46.716412000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/98'><h4><b>Inschrift ID 126</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1654",
+            "images": "noImages"
+        },
+        "id": "98"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.656119000000, 46.716412000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/99'><h4><b>Inschrift ID 127</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1635",
+            "images": "noImages"
+        },
+        "id": "99"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658464000000, 46.716625000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/100'><h4><b>Inschrift ID 128</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1600",
+            "images": "noImages"
+        },
+        "id": "100"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.656460000000, 46.716669000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/101'><h4><b>Inschrift ID 129</b></h4></a><br><b>Gattung: </b> <br>Freskobeischrift<br><b>Traeger: </b>Erkerwand<br>",
+            "images": "noImages"
+        },
+        "id": "101"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.655507000000, 46.715891000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/102'><h4><b>Inschrift ID 130</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1570",
+            "images": "noImages"
+        },
+        "id": "102"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.656119000000, 46.716412000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/103'><h4><b>Inschrift ID 131</b></h4></a><br><b>Gattung: </b> <br>Baunachricht<br><b>Traeger: </b>Türsturz<br><b>Datierung: </b>1590",
+            "images": "noImages"
+        },
+        "id": "103"
+        }
+        
+        ,
+        
+        
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658507000000, 46.716815000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/105'><h4><b>Inschrift ID 135</b></h4></a><br><b>Gattung: </b> <br>Datierung<br><b>Traeger: </b> <br>Türstock<br><b>Datierung: </b>1632",
+            "images": "noImages"
+        },
+        "id": "105"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.657507000000, 46.716615000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/106'><h4><b>Inschrift ID 136</b></h4></a><br><b>Gattung: </b> <br>historische Nachricht<br> Devise<br><b>Traeger: </b> <br>Wappenschild<br><b>Datierung: </b>1581",
+            "images": "noImages"
+        },
+        "id": "106"
+        }
+        
+        ,
+        
+        
+        
+        
+        {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [ 11.658341000000, 46.711914000000 ]
+        },
+        "type": "Feature",
+        "properties": {
+            "popupContent":
+            "<a class='read-more' href='/inschriften/107'><h4><b>Inschrift ID 137</b></h4></a><br><b>Gattung: </b> <br>Grabinschrift<br><b>Traeger: </b> <br>Grabplatte<br><b>Datierung: </b>1518",
+            "images": "noImages"
+        },
+        "id": "107"
+        }      
+
+        ]
+    }
