@@ -1,6 +1,6 @@
 import django_filters
 from dal import autocomplete
-from inscriptions.models import Inschrift
+from inscriptions.models import Inschrift, Person
 from vocabs.models import SkosConcept
 
 django_filters.filters.LOOKUP_TYPES = [
@@ -18,6 +18,23 @@ django_filters.filters.LOOKUP_TYPES = [
     ('icontains', 'Contains (case insensitive)'),
     ('not_contains', 'Does not contain'),
 ]
+
+
+class PersonListFilter(django_filters.FilterSet):
+    name = django_filters.CharFilter(
+        lookup_expr='icontains',
+        help_text=Person._meta.get_field('name').help_text,
+        label=Person._meta.get_field('name').verbose_name
+        )
+    titel_grad_beruf = django_filters.CharFilter(
+        lookup_expr='icontains',
+        help_text=Person._meta.get_field('titel_grad_beruf').help_text,
+        label=Person._meta.get_field('titel_grad_beruf').verbose_name
+        )
+
+    class Meta:
+        model = Person
+        fields = '__all__'
 
 
 class InschriftListFilter(django_filters.FilterSet):

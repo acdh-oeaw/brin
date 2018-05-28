@@ -4,9 +4,49 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
-from .models import Inschrift
-from .forms import InschriftForm
+from .models import Inschrift, Person
+from .forms import InschriftForm, PersonForm
 from images.models import Image
+
+
+class PersonDetailView(DetailView):
+    model = Person
+    template_name = 'inscriptions/person_detail.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PersonDetailView, self).dispatch(*args, **kwargs)
+
+
+class PersonListView(ListView):
+    model = Person
+    template_name = 'inscriptions/person_list.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PersonListView, self).dispatch(*args, **kwargs)
+
+
+class PersonCreate(CreateView):
+
+    model = Person
+    template_name = 'inscriptions/person_create.html'
+    form_class = PersonForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PersonCreate, self).dispatch(*args, **kwargs)
+
+
+class PersonUpdate(UpdateView):
+
+    model = Person
+    template_name = 'inscriptions/person_create.html'
+    form_class = PersonForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PersonUpdate, self).dispatch(*args, **kwargs)
 
 
 class InschriftDetailView(DetailView):

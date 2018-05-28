@@ -16,6 +16,34 @@ class GenericFilterFormHelper(FormHelper):
         self.add_input(Submit('Filter', 'Search'))
 
 
+class PersonFilterFormHelper(FormHelper):
+    def __init__(self, *args, **kwargs):
+        super(PersonFilterFormHelper, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.form_class = 'genericFilterForm'
+        self.form_method = 'GET'
+        self.helper.form_tag = False
+        self.add_input(Submit('Filter', 'Search'))
+        self.layout = Layout(
+            Accordion(
+                AccordionGroup(
+                    'Basic search options',
+                    'name',
+                    'titel_grad_beruf',
+                    css_id="basic_search_fields"
+                ),
+                # AccordionGroup(
+                #     'Advanced search options',
+                #     css_id="advanced_search_options"),
+                # AccordionGroup(
+                #     'Other search options',
+                #     css_id="other_search_options"
+                # ),
+                css_id="accordion",
+                )
+            )
+
+
 class InschriftFilterFormHelper(FormHelper):
     def __init__(self, *args, **kwargs):
         super(InschriftFilterFormHelper, self).__init__(*args, **kwargs)

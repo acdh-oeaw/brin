@@ -111,6 +111,9 @@
 
                             {% if user.is_authenticated %}
                             <li>
+                                <a href="{% url 'browsing:browse_persons' %}">Personen</a>
+                            </li>
+                            <li>
                                 <a href="{% url 'browsing:map' %}">Map</a>
                             </li>
                              <li>

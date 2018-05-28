@@ -24,7 +24,25 @@ class Person(models.Model):
     gnd_id = models.CharField(blank=True, max_length=255)
 
     def __str__(self):
-        return self.name
+        if self.name:
+            return "{}".format(self.name)
+        else:
+            return "{}".format(self.id)
+
+    def get_absolute_url(self):
+        return reverse('inschriften:person_detail', kwargs={'pk': self.id})
+
+    def get_next(self):
+        next = Person.objects.filter(id__gt=self.id)
+        if next:
+            return next.first().id
+        return False
+
+    def get_prev(self):
+        prev = Person.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return prev.first().id
+        return False
 
 
 class Inschrift(models.Model):
