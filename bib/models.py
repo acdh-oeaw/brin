@@ -19,7 +19,14 @@ class Book(models.Model):
 
     def get_zotero_url(self):
         "Returns the objects URL pointing to its Zotero entry"
-        return "/".join([settings.Z_BASE_URL, settings.Z_COLLECTION, 'itemKey', self.zoterokey])
+        try:
+            base = "https://www.zotero.org/{}/".format(settings.Z_ID_TYPE)
+            url = "{}{}/peter_handke_stage_texts/items/itemKey/{}".format(
+                base, settings.Z_ID, self.zoterokey
+            )
+            return url
+        except AttributeError:
+            return "please provide Zotero settings"
 
     def __str__(self):
         return "{}, {}".format(self.author, self.title)

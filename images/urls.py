@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views
 
-app_name = 'inscriptions'
+app_name = 'images'
 
 urlpatterns = [
     url(r'^$', views.ImageListView.as_view(), name='image_list'),

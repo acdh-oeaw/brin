@@ -1,77 +1,78 @@
-"1","Brixen","3181550","46.715030000000","11.655980000000","city","1"
-"2","Dombezirk","NaN","46.716115000000","11.657610000000","district","1"
-"3","Pfarrkirche St. Michael","NaN","46.716285000000","11.657555000000","building","2"
-"4","Langhaus-Südwand, außen","NaN","46.716290000000","11.657560000000","part of building","3"
-"5","Langhaus-Südwand, Portal","NaN","46.716272000000","11.657466000000","part of building","3"
-"6","Griesgasse","NaN","46.716305000000","11.659388000000","street","1"
-"7","Westliches Eisackufer","NaN","46.716623000000","11.659147000000","district","6"
-"8","Altstadt","NaN","46.715941000000","11.656961000000","district","1"
-"9","Runggadgasse Nr. 11a","NaN","46.713783000000","11.659193000000","building","8"
-"10","Haupteingang, Türsturz;","NaN","46.716412000000","11.656119000000","part of building","70"
-"11","Runggadgasse Nr. 6","NaN","46.714325000000","11.659243000000","building","8"
-"12","Türsturz","NaN","46.714325000000","11.659243000000","part of building","11"
-"13","Runggadgasse Nr. 26","NaN","46.712451000000","11.658823000000","building","1"
-"14","Östliche Außenmauer","NaN","46.712451000000","11.658823000000","part of building","13"
-"15","Südportal, Außenbereich","NaN","46.716333400000","11.655172917000","part of building","3"
-"16","Dom Mariä Himmelfahrt","NaN","46.715838000000","11.657788000000","building","2"
-"17","Langschiff, Nordwand, außen","NaN","46.715838000000","11.657788000000","part of building","16"
-"18","Dom Mariä Mimmelfahrt","NaN","46.715838000000","11.657788000000","building","2"
-"19","Nordwand, außen","NaN","46.715838000000","11.657788000000","part of building","16"
-"20","Domvorhalle, Südwand","NaN","46.715838000000","11.657788000000","part of building","16"
-"21","Alter Friedhof","NaN","46.716178000000","11.657637000000","building","2"
-"22","Mitte Alter Friedhof","NaN","46.716178000000","11.657637000000","part of building","21"
-"23","Westwand","NaN","46.716178000000","11.657637000000","part of building","21"
-"24","Nordwand, außen;","NaN","46.715838000000","11.657788000000","part of building","16"
-"25","nördliche Langhauswand, außen","NaN","46.715838000000","11.657788000000","part of building","16"
-"26","Langhaus-Nordwand, außen","NaN","46.716333400000","11.655172917000","part of building","3"
-"27","nördliches Langhaus, außen","NaN","46.715838000000","11.657788000000","part of building","16"
-"28","Westwand;","NaN","46.716178000000","11.657637000000","part of building","21"
-"29","Runggadgasse 25, Franziskanerkloster","NaN","46.711914000000","11.658341000000","building","8"
-"30","Kreuzgang, Westflügel, Boden","NaN","46.711914000000","11.658341000000","part of building","29"
-"31","Frauenkirche","NaN","46.715682000000","11.657485000000","building","2"
-"32","nördlicher Turm; Nordwand","NaN","46.715838000000","11.657788000000","part of building","16"
-"33","Südwand, Kreuzgang","NaN","46.715838000000","11.657788000000","part of building","16"
-"34","Kreuzgang, Ostarm, außen","NaN","46.715838000000","11.657788000000","part of building","16"
-"35","Südwand, Kreuzgang;","NaN","46.715838000000","11.657788000000","part of building","16"
-"36","Kreuzgang, Südtrakt, Südmauer, innen","NaN","46.715838000000","11.657788000000","part of building","16"
-"37","Pfeiler südwestlich des Hauptaltars, Ostrichtung","NaN","46.715682000000","11.657485000000","part of building","31"
-"38","südliches Langhaus","NaN","46.715682000000","11.657485000000","part of building","31"
-"39","Westfassade","NaN","46.712923000000","11.659348000000","part of building","59"
-"40","Domherrenhof, ehem. Refektorium","NaN","46.715838000000","11.657788000000","building","2"
-"41","Innenwand zur Albuingasse, Turm 1. Stock","NaN","46.715838000000","11.657788000000","part of building","40"
-"42","Domvorhalle, Ostwand","NaN","46.715838000000","11.657788000000","part of building","16"
-"43","Domvorhalle, Nordwand","NaN","46.715838000000","11.657788000000","part of building","16"
-"44","Domplatz Nr. 1a","NaN","46.716281000000","11.657203000000","building","2"
-"45","Hauswand;","NaN","46.716281000000","11.657203000000","part of building","44"
-"46","am Boden im hinteren Langhaus;","NaN","46.716333400000","11.655172917000","part of building","3"
-"47","Nordturm, Wand/Mauer","NaN","46.715838000000","11.657788000000","part of building","16"
-"48","Kreuzgang, heutige Musikschule, ehem. Dokapitelhaus","NaN","46.715608000000","11.658239000000","building","2"
-"49","heute Abstellkammer, ehem. Keller","NaN","46.715608000000","11.658239000000","part of building","48"
-"50","Glockenstube, Südwand;","NaN","46.716333400000","11.655172917000","part of building","3"
-"51","Weißer Turm, 1. Stock, Nordmauer innen;","NaN","46.716333400000","11.655172917000","part of building","3"
-"52","Trattengasse 22 a","NaN","46.719165000000","11.654571000000","building","8"
-"53","Südfassade","NaN","46.714339000000","11.658868000000","part of building","57"
-"54","Weißlahnstraße 4, Hotel Elephant","NaN","46.719264000000","11.653458000000","building","8"
-"55","Große Lauben 18, Altes Rathaus","NaN","46.716627000000","11.655914000000","building","8"
-"56","Lichthof, Säulenkapitell","NaN","46.716627000000","11.655914000000","part of building","55"
-"57","Hartwiggasse 8","NaN","46.714339000000","11.658868000000","building","8"
-"58","Weißer Turm; Turmkugel;","NaN","46.716333400000","11.655172917000","part of building","3"
-"59","Kapuzinerkirche zur Hl. Katharina","NaN","46.712923000000","11.659348000000","building","8"
-"60","Runggadgasse 1, Mühlgasse 2","NaN","46.714563000000","11.658875000000","building","8"
-"61","Fassade","NaN","46.716625000000","11.658464000000","part of building","65"
-"62","Hofseite, Säulenkapitell;","NaN","46.714563000000","11.658875000000","part of building","60"
-"63","Griesgasse 2","NaN","46.716587000000","11.658681000000","building","8"
-"64","Adlerbrückengasse 9, Hotel Goldener Adler","NaN","46.716815000000","11.658507000000","building","8"
-"65","Adlerbrückengasse 6","NaN","46.716625000000","11.658464000000","building","8"
-"66","Große Lauben 10","NaN","46.716669000000","11.656460000000","building","8"
-"67","Fassade, östlicher Erker","NaN","46.716669000000","11.656460000000","part of building","66"
-"68","Erhardgasse 4, Herrengarten","NaN","46.715891000000","11.655507000000","building","8"
-"69","Türsturz Richtung Herrengarten;","NaN","46.715891000000","11.655507000000","part of building","68"
-"70","Bäckergasse Nr. 1","NaN","46.716412000000","11.656119000000","building","8"
-"71",,,NULL,NULL,"city","8"
-"72","2. Stock, Eingang zum Sitzungssal, Türsturz",,NULL,NULL,"part of building","71"
-"73","1. Stock; Türstock von Adlerstube hinaus;","NaN","46.716815000000","11.658507000000","part of building","64"
-"74","Pfarrplatz Nr. 3, Pfaundlerhaus","NaN","46.716615000000","11.657507000000","building","8"
-"75","2. Stock, großer Saal, Felderdecke;","NaN","46.716615000000","11.657507000000","part of building","74"
-"76","Runggadgasse 25, Klarissenkirche","NaN","46.711914000000","11.658341000000","building","8"
-"77","Westwand, innen; Rechts neben Tür;","NaN","46.711914000000","11.658341000000","part of building","76"
+legacy_id,name,geonames_id,lat,lng,place_type,part_of
+1,Brixen,3181550,46.71503,11.65598,city,1
+2,Dombezirk,NaN,46.716115,11.65761,district,1
+3,Pfarrkirche St. Michael,NaN,46.716285,11.657555,building,2
+4,"Langhaus-Südwand, außen",NaN,46.71629,11.65756,part of building,3
+5,"Langhaus-Südwand, Portal",NaN,46.716272,11.657466,part of building,3
+6,Griesgasse,NaN,46.716305,11.659388,street,1
+7,Westliches Eisackufer,NaN,46.716623,11.659147,district,6
+8,Altstadt,NaN,46.715941,11.656961,district,1
+9,Runggadgasse Nr. 11a,NaN,46.713783,11.659193,building,8
+10,"Haupteingang, Türsturz;",NaN,46.716412,11.656119,part of building,70
+11,Runggadgasse Nr. 6,NaN,46.714325,11.659243,building,8
+12,Türsturz,NaN,46.714325,11.659243,part of building,11
+13,Runggadgasse Nr. 26,NaN,46.712451,11.658823,building,1
+14,Östliche Außenmauer,NaN,46.712451,11.658823,part of building,13
+15,"Südportal, Außenbereich",NaN,46.7163334,11.655172917,part of building,3
+16,Dom Mariä Himmelfahrt,NaN,46.715838,11.657788,building,2
+17,"Langschiff, Nordwand, außen",NaN,46.715838,11.657788,part of building,16
+18,Dom Mariä Mimmelfahrt,NaN,46.715838,11.657788,building,2
+19,"Nordwand, außen",NaN,46.715838,11.657788,part of building,16
+20,"Domvorhalle, Südwand",NaN,46.715838,11.657788,part of building,16
+21,Alter Friedhof,NaN,46.716178,11.657637,building,2
+22,Mitte Alter Friedhof,NaN,46.716178,11.657637,part of building,21
+23,Westwand,NaN,46.716178,11.657637,part of building,21
+24,"Nordwand, außen;",NaN,46.715838,11.657788,part of building,16
+25,"nördliche Langhauswand, außen",NaN,46.715838,11.657788,part of building,16
+26,"Langhaus-Nordwand, außen",NaN,46.7163334,11.655172917,part of building,3
+27,"nördliches Langhaus, außen",NaN,46.715838,11.657788,part of building,16
+28,Westwand;,NaN,46.716178,11.657637,part of building,21
+29,"Runggadgasse 25, Franziskanerkloster",NaN,46.711914,11.658341,building,8
+30,"Kreuzgang, Westflügel, Boden",NaN,46.711914,11.658341,part of building,29
+31,Frauenkirche,NaN,46.715682,11.657485,building,2
+32,nördlicher Turm; Nordwand,NaN,46.715838,11.657788,part of building,16
+33,"Südwand, Kreuzgang",NaN,46.715838,11.657788,part of building,16
+34,"Kreuzgang, Ostarm, außen",NaN,46.715838,11.657788,part of building,16
+35,"Südwand, Kreuzgang;",NaN,46.715838,11.657788,part of building,16
+36,"Kreuzgang, Südtrakt, Südmauer, innen",NaN,46.715838,11.657788,part of building,16
+37,"Pfeiler südwestlich des Hauptaltars, Ostrichtung",NaN,46.715682,11.657485,part of building,31
+38,südliches Langhaus,NaN,46.715682,11.657485,part of building,31
+39,Westfassade,NaN,46.712923,11.659348,part of building,59
+40,"Domherrenhof, ehem. Refektorium",NaN,46.715838,11.657788,building,2
+41,"Innenwand zur Albuingasse, Turm 1. Stock",NaN,46.715838,11.657788,part of building,40
+42,"Domvorhalle, Ostwand",NaN,46.715838,11.657788,part of building,16
+43,"Domvorhalle, Nordwand",NaN,46.715838,11.657788,part of building,16
+44,Domplatz Nr. 1a,NaN,46.716281,11.657203,building,2
+45,Hauswand;,NaN,46.716281,11.657203,part of building,44
+46,am Boden im hinteren Langhaus;,NaN,46.7163334,11.655172917,part of building,3
+47,"Nordturm, Wand/Mauer",NaN,46.715838,11.657788,part of building,16
+48,"Kreuzgang, heutige Musikschule, ehem. Dokapitelhaus",NaN,46.715608,11.658239,building,2
+49,"heute Abstellkammer, ehem. Keller",NaN,46.715608,11.658239,part of building,48
+50,"Glockenstube, Südwand;",NaN,46.7163334,11.655172917,part of building,3
+51,"Weißer Turm, 1. Stock, Nordmauer innen;",NaN,46.7163334,11.655172917,part of building,3
+52,Trattengasse 22 a,NaN,46.719165,11.654571,building,8
+53,Südfassade,NaN,46.714339,11.658868,part of building,57
+54,"Weißlahnstraße 4, Hotel Elephant",NaN,46.719264,11.653458,building,8
+55,"Große Lauben 18, Altes Rathaus",NaN,46.716627,11.655914,building,8
+56,"Lichthof, Säulenkapitell",NaN,46.716627,11.655914,part of building,55
+57,Hartwiggasse 8,NaN,46.714339,11.658868,building,8
+58,Weißer Turm; Turmkugel;,NaN,46.7163334,11.655172917,part of building,3
+59,Kapuzinerkirche zur Hl. Katharina,NaN,46.712923,11.659348,building,8
+60,"Runggadgasse 1, Mühlgasse 2",NaN,46.714563,11.658875,building,8
+61,Fassade,NaN,46.716625,11.658464,part of building,65
+62,"Hofseite, Säulenkapitell;",NaN,46.714563,11.658875,part of building,60
+63,Griesgasse 2,NaN,46.716587,11.658681,building,8
+64,"Adlerbrückengasse 9, Hotel Goldener Adler",NaN,46.716815,11.658507,building,8
+65,Adlerbrückengasse 6,NaN,46.716625,11.658464,building,8
+66,Große Lauben 10,NaN,46.716669,11.65646,building,8
+67,"Fassade, östlicher Erker",NaN,46.716669,11.65646,part of building,66
+68,"Erhardgasse 4, Herrengarten",NaN,46.715891,11.655507,building,8
+69,Türsturz Richtung Herrengarten;,NaN,46.715891,11.655507,part of building,68
+70,Bäckergasse Nr. 1,NaN,46.716412,11.656119,building,8
+71,,,NULL,NULL,city,8
+72,"2. Stock, Eingang zum Sitzungssal, Türsturz",,NULL,NULL,part of building,71
+73,1. Stock; Türstock von Adlerstube hinaus;,NaN,46.716815,11.658507,part of building,64
+74,"Pfarrplatz Nr. 3, Pfaundlerhaus",NaN,46.716615,11.657507,building,8
+75,"2. Stock, großer Saal, Felderdecke;",NaN,46.716615,11.657507,part of building,74
+76,"Runggadgasse 25, Klarissenkirche",NaN,46.711914,11.658341,building,8
+77,"Westwand, innen; Rechts neben Tür;",NaN,46.711914,11.658341,part of building,76

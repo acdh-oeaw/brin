@@ -1,4 +1,5 @@
 {% extends "webpage/base.html" %}
+{% load webpage_extras %}
 {% load staticfiles %}
 {% load django_tables2 %}
 {% load browsing_extras %}
@@ -212,7 +213,7 @@ $("#goto option").each(function() {
                     <hr>
                     {% column_selector  %}
                 {% endif %}
-                
+
                 </br>
             <h3>Refine your search</h3>
             <hr>

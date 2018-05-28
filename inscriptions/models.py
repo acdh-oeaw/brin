@@ -41,7 +41,7 @@ class Inschrift(models.Model):
         help_text="Klassifikation des Inschriftenträgers (Grabplatte, Epitaph, Fassade, Türsturz,\
         Altar, Kelch, Tafelmalerei, Medaillon, Grenzstein, Uhr etc.)."
         )
-    gattung = models.ManyToManyField(
+    schrift_anbringung = models.ManyToManyField(
         SkosConcept, blank=True, related_name="anbringung",
         verbose_name="Anbringung der Schrift",
         help_text="Art der Anbringung der Schrift am/im Inschriftenträger\

@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.Default.css' %}"/></link>
 <script src="{% static 'webpage/libraries/leaflet.markercluster/src/leaflet.markercluster-src.js' %}"></script>
 <style>
-#map { 
-    height: 900px; 
+#map {
+    height: 900px;
 }
 .pop-up-image {
     height: auto !important;
@@ -36,7 +36,7 @@
     }
     .info > h3 {
        font-size: 2rem;
-        margin-bottom: 0px; 
+        margin-bottom: 0px;
     }
     .h-hr {
         margin-bottom: 10px;
@@ -48,7 +48,7 @@
 
 {% endblock %}
 {% block explore-map %}
-  
+
 <div id="map"></div>
  <script>
     var mapLayerGroups = [];
@@ -128,7 +128,7 @@
         {% empty %}
         {% endfor %}]
         };
-       
+
         var geoJsonLayer = L.geoJson(geojsonFeature, {onEachFeature: onEachFeature});
         markers.addLayer(geoJsonLayer);
         mymap.addLayer(markers);
