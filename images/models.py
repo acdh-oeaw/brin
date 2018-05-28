@@ -1,12 +1,12 @@
 import os
 from django.db import models
 from django.conf import settings
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 
 try:
     base_url = settings.IIIF_BASE
-except:
+except AttributeError:
     base_url = "https://iiif.acdh.oeaw.ac.at/"
 
 IIIF_PATH = "{}".format(base_url)
@@ -25,19 +25,23 @@ def set_directory_path(instance, filename):
 
 
 class ServerPath(models.Model):
-    name = models.CharField(default=IIIF_PATH, blank=True, max_length=250)
+    name = models.CharField(
+        default=IIIF_PATH, blank=True, max_length=250)
 
     def __str__(self):
         return "{}".format(self.name)
 
 
 class Image(models.Model):
-    path = models.ForeignKey(ServerPath, blank=True, null=True)
+    path = models.ForeignKey(
+        ServerPath, blank=True, null=True, on_delete=models.SET_NULL
+    )
     directory = models.CharField(blank=True, max_length=250)
     custom_filename = models.CharField(blank=True, max_length=250)
     file_extension = models.CharField(
         blank=True, max_length=20, choices=FILE_EXTENSION_CHOICES, default='.jp2')
     upload = models.FileField(upload_to=set_directory_path, blank=True, null=True)
+    legacy_id = models.CharField(blank=True, max_length=250)
 
     def save(self, *args, **kwargs):
         if self.path is None:

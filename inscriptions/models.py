@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from vocabs.models import SkosConcept
 from bib.models import Book
 from places.models import Place
@@ -7,7 +7,10 @@ from images.models import Image
 
 
 class Reference(models.Model):
-    book = models.ForeignKey(Book, blank=True, null=True)
+    book = models.ForeignKey(
+        Book, blank=True, null=True,
+        on_delete=models.SET_NULL
+    )
     page = models.CharField(blank=True, max_length=50)
     note = models.CharField(blank=True, max_length=255)
 
@@ -37,6 +40,12 @@ class Inschrift(models.Model):
         verbose_name="Inschriftenträger",
         help_text="Klassifikation des Inschriftenträgers (Grabplatte, Epitaph, Fassade, Türsturz,\
         Altar, Kelch, Tafelmalerei, Medaillon, Grenzstein, Uhr etc.)."
+        )
+    gattung = models.ManyToManyField(
+        SkosConcept, blank=True, related_name="anbringung",
+        verbose_name="Anbringung der Schrift",
+        help_text="Art der Anbringung der Schrift am/im Inschriftenträger\
+        (vertieft, erhaben, eingeritzt, ausgelegt, gemalt etc.)."
         )
     schrift_hoch_min = models.IntegerField(
         blank=True, null=True,
@@ -260,7 +269,8 @@ class Inschrift(models.Model):
         help_text="Lokalisierung der Inschrift an ihrem Standort zum Zeitpunkt der Aufnahme anhand\
         einer hierarchischen Darstellung (Ort, Fraktion, Weiler/Adresse, genauer Standort).\
         Beispiel: Gemeinde: Brixen, Fraktion: Dombezirk/Altstadt, Weiler/Adresse:\
-        Runggadgasse 21, Genauer Standort: Südwand, Erker."
+        Runggadgasse 21, Genauer Standort: Südwand, Erker.",
+        on_delete=models.SET_NULL
         )
     alter_standort = models.CharField(
         blank=True, max_length=255, null=True,

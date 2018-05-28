@@ -21,7 +21,6 @@ urlpatterns = [
     url(r'^browsing/', include('browsing.urls', namespace='browsing')),
     url(r'^vocabs/', include('vocabs.urls', namespace='vocabs')),
     url(r'^vocabs-ac/', include('vocabs.dal_urls', namespace='vocabs-ac')),
-    url(r'^datamodel/', include('django_spaghetti.urls', namespace='datamodel')),
     url(r'^sparql/', include('sparql.urls', namespace='sparql')),
     url(r'^places/', include('places.urls', namespace='places')),
     url(r'^bib/', include('bib.urls', namespace='bib')),

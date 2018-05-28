@@ -1,8 +1,10 @@
 from django.conf.urls import url
+from django.urls import path
 from . import views
 from . import dal_views
 from .models import SkosLabel, SkosConcept, SkosConceptScheme
 
+app_name = 'vocabs'
 
 urlpatterns = [
     url(
@@ -17,7 +19,7 @@ urlpatterns = [
         name='skosconceptscheme-autocomplete',
     ),
     url(
-        r'^skosconcept-autocomplete/$', dal_views.SkosConceptAC.as_view(
+        r'^skosconcept-autocomplete/$', dal_views.SpecificConcepts.as_view(
             model=SkosConcept,
             create_field='pref_label',),
         name='skosconcept-autocomplete',
@@ -35,5 +37,10 @@ urlpatterns = [
         r'^skos-constraint-no-hierarchy-ac/$', dal_views.SKOSConstraintACNoHierarchy.as_view(
             model=SkosConcept),
         name='skos-constraint-no-hierarchy-ac',
+    ),
+    path(
+        r'specific-concept-ac/<str:scheme>', dal_views.SpecificConcepts.as_view(
+            model=SkosConcept),
+        name='specific-concept-ac',
     )
 ]
