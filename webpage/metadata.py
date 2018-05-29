@@ -9,5 +9,7 @@ PROJECT_METADATA = {
     'github': 'https://github.com/acdh-oeaw/brin',
     'purpose_de': 'Ziel dieser Anwendung ist die Publikation von Daten.',
     'purpose_en': 'The purpose of this project is to publish data.',
-    'version': '1.0.0'
+    'version': '1.0.0',
+    'matomo_id': '36',
+    'matomo_url': '//piwik.apollo.arz.oeaw.ac.at/'
 }
