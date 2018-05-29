@@ -66,6 +66,30 @@
                         </td>
                     </tr>
                 {% endif %}
+                <tr>
+                    <td>
+                        Erzeuger von
+                    </td>
+                    <td>
+                        {% for x in object.kuenstler.all %}
+                            <li>
+                                <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                            </li>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        erwähnt in
+                    </td>
+                    <td>
+                        {% for x in object.kennname.all %}
+                            <li>
+                                <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                            </li>
+                        {% endfor %}
+                    </td>
+                </tr>
             </table>
 
                 </div>

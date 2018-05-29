@@ -30,6 +30,8 @@ class InschriftForm(forms.ModelForm):
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=gattung'),
             'traeger': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=traeger'),
+            'schrift_anbringung': autocomplete.ModelSelect2Multiple(
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=schriftanbringung'),
             'schlagworte': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=schlagworte'),
             'schriftklassifikation': autocomplete.ModelSelect2Multiple(
@@ -38,6 +40,10 @@ class InschriftForm(forms.ModelForm):
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=Dating'),
             'reference': autocomplete.ModelSelect2Multiple(
                 url='burials:book-autocomplete'),
+            'kennname': autocomplete.ModelSelect2Multiple(
+                url='inschriften-ac:person-ac'),
+            'kuenstler': autocomplete.ModelSelect2Multiple(
+                url='inschriften-ac:person-ac'),
             'images': autocomplete.ModelSelect2Multiple(
                 url='images-ac:image-autocomplete'),
         }

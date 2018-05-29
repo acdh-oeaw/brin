@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^sparql/', include('sparql.urls', namespace='sparql')),
     url(r'^places/', include('places.urls', namespace='places')),
     url(r'^inschriften/', include('inscriptions.urls', namespace='inschriften')),
+    url(r'^inschriften-ac/', include('inscriptions.dal_urls', namespace='inschriften-ac')),
     url(r'^images/', include('images.urls', namespace='images')),
     url(r'^images-ac/', include('images.dal_urls', namespace='images-ac')),
     url(r'^', include('webpage.urls', namespace='webpage')),
