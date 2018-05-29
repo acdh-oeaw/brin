@@ -338,38 +338,27 @@
                             {% for x in object.images.all %}
                                 <div class="panel panel-default image-panel" style="text-align:center">
                                     <div class="panel-heading"><strong>{{ x.filename }}</strong>
-                                        {% if user.is_authenticated %}
-                                            {# <div class="checkbox">#}
-                                                <label><input type="checkbox" value="{{ x.id }}" name="to_remove">remove?</label>
-                                            {# </div>#}
-                                        {% endif %}
 
                                         <br>
                                         <div class="btn-group">
-                                            {# <button type="button" class="btn btn-primary" id="zoom-in-{{ forloop.counter }}">Zoom In</button>#}
                                             <button type="button" class="btn btn-primary" id="home-{{ forloop.counter }}">Default</button>
-                                            {# <button type="button" class="btn btn-primary" id="zoom-out-{{ forloop.counter }}">Zoom Out</button>#}
                                             <button type="button" class="btn btn-primary" id="full-page-{{ forloop.counter }}">Full Screen</button>
                                         </div>
                                     </div>
                                     <div class="panel-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 150px">
-                                        {# <a href="{{ x }}">dragon-{{ forloop.counter }}</a>#}
                                     </div>
                                     <script type="text/javascript">
                                         var viewer = OpenSeadragon({
                                             id: "dragon-{{ forloop.counter }}",
                                             tileSources: "{{ x }}",
-                                            zoomInButton:   "zoom-in-{{ forloop.counter }}",
-                                            zoomOutButton:  "zoom-out-{{ forloop.counter }}",
+                                            zoomInButton:   null,
+                                            zoomOutButton:  null,
                                             homeButton:     "home-{{ forloop.counter }}",
                                             fullPageButton: "full-page-{{ forloop.counter }}",
                                         });
                                     </script>
                                 </div>
                             {% endfor %}
-                            {% if user.is_authenticated %}
-                                <button type="submit" class="btn btn-default">remove selected images from this entry</button>
-                            {% endif %}
                         </form>
                     </div>
                 </div>
@@ -411,7 +400,6 @@
     }
 
     var overlayMaps = {
-        "Dinamlex": L.tileLayer('https://maps.acdh.oeaw.ac.at/mapserv?map=/data/test.map&mode=tile&layers=test&tilemode=gmap&tile={x}+{y}+{z}', {'maxZoom': 18, 'opacity': 0.7}),
         "Tirol": L.tileLayer('https://maps.acdh.oeaw.ac.at/mapserv?map=/data/tirol.map&mode=tile&layers=tirol&tilemode=gmap&tile={x}+{y}+{z}', {'maxZoom': 18, 'opacity': 0.7}),
         "Czoernig": L.tileLayer('https://maps.acdh.oeaw.ac.at/mapserv?map=/data/czoernig.map&mode=tile&layers=czoernig&tilemode=gmap&tile={x}+{y}+{z}', {'maxZoom': 18, 'opacity': 0.7})
     };
