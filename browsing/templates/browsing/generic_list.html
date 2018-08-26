@@ -26,8 +26,8 @@ $("#goto option").each(function() {
 });
 </script>
 <div class="container">
-<div class="panel panel-default">
-    <div class="panel-heading text-center">
+<div class="card card-default">
+    <div class="card-heading text-center">
 
         <h1><!-- <span class="fa fa-search" style="padding-left:10px; padding-right: 10px;"></span> -->Explore {% class_definition %} {% block list_title %}{% endblock %}</h1>
        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myFilter">
@@ -37,7 +37,7 @@ $("#goto option").each(function() {
     {%block customView %}{% endblock %}
     {% block create_button %}{% endblock %}
     </div>
-    <div class="panel-body">
+    <div class="card-body">
         <div class="row">
             <div class="col-md-12">
                 {% with table.paginator.count as total %}
@@ -237,14 +237,14 @@ $("#goto option").each(function() {
 
 //******ACCORDION TOGGLE - collapse/closed shows plus, and open shows minus
 
-    var $activePanelHeading = $('.panel-group .panel .panel-collapse.in').prev().addClass('active');  //add class="active" to panel-heading div above the "collapse in" (open) div
-    $activePanelHeading.find('a').prepend('<span class="fa fa-minus-square-o"></span> ');  //put the minus-sign inside of the "a" tag
-    $('.panel-group .panel-heading').not($activePanelHeading).find('a').prepend('<span class="fa fa-plus-square-o"></span> ');  //if it's not active, it will put a plus-sign inside of the "a" tag
-    $('.panel-group').on('show.bs.collapse', function (e) {  //event fires when "show" instance is called
-        //$('.panel-group .panel-heading.active').removeClass('active').find('.fa').toggleClass('fa-plus fa-minus-square-o'); - removed so multiple can be open and have minus sign
+    var $activecardHeading = $('.card-group .card .card-collapse.in').prev().addClass('active');  //add class="active" to card-heading div above the "collapse in" (open) div
+    $activecardHeading.find('a').prepend('<span class="fa fa-minus-square-o"></span> ');  //put the minus-sign inside of the "a" tag
+    $('.card-group .card-heading').not($activecardHeading).find('a').prepend('<span class="fa fa-plus-square-o"></span> ');  //if it's not active, it will put a plus-sign inside of the "a" tag
+    $('.card-group').on('show.bs.collapse', function (e) {  //event fires when "show" instance is called
+        //$('.card-group .card-heading.active').removeClass('active').find('.fa').toggleClass('fa-plus fa-minus-square-o'); - removed so multiple can be open and have minus sign
         $(e.target).prev().addClass('active').find('.fa').toggleClass('fa-plus-square-o fa-minus-square-o');
     });
-    $('.panel-group').on('hide.bs.collapse', function (e) {  //event fires when "hide" method is called
+    $('.card-group').on('hide.bs.collapse', function (e) {  //event fires when "hide" method is called
         $(e.target).prev().removeClass('active').find('.fa').removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
     });
 </script>
