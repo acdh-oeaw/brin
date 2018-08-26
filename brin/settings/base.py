@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'bib',
     'inscriptions',
     'images',
-    'sparql'
+    'sparql',
+    'charts',
 ]
 
 MIDDLEWARE = [
