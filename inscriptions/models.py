@@ -19,9 +19,23 @@ class Reference(models.Model):
 
 
 class Person(models.Model):
-    name = models.CharField(blank=True, max_length=255)
+    name = models.CharField(
+        blank=True, max_length=255,
+        verbose_name="Name wie aus Datenimport übernommen",
+        help_text="Für internen Gebrauch"
+    )
+    vor_name = models.CharField(
+        blank=True, max_length=255, verbose_name="Vorname"
+    )
+    nach_name = models.CharField(
+        blank=True, max_length=255, verbose_name="Nachname"
+    )
     titel_grad_beruf = models.CharField(blank=True, max_length=255)
-    gnd_id = models.CharField(blank=True, max_length=255)
+    gnd_id = models.CharField(
+        verbose_name="GND-ID", help_text="Falls es zu dieser Personen einen Eintrag\
+        in der GND gibt, bitte diese hier eintragen",
+        blank=True, max_length=255
+    )
 
     def __str__(self):
         if self.name:
@@ -31,6 +45,14 @@ class Person(models.Model):
 
     def get_absolute_url(self):
         return reverse('inschriften:person_detail', kwargs={'pk': self.id})
+
+    @classmethod
+    def get_listview_url(self):
+        return reverse('browsing:browse_persons')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('inschriften:person_create')
 
     def get_next(self):
         next = Person.objects.filter(id__gt=self.id)
@@ -304,6 +326,14 @@ class Inschrift(models.Model):
 
     def get_absolute_url(self):
         return reverse('inschriften:inschrift_detail', kwargs={'pk': self.id})
+
+    @classmethod
+    def get_listview_url(self):
+        return reverse('browsing:browse_inscriptions')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('inschriften:inschrift_create')
 
     def get_next(self):
         next = Inschrift.objects.filter(id__gt=self.id)

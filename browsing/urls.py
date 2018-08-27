@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views
 
-app_name = 'bib'
+app_name = 'browsing'
 
 urlpatterns = [
     url(r'inscriptions/$', views.InschriftListView.as_view(), name='browse_inscriptions'),

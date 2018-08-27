@@ -37,7 +37,7 @@ def generous_concept_filter(queryset, name, value):
 class SkosConceptListFilter(django_filters.FilterSet):
 
     pref_label = django_filters.ModelMultipleChoiceFilter(
-        widget=autocomplete.Select2Multiple(url='vocabs-ac:skosconcept-autocomplete'),
+        widget=autocomplete.Select2Multiple(url='vocabs-ac:skos-constraint-no-hierarchy-ac'),
         queryset=SkosConcept.objects.all(),
         lookup_expr='icontains',
         label='PrefLabel',
