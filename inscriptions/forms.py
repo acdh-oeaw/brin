@@ -24,7 +24,9 @@ class InschriftForm(forms.ModelForm):
 
     class Meta:
         model = Inschrift
-        fields = "__all__"
+        exclude = [
+            'quellen',
+        ]
         widgets = {
             'gattung': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=gattung'),
