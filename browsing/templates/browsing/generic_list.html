@@ -23,11 +23,7 @@ $("#goto option").each(function() {
 });
 </script>
 <style>
-
 </style>
-<div class="container-fluid">
-
-
         <div class="row">
             <div class="col-md-4">
             <div class="card">
@@ -51,9 +47,9 @@ $("#goto option").each(function() {
                 {% load django_tables2 crispy_forms_tags %}
             <form action="." class="uniForm" method="get">
                 {% if togglable_colums %}
-                    <legend>Select additional columns</legend>
-                    {% column_selector  %}
-                    {% endif %}
+                  <h4>Select additional columns</h4>
+                  {% column_selector  %}
+                {% endif %}
                 <br/>
                 {% crispy filter.form filter.form.helper %}
             </form>
@@ -61,7 +57,7 @@ $("#goto option").each(function() {
           <a class ="btn btn-outline-secondary"  href=".">Reset search</a>
           {% if vis_list %}
               <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                   Visualize <span class="caret"></span></button>
                   <ul class="dropdown-menu" role="menu">
                       {% for x in vis_list %}
@@ -71,7 +67,6 @@ $("#goto option").each(function() {
                               {% endfor %}
                           </li>
                           <hr/>
-
                       {% endfor %}
                   </ul>
               </div>
@@ -79,11 +74,10 @@ $("#goto option").each(function() {
           {% if vis_list %}
             {% if data %}
               <div class="card">
-                  <div class="card-heading" style="text-align:center;">
-
+                  <div class="card-header" style="text-align:center;">
                           <h1>{{ data.title }}</h1>
                           <legend>{{ data.items }}</legend>
-                          <button  type="button" class="btn btn-default" data-toggle="collapse" data-target="#howtocite" id="howtocite-btn">JSON data</button>
+                          <button  type="button" class="btn btn-outline-primary" data-toggle="collapse" data-target="#howtocite" id="howtocite-btn">JSON data</button>
                           <div id="howtocite" class="collapse">
                               <p>{{data}}</p>
                           </div>
@@ -95,21 +89,19 @@ $("#goto option").each(function() {
                         <h4>{{ error_msg|safe }}</h4>
                     {% endif %}
 
-                  </div>
+              </div>
             {% endif %}
           {% endif %}
-
-
           {% endblock %}
+          </div><!--end-of card-body-->
+          </div><!--end-of card-->
+          </div><!--end of col-md-4-->
 
-            </div>
-            </div>
-            </div>
-            <div class="col-md-8" id="results">
-            <div class="card">
-            <div class="card-body">
-    {% with table.paginator.count as total %}
-        <legend>Result: {{ total }} items</legend>
+          <div class="col-md-8" id="results">
+          <div class="card">
+          <div class="card-body">
+        {% with table.paginator.count as total %}
+        <legend class="legend-yellow">Results: {{ total }} items</legend>
         {% if conf_items %}
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle dropdown-custom" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -124,7 +116,7 @@ $("#goto option").each(function() {
                 </ul>
             </div>
         {% endif %}
-    {% endwith %}
+        {% endwith %}
 
 
       {% block table %}
@@ -205,24 +197,25 @@ $("#goto option").each(function() {
 
 
 <!--Page # of total -->
-{% if table.page.has_previous or table.page.has_next %}
-{% block pagination.cardinality %}
-{% blocktrans with table.page.number as current and table.paginator.num_pages as total %}
-<p>Page {{ current }} of {{ total }}</p>
-{% endblocktrans %}
-{% endblock pagination.cardinality %}
-{% endif %}
+        {% if table.page.has_previous or table.page.has_next %}
+        {% block pagination.cardinality %}
+        {% blocktrans with table.page.number as current and table.paginator.num_pages as total %}
+        <p>Page {{ current }} of {{ total }}</p>
+        {% endblocktrans %}
+        {% endblock pagination.cardinality %}
+        {% endif %}
 
 <!--if has next page - next button -->
 
-{% if table.page.has_next %}
-{% block pagination.next.goto %}
-  <li class="next">
-  <a style="margin-left: 10px;" href="{% querystring table.prefixed_page_field=table.page.next_page_number %}" style="border-radius: 0px;">{% trans "Next" %}</a>
-  </li>
-{% endblock pagination.next.goto %}
-{% endif %}
-</ul>
+      {% if table.page.has_next %}
+      {% block pagination.next.goto %}
+        <li class="next">
+        <a style="margin-left: 10px;" href="{% querystring table.prefixed_page_field=table.page.next_page_number %}" style="border-radius: 0px;">{% trans "Next" %}</a>
+        </li>
+      {% endblock pagination.next.goto %}
+      {% endif %}
+    </ul>
+
 <!--select form if more than 10 pages -->
 
 <div class="form-group" style="width: 20%;">
@@ -238,7 +231,6 @@ $("#goto option").each(function() {
 <!--else condition  - if less than 10 pages  - shows page number buttons-->
 
         {% else %}
-
 
         {% if table.page.has_previous %}
         {% block pagination.previous %}
@@ -268,18 +260,13 @@ $("#goto option").each(function() {
         {% endblock pagination.next %}
         {% endif %}
 
-</ul>
         {% endif %}
+        {% endblock pagination.allpages %}
 
-
-      <!-- </ul> -->
-      {% endblock pagination.allpages %}
-
-  </div>
-        </div>
-        </div>
-        </div>
-</div>
+          </div><!--div card ends-->
+          </div><!--div card-body ends-->
+          </div><!--div col-md-8 ends-->
+        </div><!--div row ends-->
 
 {% config_highcharts %}
 

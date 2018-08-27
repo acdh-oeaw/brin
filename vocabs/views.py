@@ -9,7 +9,7 @@ from .models import SkosConcept, SkosConceptScheme, SkosLabel
 from .forms import *
 from .tables import SkosConceptTable, SkosConceptSchemeTable, SkosLabelTable
 from .filters import SkosConceptListFilter, SkosConceptSchemeListFilter, SkosLabelListFilter
-from webpage.utils import GenericListView, BaseCreateView, BaseUpdateView
+from browsing.browsing_utils import GenericListView, BaseCreateView, BaseUpdateView
 
 
 class SkosConceptListView(GenericListView):

@@ -2,15 +2,14 @@
 {% load staticfiles %}
 {% block Titel %} {{ object.legacy_id }} {% endblock %}
 {% block scriptHeader %}
-    <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/></link>
-    <script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
-        <style>
-            #mymap { height: 500px; }
-        </style>
+<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"/>
+<script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
+    <style>
+        #mymap { height: 500px; }
+    </style>
 {% endblock %}
 {% block content %}
 <script src="{% static 'images/openseadragon/openseadragon.min.js' %}"></script>
-
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -33,7 +32,6 @@
                          </a>
                      {% endif %}
                     </h1>
-
                 </div>
                 <div class="col-md-2">
                 {% if object.get_next %}
@@ -49,10 +47,10 @@
         <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <legend>Klassifizierung</legend>
+                        <legend class="legend-yellow">Klassifizierung</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>Inschriftengattung</th>
+                                <th class="w-50">Inschriftengattung</th>
                                 <td>
                                     {% for x in object.gattung.all %}
                                         <li>
@@ -62,7 +60,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Inschriftenträger</th>
+                                <th class="w-50">Inschriftenträger</th>
                                 <td>
                                     {% for x in object.traeger.all %}
                                         <li>
@@ -72,7 +70,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Anbringung der Schrift</th>
+                                <th class="w-50">Anbringung der Schrift</th>
                                 <td>
                                     {% for x in object.schrift_anbringung.all %}
                                         <li>
@@ -82,18 +80,18 @@
                                 </td>
                             </tr>
                              <tr>
-                                <th>Farbe des Inschriftenträgers</th>
+                                <th class="w-50">Farbe des Inschriftenträgers</th>
                                 <td>{{ object.farbtraeger }}</td>
                             </tr>
                             <tr>
-                                <th>Farbe der Schrift</th>
+                                <th class="w-50">Farbe der Schrift</th>
                                 <td>{{ object.farbschrift }}</td>
                             </tr>
                         </table>
-                         <legend>Standort</legend>
+                        <legend class="legend-yellow">Standort</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th width="66%">aktueller Standort</th>
+                                <th class="w-50">aktueller Standort</th>
                                 <th>alter Standort</th>
                             </tr>
                             <tr>
@@ -104,61 +102,54 @@
                                                 <li>{{ object.genauer_standort.part_of.part_of }}</li>
                                                 <ul>
                                                     <li>{{ object.genauer_standort.part_of}}</li>
-                                                    <ul>
-                                                        <li>{{ object.genauer_standort}}</li>
-                                                    </ul>
+                                                <ul>
+                                                    <li>{{ object.genauer_standort}}</li>
+                                                </ul>
                                                 </ul>
                                             </ul>
-                                        </ul>
                                     </ul>
                                 </td>
                                 <td>{{ object.alter_standort }}</td>
                             </tr>
                         </table>
-
                         <div id="mymap"></div>
                         <br>
-                        <legend>Datierung</legend>
+                        <legend class="legend-yellow">Datierung</legend>
                         <table class="table table-bordered table-hover">
                         <tr>
-                                <th>Datierung</th>
+                                <th class="w-50">Datierung</th>
                                 <td>{{ object.datierung_inschrift_written}}</td>
 
                             </tr>
                              <tr>
-                                <th>Datierung</th>
+                                <th class="w-50">Datierung</th>
                                 <td>{{ object.datierung_inschrift}}</td>
                             </tr>
-
                         </table>
-
-                        <legend>Edition</legend>
+                        <legend class="legend-yellow">Edition</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>Transkription</th>
+                                <th class="w-50">Transkription</th>
                                 <th>Transkription normalisiert</th>
                             </tr>
                             <tr>
                                 <td>
                                     {{ object.transkription|safe }}
                                     {% if object.schriftbeschreibung %}
-                                        <br/>
+                                        <br>
                                         <hr/>
                                         <small>
                                             {{ object.schriftbeschreibung}}
                                         </small>
-                                    </hr/>
                                     {% endif %}
                                 </td>
                                 <td>{{ object.transkription_normalized }}</td>
                             </tr>
                         </table>
-
-                        <legend>Überlieferung</legend>
+                        <legend class="legend-yellow">Überlieferung</legend>
                         <table class="table table-bordered table-hover">
-
                             <tr>
-                                <th>Signatur bei Resch</th>
+                                <th class="w-50">Signatur bei Resch</th>
                                 <td>{{ object.resch_kopial_signatur }}</td>
                             </tr>
                             <tr>
@@ -181,26 +172,22 @@
                                 <th>Erhaltungszustand</th>
                                 <td>{{ object.erhaltungszustand }}</td>
                             </tr>
-
                         </table>
-
-                        <legend>Schriftfeld</legend>
+                        <legend class="legend-yellow">Schriftfeld</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>Höhe Schriftfeld (min/max)</th>
+                                <th class="w-50">Höhe Schriftfeld (min/max)</th>
                                 <td>{{ object.schrift_hoch_min }}/{{ object.schrift_hoch_max }}</td>
                             </tr>
                             <tr>
-                                <th>Breite Schriftfeld (min/max)</th>
+                                <th class="w-50">Breite Schriftfeld (min/max)</th>
                                 <td>{{ object.schrift_breit_min }}/{{ object.schrift_breit_max }}</td>
                             </tr>
-                            </table>
-
-                         <legend>Schriftgröße</legend>
+                        </table>
+                        <legend class="legend-yellow">Schriftgröße</legend>
                         <table class="table table-bordered table-hover">
-
                             <tr>
-                                <th>Höhe Majuskel (min/max)</th>
+                                <th class="w-50">Höhe Majuskel (min/max)</th>
                                 <td>{{ object.majuskel_min }}/{{ object.majuskel_max }}</td>
                             </tr>
                             <tr>
@@ -216,12 +203,10 @@
                                 <td>{{ object.oberlaenge_min }}/{{ object.oberlaenge_max }}</td>
                             </tr>
                         </table>
-
-
-                        <legend>Schriftbild</legend>
+                        <legend class="legend-yellow">Schriftbild</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>Schriftbeschreibung</th>
+                                <th class="w-50">Schriftbeschreibung</th>
                                 <td>{{ object.schriftbeschreibung }}</td>
                             </tr>
                             <tr>
@@ -234,13 +219,11 @@
                                     {% endfor %}
                                 </td>
                             </tr>
-                            </table>
-
-
-                        <legend>Allgemeine Beschreibung</legend>
+                        </table>
+                        <legend class="legend-yellow">Allgemeine Beschreibung</legend>
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th>ausführender Künstler</th>
+                                <th class="w-50">ausführender Künstler</th>
                                 <td>
                                     {% for x in object.kuenstler.all %}
                                         <li>
@@ -250,7 +233,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>allgemeine Beschreibung</th>
+                                <th class="w-50">allgemeine Beschreibung</th>
                                 <td>{{ object.allgemeine_beschreibung }}</td>
                             </tr>
                              <tr>
@@ -267,13 +250,11 @@
                                 <td>{{ object.notizen }}</td>
                             </tr>
                             {% endif %}
-                            </table>
-
-
-                     <legend>Quellen und Literatur</legend>
+                        </table>
+                        <legend class="legend-yellow">Quellen und Literatur</legend>
                         <table class="table table-bordered table-hover">
                            <tr>
-                                <th>Quellen und Literatur</th>
+                                <th class="w-50">Quellen und Literatur</th>
                                 <td>
                                     {% for x in object.quellen.all %}
                                         <li>
@@ -282,17 +263,15 @@
                                     {% endfor %}
                                 </td>
                             </tr>
-                          <tr>
+                            <tr>
                                 <th>Quellen und Literatur (unstrukturiert)</th>
                                 <td>{{ object.quellen_unstruktieriert }}</td>
                             </tr>
-                            </table>
-
-
-                        <legend>Schlagworte</legend>
+                        </table>
+                        <legend class="legend-yellow">Schlagworte</legend>
                         <table class="table table-bordered table-hover">
                            <tr>
-                                <th>Schlagworte</th>
+                                <th class="w-50">Schlagworte</th>
                                 <td>
                                     {% for x in object.schlagworte.all %}
                                         <li>
@@ -311,13 +290,11 @@
                                     {% endfor %}
                                 </td>
                             </tr>
-                            </table>
-
-                        <legend>Metadaten</legend>
+                        </table>
+                        <legend class="legend-yellow">Metadaten</legend>
                         <table class="table table-bordered table-hover">
-
                             <tr>
-                                <th>Anlagedatum</th>
+                                <th class="w-50">Anlagedatum</th>
                                 <td>{{ object.created }}</td>
                             </tr>
                             <tr>
@@ -333,9 +310,6 @@
                                 <td>{{ object.aufnahmedatum }}</td>
                             </tr>
                         </table>
-
-
-
                     </div>
                     <div class="col-md-6">
                         <form method="get">

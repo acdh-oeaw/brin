@@ -8,7 +8,7 @@ body {
     height: 100%;
     font-family: 'Libre Franklin', sans-serif;
     background-color: #f7f5f6;
-    padding-top: 65px;
+    padding-top: 70px;
 
 }
 
@@ -28,7 +28,7 @@ footer{
     flex: 0 0 auto;
     background-color: #1a2930;
     color: #ffffff;
-    font-size:1 3px;
+    font-size: 13px;
     padding: 20px;
     left: 0;
     right: 0;
@@ -36,13 +36,10 @@ footer{
     margin-top: 10px;
 }
 /*#00303f*/
-legend {
-    /*background-color: #f7ce3e;*/
-    /*opacity: 0.75;*/
+.legend-yellow {
     color: #1a2930;
     font-weight: 600;
     padding: 10px;
-    /*border-bottom: 3px solid #f7ce3e;*/
     border: 2px solid #f7ce3e;
 }
 
@@ -73,111 +70,24 @@ legend {
     }
 }
 
-
-
-/*@media (min-width: 768px) and (max-width: 1105px) {
-    .navbar-right {
-        float: none !important;
-    }
-}*/
 .navbar {
-    background-color: #f7f5f6;
-    /*background-color:  #1a2930;*/
-    padding: 5px 15px 5px 15px;
-    margin: 0px;
-    padding: 0px;
+   /* background-color: #f7f5f6;*/
     box-shadow: 0 3px 3px rgba(50, 50, 50, .55);
 
 }
-
-
-.navbar-default .navbar-nav>li>a {
+.navbar .navbar-nav > li > a {
     color: #1a2930;
     line-height: 200%;
-    /*font-weight: bold;*/
-    /*text-transform: uppercase;*/
-    /*color: #ffffff;*/
-}
-/*responsive navbar*/
-@media (max-width: 991px) {
-  .navbar-header {
-      float: none;
-  }
-  .navbar-left,.navbar-right {
-      float: none !important;
-  }
-  .navbar-toggle {
-      display: block;
-  }
-  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-      display: none!important;
-  }
-  .navbar-nav {
-      float: none!important;
-      margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-      float: none;
-  }
-  .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .collapse.in{
-      display:block !important;
-  }
 }
 
-
-
-
-/*end of responsive navbar*/
-
-.responsive-tabs.nav-tabs > li.active > a {
-    background-color: #ced0d4;
-}
-
-.responsive-tabs.nav-tabs > li > a:hover {
-    color: #333333;
-}
-
-
-/*.btn {
-    font-weight: bold;
-    font-variant: small-caps;
-  
-}*/
 .btn {
-    line-height: 36px;
-
-    height: 36px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0 2rem;
-
     white-space: normal;
-    letter-spacing: .5px;
-    
-}
-
-.btn-default {
     margin-bottom: 10px;
 }
-
 .index-image {
     height: 70vh;
-    /*-webkit-clip-path: inset(0px 10px 0px 10px);
-    clip-path: inset(0px 10px 0px 10px);*/
     margin-top: -25px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     background-repeat: no-repeat;
     background-position: 0 30%;
     background-size: cover;
@@ -185,7 +95,7 @@ legend {
 
 .top-main-section {
     margin: 10px;
-    padding: 5px;
+    padding: 20px 10px 10px 10px;
     background-color: #fff;
     box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);
     opacity: 0.75;
@@ -265,7 +175,7 @@ and (max-device-width: 667px) {
     margin: 10px;
     padding: 20px;
     background: #fff;
-    box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);
+    box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .2);
     flex: 3 1 50%;
     order: 0;
 
@@ -282,21 +192,11 @@ and (max-device-width: 667px) {
         /* Return them to document order */
         order: 0;
     }
-/*    .main-flexbox>aside {
-        min-height: auto;
-        max-height: auto;
-    }*/
 }
-/*#basic_search_fields > .card-body >.form-group > .controls > input {
- width: 50%;
-}
-@media all and (max-width: 768px) {
-    #basic_search_fields > .card-body >.form-group > .controls > input {
- width: 100%;
-}
-}*/
+
 .card-default {
-    box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);
+    box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .2);
+    margin-bottom: 10px;
 }
 .card-default > .card-heading {
     background-color: #ffffff;
@@ -306,16 +206,6 @@ and (max-device-width: 667px) {
 .card-default > .card-heading > h3 {
     color: #1a2930;
 }
-/*a {
-    color: #1a2930;
-}*/
-
-/*.results-item-card {
-    margin: 5px;
-    padding: 10px;
-
-    border: 1px solid #565656;
-}*/
 .image-card:hover {
-    box-shadow: 0 5px 5px rgba(50, 50, 50, .75);
+    box-shadow: 2px 2px 24px 0 rgba(10, 10, 10, .3);
 }
