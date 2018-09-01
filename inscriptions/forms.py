@@ -32,6 +32,8 @@ class InschriftForm(forms.ModelForm):
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=gattung'),
             'traeger': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=traeger'),
+            'traeger_material': autocomplete.ModelSelect2Multiple(
+                url='../../vocabs-ac/skos-constraint-ac/?scheme=traegermaterial'),
             'schrift_anbringung': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=schriftanbringung'),
             'schlagworte': autocomplete.ModelSelect2Multiple(

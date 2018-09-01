@@ -81,6 +81,12 @@ class Inschrift(models.Model):
         help_text="Klassifikation des Inschriftenträgers (Grabplatte, Epitaph, Fassade, Türsturz,\
         Altar, Kelch, Tafelmalerei, Medaillon, Grenzstein, Uhr etc.)."
         )
+    traeger_material = models.ManyToManyField(
+        SkosConcept, blank=True, related_name="traeger_material",
+        verbose_name="Material des Inschriftenträgers",
+        help_text="Auswahlmöglichkeiten: Holz, Stein, Keramik, Glas, Horn, Elfenbein, Gold, Silber,\
+        Blech, Leinwand, Putz, Stoff"
+        )
     schrift_anbringung = models.ManyToManyField(
         SkosConcept, blank=True, related_name="anbringung",
         verbose_name="Anbringung der Schrift",

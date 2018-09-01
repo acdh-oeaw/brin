@@ -70,6 +70,16 @@
                                 </td>
                             </tr>
                             <tr>
+                                <th class="w-50">Material des Inschriftenträgers</th>
+                                <td>
+                                    {% for x in object.traeger_material.all %}
+                                        <li>
+                                            {{ x.pref_label }}
+                                        </li>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
                                 <th class="w-50">Anbringung der Schrift</th>
                                 <td>
                                     {% for x in object.schrift_anbringung.all %}
