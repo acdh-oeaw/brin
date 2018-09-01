@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
+
 from .models import Inschrift, Person
 from .forms import InschriftForm, PersonForm
 from images.models import Image
@@ -47,6 +49,16 @@ class PersonUpdate(UpdateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(PersonUpdate, self).dispatch(*args, **kwargs)
+
+
+class PersonDelete(DeleteView):
+    model = Person
+    template_name = 'webpage/confirm_delete.html'
+    success_url = reverse_lazy('browsing:browse_persons')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PersonDelete, self).dispatch(*args, **kwargs)
 
 
 class InschriftDetailView(DetailView):

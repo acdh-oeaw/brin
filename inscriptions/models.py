@@ -305,8 +305,8 @@ class Inschrift(models.Model):
         )
     datierung_inschrift = models.DateField(
         null=True, blank=True,
-        verbose_name="Datierung",
-        help_text="Exakte oder annähernde Datierung der Inschrift"
+        verbose_name="Datierung (normiert)",
+        help_text="Normiertes Datum (YYYY-MM-DD)"
         )
     genauer_standort = models.ForeignKey(
         Place, blank=True, null=True,

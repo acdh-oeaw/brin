@@ -53,6 +53,11 @@ class InschriftListFilter(django_filters.FilterSet):
         help_text=Inschrift._meta.get_field('resch_kopial_signatur').help_text,
         label=Inschrift._meta.get_field('resch_kopial_signatur').verbose_name
         )
+    allgemeine_beschreibung = django_filters.CharFilter(
+        lookup_expr='icontains',
+        help_text=Inschrift._meta.get_field('allgemeine_beschreibung').help_text,
+        label=Inschrift._meta.get_field('allgemeine_beschreibung').verbose_name
+        )
 
     class Meta:
         model = Inschrift

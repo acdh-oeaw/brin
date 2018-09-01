@@ -53,6 +53,7 @@ class InschriftFilterFormHelper(FormHelper):
                     'transkription',
                     'transkription_normalized',
                     'resch_kopial_signatur',
+                    'allgemeine_beschreibung',
                     css_id="basic_search_fields"
                 ),
                 css_id="accordion",

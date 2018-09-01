@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^person/(?P<pk>[0-9]+)$', views.PersonDetailView.as_view(), name='person_detail'),
     url(r'^person/create/$', views.PersonCreate.as_view(), name='person_create'),
     url(r'^person/update/(?P<pk>[0-9]+)$', views.PersonUpdate.as_view(), name='person_update'),
+    url(r'^person/delete/(?P<pk>[0-9]+)$', views.PersonDelete.as_view(),
+        name='person_delete'),
 ]
