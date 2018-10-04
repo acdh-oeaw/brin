@@ -49,7 +49,7 @@
                     <div class="card">
                         <div class="card-header">skos:broader</div>
                         <div class="card-body">
-                            <h3>{{ object.broader_concept }}</h3>
+                            {{ object.broader_concept }}
                             {% for x in object.get_broader %}
                                 <a href="{% url 'vocabs:skosconcept_detail' pk=x.id %}">{{ x }}</a>
                             {% endfor %}
@@ -149,9 +149,78 @@
                                     </tr>
                                 {% endif %}
                             </table>
-                            <legend>
-                                related concepts
-                            </legend>
+                            {% if object.gattung.all %}
+                                <legend>
+                                    Gattung
+                                </legend>
+                                <ul>
+                                    {% for x in object.gattung.all %}
+                                        <li>
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if object.traeger.all %}
+                                <legend>
+                                    Träger
+                                </legend>
+                                <ul>
+                                    {% for x in object.traeger.all %}
+                                        <li>
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if object.traeger_material.all %}
+                                <legend>
+                                    Trägermaterial
+                                </legend>
+                                <ul>
+                                    {% for x in object.traeger_material.all %}
+                                        <li>
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if object.anbringung.all %}
+                                <legend>
+                                    Anbringung
+                                </legend>
+                                <ul>
+                                    {% for x in object.anbringung.all %}
+                                        <li>
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if object.schlagworte.all %}
+                                <legend>
+                                    Schlagwort
+                                </legend>
+                                <ul>
+                                    {% for x in object.schlagworte.all %}
+                                        <li>
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            {% if object.schriftklassifikation.all %}
+                                <legend>
+                                    Schriftklassifikation
+                                </legend>
+                                <ul>
+                                    {% for x in object.schriftklassifikation.all %}
+                                        <li>
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
