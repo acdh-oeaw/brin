@@ -248,6 +248,10 @@ class Inschrift(models.Model):
         verbose_name="Status",
         help_text="Status der Bearbeitung (unfertig, halb fertig, fertig)."
         )
+    status_resch = models.NullBooleanField(
+        verbose_name="Status Resch",
+        help_text="Status der Resch Transkription."
+        )
     schlagworte = models.ManyToManyField(
         SkosConcept, blank=True, related_name="schlagworte",
         verbose_name="Schlagworte",
