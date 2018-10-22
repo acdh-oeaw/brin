@@ -268,7 +268,7 @@
                                 <td>
                                     {% for x in object.quellen.all %}
                                         <li>
-                                            {{ x.book }}
+                                            <a href="{{ x.get_absolute_url }}">{{ x }}</a>
                                         </li>
                                     {% endfor %}
                                 </td>

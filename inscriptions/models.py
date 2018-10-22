@@ -7,15 +7,45 @@ from images.models import Image
 
 
 class Reference(models.Model):
-    book = models.ForeignKey(
-        Book, blank=True, null=True,
-        on_delete=models.SET_NULL
+    short_title = models.TextField(
+        blank=True, null=True,
+        verbose_name="Kurzzitat"
+    )
+    long_title = models.TextField(
+        blank=True, null=True,
+        verbose_name="Langzitat"
     )
     page = models.CharField(blank=True, max_length=50)
     note = models.CharField(blank=True, max_length=255)
 
     def __str__(self):
-        return self.book
+        if self.short_title:
+            return "{}".format(self.short_title)
+        else:
+            return "{}".format(self.id)
+
+    def get_absolute_url(self):
+        return reverse('inschriften:reference_detail', kwargs={'pk': self.id})
+
+    @classmethod
+    def get_listview_url(self):
+        return reverse('browsing:browse_reference')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('inschriften:reference_create')
+
+    def get_next(self):
+        next = Reference.objects.filter(id__gt=self.id)
+        if next:
+            return next.first().id
+        return False
+
+    def get_prev(self):
+        prev = Reference.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return prev.first().id
+        return False
 
 
 class Person(models.Model):

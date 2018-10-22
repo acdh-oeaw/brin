@@ -1,6 +1,6 @@
 import django_filters
 from dal import autocomplete
-from inscriptions.models import Inschrift, Person
+from inscriptions.models import Inschrift, Person, Reference
 from vocabs.models import SkosConcept
 
 django_filters.filters.LOOKUP_TYPES = [
@@ -18,6 +18,23 @@ django_filters.filters.LOOKUP_TYPES = [
     ('icontains', 'Contains (case insensitive)'),
     ('not_contains', 'Does not contain'),
 ]
+
+
+class ReferenceListFilter(django_filters.FilterSet):
+    short_title = django_filters.CharFilter(
+        lookup_expr='icontains',
+        help_text=Reference._meta.get_field('short_title').help_text,
+        label=Reference._meta.get_field('short_title').verbose_name
+        )
+    long_title = django_filters.CharFilter(
+        lookup_expr='icontains',
+        help_text=Reference._meta.get_field('long_title').help_text,
+        label=Reference._meta.get_field('long_title').verbose_name
+        )
+
+    class Meta:
+        model = Reference
+        fields = '__all__'
 
 
 class PersonListFilter(django_filters.FilterSet):

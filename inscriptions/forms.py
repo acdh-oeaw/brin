@@ -2,7 +2,22 @@ from dal import autocomplete
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from .models import Inschrift, Person
+from .models import Inschrift, Person, Reference
+
+
+class ReferenceForm(forms.ModelForm):
+    class Meta:
+        model = Reference
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super(ReferenceForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_tag = True
+        self.helper.form_class = 'form-horizontal'
+        self.helper.label_class = 'col-md-3'
+        self.helper.field_class = 'col-md-9'
+        self.helper.add_input(Submit('submit', 'save'),)
 
 
 class PersonForm(forms.ModelForm):
@@ -24,9 +39,7 @@ class InschriftForm(forms.ModelForm):
 
     class Meta:
         model = Inschrift
-        exclude = [
-            'quellen',
-        ]
+        fields = '__all__'
         widgets = {
             'gattung': autocomplete.ModelSelect2Multiple(
                 url='../../vocabs-ac/skos-constraint-ac/?scheme=gattung'),

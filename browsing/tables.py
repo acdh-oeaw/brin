@@ -3,6 +3,18 @@ from django_tables2.utils import A
 from inscriptions.models import *
 
 
+class ReferenceTable(tables.Table):
+    name = tables.LinkColumn(
+        'inschriften:reference_detail',
+        args=[A('pk')], verbose_name='Name'
+    )
+
+    class Meta:
+        model = Reference
+        sequence = ('id', 'short_title')
+        attrs = {"class": "table table-responsive table-hover"}
+
+
 class PersonTable(tables.Table):
     name = tables.LinkColumn(
         'inschriften:person_detail',

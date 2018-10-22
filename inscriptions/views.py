@@ -6,8 +6,8 @@ from django.utils.decorators import method_decorator
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
 
-from .models import Inschrift, Person
-from .forms import InschriftForm, PersonForm
+from .models import Inschrift, Person, Reference
+from .forms import InschriftForm, PersonForm, ReferenceForm
 from images.models import Image
 
 
@@ -112,3 +112,63 @@ class InschriftUpdate(UpdateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(InschriftUpdate, self).dispatch(*args, **kwargs)
+
+
+class InschriftDelete(DeleteView):
+    model = Inschrift
+    template_name = 'webpage/confirm_delete.html'
+    success_url = reverse_lazy('browsing:browse_inscriptions')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(InschriftDelete, self).dispatch(*args, **kwargs)
+
+
+class ReferenceDetailView(DetailView):
+    model = Reference
+    template_name = 'inscriptions/reference_detail.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ReferenceDetailView, self).dispatch(*args, **kwargs)
+
+
+class ReferenceListView(ListView):
+    model = Reference
+    template_name = 'inscriptions/reference_list.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ReferenceListView, self).dispatch(*args, **kwargs)
+
+
+class ReferenceCreate(CreateView):
+
+    model = Reference
+    template_name = 'inscriptions/reference_create.html'
+    form_class = ReferenceForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ReferenceCreate, self).dispatch(*args, **kwargs)
+
+
+class ReferenceUpdate(UpdateView):
+
+    model = Reference
+    template_name = 'inscriptions/reference_create.html'
+    form_class = ReferenceForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ReferenceUpdate, self).dispatch(*args, **kwargs)
+
+
+class ReferenceDelete(DeleteView):
+    model = Reference
+    template_name = 'webpage/confirm_delete.html'
+    success_url = reverse_lazy('browsing:browse_persons')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ReferenceDelete, self).dispatch(*args, **kwargs)
