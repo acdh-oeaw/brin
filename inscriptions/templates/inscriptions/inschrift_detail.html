@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-8">
                     <h1 style="text-align: center;">
-                      <a href="{% url 'browsing:browse_inscriptions' %}"><small class="text-muted">Inschrift: </small></a>{{ object.transkription_normalized|truncatechars:20 }}
+                      <a href="{% url 'browsing:browse_inscriptions' %}"><small class="text-muted">Inschrift: </small></a>{{ object.transkription_normalized|safe|truncatechars:20 }}
                       {% if user.is_authenticated %}
                          <a href="{% url 'inschriften:inschrift_update' pk=object.id %}">
                             <i class="fas fa-edit" title="edit"></i>
@@ -161,11 +161,11 @@
                                         <br>
                                         <hr/>
                                         <small>
-                                            {{ object.schriftbeschreibung}}
+                                            {{ object.schriftbeschreibung|safe }}
                                         </small>
                                     {% endif %}
                                 </td>
-                                <td>{{ object.transkription_normalized }}</td>
+                                <td>{{ object.transkription_normalized|safe }}</td>
                             </tr>
                         </table>
                         <legend class="legend-yellow">Überlieferung</legend>
@@ -256,7 +256,7 @@
                             </tr>
                             <tr>
                                 <th class="w-50">allgemeine Beschreibung</th>
-                                <td>{{ object.allgemeine_beschreibung }}</td>
+                                <td>{{ object.allgemeine_beschreibung|safe }}</td>
                             </tr>
                              <tr>
                                 <th>Restaurierungsphasen</th>
