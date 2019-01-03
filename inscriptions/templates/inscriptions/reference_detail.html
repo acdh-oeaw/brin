@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-md-8">
                         <h1 style="text-align: center;">
-                            {{ object.name}}
+                            {{ object}}
                             {% if user.is_authenticated %}
                                 <a href="{% url 'inschriften:reference_update' pk=object.id %}">
                                     <i class="fas fa-edit" title="edit"></i>
@@ -74,6 +74,16 @@
                         </th>
                         <td>
                             {{ object.note }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Inschriften
+                        </th>
+                        <td>
+                            {% for x in object.has_inscriptions.all %}
+                                <a href="{{ x.get_absolute_url }}">{{ x }}</a><br />
+                            {% endfor %}
                         </td>
                     </tr>
                 </table>

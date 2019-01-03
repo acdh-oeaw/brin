@@ -4,7 +4,7 @@ from inscriptions.models import *
 
 
 class ReferenceTable(tables.Table):
-    name = tables.LinkColumn(
+    short_title = tables.LinkColumn(
         'inschriften:reference_detail',
         args=[A('pk')], verbose_name='Name'
     )

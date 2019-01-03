@@ -15,7 +15,7 @@ class Reference(models.Model):
         blank=True, null=True,
         verbose_name="Langzitat"
     )
-    page = models.CharField(blank=True, max_length=50)
+    page_number = models.CharField(blank=True, max_length=50)
     note = models.CharField(blank=True, max_length=255)
 
     def __str__(self):
@@ -260,7 +260,8 @@ class Inschrift(models.Model):
         verbose_name="Quellen und Literatur",
         help_text="Bisherige Nachweise der Inschriften, ggf. mit dem Zusatz ('Abb.'');\
         wichtige Arbeiten, die zum Verständnis des Inschriftenträgers und vor allem zum Inhalt\
-        der In­schrift aufklärend und erläuternd beitragen können"
+        der In­schrift aufklärend und erläuternd beitragen können",
+        related_name="has_inscriptions"
         )
     quellen_unstruktieriert = models.TextField(
         blank=True,
