@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'webpage.webpage_content_processors.installed_apps',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
