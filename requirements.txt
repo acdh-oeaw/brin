@@ -2,11 +2,11 @@ acdh-django-charts==0.4.1
 bleach==2.0.0
 colorama==0.3.9
 decorator==4.1.2
-Django==2.0.5
+Django==2.1.2
 django-autocomplete-light==3.3.0rc3
 django-crispy-forms==1.7.2
 django-extensions==1.7.7
-django-filter==1.0.4
+django-filter==2.0.0
 django-gm2m==0.4.10
 django-tables2==1.4.2
 djangorestframework==3.8.2
