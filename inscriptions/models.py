@@ -123,6 +123,16 @@ class Inschrift(models.Model):
         help_text="Art der Anbringung der Schrift am/im Inschriftenträger\
         (vertieft, erhaben, eingeritzt, ausgelegt, gemalt etc.)."
         )
+    hoehe_schrifttraeger = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Höhe des Inschriftenträgers",
+        help_text="Höhe des Inschriftenträgers, Angabe in Millimetern."
+        )
+    breite_schrifttraeger = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Breite des Inschriftenträgers",
+        help_text="Breite des Inschriftenträgers, Angabe in Millimetern."
+        )
     schrift_hoch_min = models.IntegerField(
         blank=True, null=True,
         verbose_name="minimale Höhe Schriftfeld",

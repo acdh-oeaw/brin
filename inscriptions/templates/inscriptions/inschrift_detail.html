@@ -93,10 +93,22 @@
                                 <th class="w-50">Farbe des Inschriftenträgers</th>
                                 <td>{{ object.farbtraeger }}</td>
                             </tr>
-                            <tr>
-                                <th class="w-50">Farbe der Schrift</th>
-                                <td>{{ object.farbschrift }}</td>
-                            </tr>
+                            {% if object.farbschrift %}
+                                <tr>
+                                    <th class="w-50">Farbe der Schrift</th>
+                                    <td>{{ object.farbschrift }}</td>
+                                </tr>
+                            {% endif %}
+                            {% if object.hoehe_schrifttraeger %}
+                                <tr>
+                                    <th class="w-50">Abmessungen</th>
+                                    <td>
+                                        <abbr title="Höhe in mm">{{ object.hoehe_schrifttraeger }}</abbr>
+                                        mal
+                                        <abbr title="Breite in mm">{{ object.breite_schrifttraeger }}</abbr>
+                                    </td>
+                                </tr>
+                            {% endif %}
                         </table>
                         <legend class="legend-yellow">Standort</legend>
                         <table class="table table-bordered table-hover">
