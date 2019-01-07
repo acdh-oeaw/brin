@@ -11,5 +11,6 @@ PROJECT_METADATA = {
     'purpose_en': 'The purpose of this project is to publish data.',
     'version': '1.0.0',
     'matomo_id': '36',
-    'matomo_url': '//piwik.apollo.arz.oeaw.ac.at/'
+    'matomo_url': '//piwik.apollo.arz.oeaw.ac.at/',
+    'app_type': 'database',  # database|website|service|tool|digital-edition
 }
