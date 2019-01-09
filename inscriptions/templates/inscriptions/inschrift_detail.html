@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 <script src="{% static 'images/openseadragon/openseadragon.min.js' %}"></script>
-<div class="container">
+<div class="container-fluid">
     <div class="card">
         <div class="card-header">
             <div class="row">
@@ -290,19 +290,9 @@
                                 <td>{{ object.quellen_unstruktieriert }}</td>
                             </tr>
                         </table>
-                        <legend class="legend-yellow">Schlagworte</legend>
+                        <legend class="legend-yellow">Inhalt</legend>
                         <table class="table table-bordered table-hover">
-                           <tr>
-                                <th class="w-50">Schlagworte</th>
-                                <td>
-                                    {% for x in object.schlagworte.all %}
-                                        <li>
-                                            {{ x.pref_label }}
-                                        </li>
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                           <tr>
+                            <tr>
                                 <th>Kenname(n)</th>
                                 <td>
                                     {% for x in object.kennname.all %}
@@ -341,7 +331,7 @@
                         <form method="get">
                             {% for x in object.images.all %}
                                 <div class="card card-default image-card" style="text-align:center">
-                                    <div class="card-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 400px">
+                                    <div class="card-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 600px">
                                     </div>
                                     <script type="text/javascript">
                                         var viewer = OpenSeadragon({
