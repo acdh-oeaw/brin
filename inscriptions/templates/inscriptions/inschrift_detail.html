@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-8">
                     <h1 style="text-align: center;">
-                      <a href="{% url 'browsing:browse_inscriptions' %}"><small class="text-muted">Inschrift: </small></a>{{ object.transkription_normalized|safe|truncatechars:20 }}
+                      <a href="{% url 'browsing:browse_inscriptions' %}"><small class="text-muted">Inschrift: </small></a>{{ object.transkription_normalized|truncatechars:20 }}
                       {% if user.is_authenticated %}
                          <a href="{% url 'inschriften:inschrift_update' pk=object.id %}">
                             <i class="fas fa-edit" title="edit"></i>
