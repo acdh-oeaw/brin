@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'webpage',
     'vocabs',
     'places',
-    'bib',
     'inscriptions',
     'images',
     'charts',

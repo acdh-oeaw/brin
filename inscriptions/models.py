@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 from vocabs.models import SkosConcept
-from bib.models import Book
 from places.models import Place
 from images.models import Image
 
@@ -285,11 +284,13 @@ class Inschrift(models.Model):
         verbose_name="Anlagedatum",
         help_text="Zeitpunkt der Anlegung des Datensatzes"
         )
-    status = models.NullBooleanField(
+    status = models.BooleanField(
+        null=True,
         verbose_name="Status",
         help_text="Status der Bearbeitung (unfertig, halb fertig, fertig)."
         )
-    status_resch = models.NullBooleanField(
+    status_resch = models.BooleanField(
+        null=True,
         verbose_name="Status Resch",
         help_text="Status der Resch Transkription."
         )
