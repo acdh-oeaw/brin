@@ -16,3 +16,4 @@ __pycache__/
 /vocabs/data/spreadsheets/vocabs_sample.xlsx
 /Untitled.ipynb
 /auth.json
+env/
