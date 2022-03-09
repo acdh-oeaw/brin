@@ -5,11 +5,15 @@
 {% block Titel %} See all {{ object.classname }} {% endblock %}
 {% block scriptHeader %}
 
-<link rel="stylesheet" href="{% static 'webpage/libraries/leaflet/leaflet.css' %}"></link>
-<script src="{% static 'webpage/libraries/leaflet/leaflet.js' %}"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
 <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.css' %}"/></link>
 <link rel="stylesheet" href="{% static 'webpage/libraries/leaflet.markercluster/dist/MarkerCluster.Default.css' %}"/></link>
-<script src="{% static 'webpage/libraries/leaflet.markercluster/src/leaflet.markercluster-src.js' %}"></script>
+<script src="{% static 'webpage/libraries/leaflet.markercluster/dist/leaflet.markercluster.js' %}"></script>
 <style>
 #map {
     height: 900px;
@@ -73,9 +77,7 @@
 
         };
 
-        var mymap = L.map('map', {
-            fullscreenControl: true,
-        }).setView([46.714861366143325, 11.656024705667175], 8  );
+        var mymap = L.map('map');
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -130,7 +132,7 @@
         var geoJsonLayer = L.geoJson(geojsonFeature, {onEachFeature: onEachFeature});
         markers.addLayer(geoJsonLayer);
         mymap.addLayer(markers);
-        mymap.fitBounds(markers.getBounds(), {'maxZoom': 18});
+        mymap.setView([46.714861366143325, 11.656024705667175], 8  );
 
     </script>
 {% endblock %}
