@@ -1,11 +1,11 @@
-from django_tables2 import SingleTableView, RequestConfig
+from django_tables2 import RequestConfig
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from inscriptions.models import *
 from . filters import *
 from . forms import *
 from . tables import *
-from . browsing_utils import GenericListView, BaseCreateView, BaseUpdateView
+from . browsing_utils import GenericListView
 
 
 class ReferenceListView(GenericListView):
