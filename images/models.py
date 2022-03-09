@@ -72,7 +72,7 @@ class Image(models.Model):
             path = "{}/{}/info.json".format(self.path, self.custom_filename)
         else:
             path = "{}{}/{}/info.json".format(self.path, self.directory, self.custom_filename)
-        path = path.replace('.jp2', '')
+        path = path.replace('/info.json', '.jp2/info.json')
         return path
 
     @property
@@ -86,7 +86,7 @@ class Image(models.Model):
 
     @property
     def fetch_binary(self):
-        return "{}/full/full/0/default.jpg".format(self.iiif_endpoint)
+        return "{}.jp2/full/full/0/default.jpg".format(self.iiif_endpoint)
 
     def __str__(self):
         return self.full_path

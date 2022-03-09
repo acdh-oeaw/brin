@@ -334,9 +334,10 @@ crossorigin=""></script>
                         </table>
                     </div>
                     <div class="col-md-6">
-                        <form method="get">
+                        
                             {% for x in object.images.all %}
                                 <div class="card card-default image-card" style="text-align:center">
+                                    <div class="card-header">{{ x }}</div>
                                     <div class="card-body" id="dragon-{{ forloop.counter }}" style="width: 100%; height: 600px">
                                     </div>
                                     <script type="text/javascript">
@@ -348,7 +349,6 @@ crossorigin=""></script>
                                     </script>
                                 </div>
                             {% endfor %}
-                        </form>
                     </div>
                 </div>
             </div>
