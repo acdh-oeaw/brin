@@ -18,3 +18,5 @@ __pycache__/
 /auth.json
 env/
 pg_local.py
+env.secret
+env.production

@@ -8,19 +8,29 @@ The current repo holds the source code of the application.
 
 The application is build with [django](https://www.djangoproject.com/) and based upon [djangobaseproject](https://github.com/acdh-oeaw/djangobaseproject).
 
-### modularized settings
-
-This django project uses modularized settings as described in [this blog post](https://simpleisbetterthancomplex.com/tips/2017/07/03/django-tip-20-working-with-multiple-settings-modules.html) to keep sensitiv information out of GitHub. Therefore you'll have to adapt `brin/settings/dev.py` to your needs, like changing the `SECRET_KEY` or adding your specific data base settings.
-To execute any `manage.py`commands, you'll have to pass in a settings parameter pointing to your custom settings file like: `python manage.py runserver --settings=brin.settings.{nameOfCustomSettingsFile}`
-
 ### step by step
+
+Brin is configured to work with a Postgresql database. Connection settings, as well as e.g. `DEBUG`, `ALLOWED_HOSTS` or `SECRET_KEY` can be configured with environment variables. See `brin/settings.py` for more information.
 
 1. clone the repo `git clone https://github.com/acdh-oeaw/brin.git`
 2. recomended: create a virtual environment
 3. install needed packages `pip install -r requirements.txt`
-4. makemigrations: `python manage.py makemigrations --settings=brin.settings.dev`
-5. migrate: `python manage.py migrate --settings=brin.settings.dev`
-5. start the server: `python manage.py runserver --settings=brin.settings.dev`
+4. makemigrations: `python manage.py makemigrations`
+5. migrate: `python manage.py migrate`
+5. start the server: `python manage.py runserver`
+
+## docker
+
+### building the image
+
+* `docker build -t brin:latest .`
+* `docker build -t brin:latest --no-cache .`
+
+### running the image
+
+To run the image you should provide an `.env` file to pass in needed environment variables; see example below:
+
+* `docker run -it -p 8020:8020 --env-file env.secret --name brin brin:latest`
 
 # import legacy data
 
